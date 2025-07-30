@@ -1,0 +1,52 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cybersec: <https://vocab.siemens-energy.com/cybersec/> .
+@prefix component: <https://vocab.siemens-energy.com/cybersec/component/> .
+@prefix nvd: <https://ontology.siemens-energy.com/nvd/> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fminimatch%403.1.2>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2022-3517> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fws%403.3.3> nvd:hasVulnerability
+    <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-32640> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fglob-parent%405.1.2>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2020-28469> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fqs%406.11.0> nvd:hasVulnerability
+    <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2022-24999> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2F%2540types%2Fqs%406.9.7%23types%2Fqs>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2022-24999> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Ftough-cookie%402.5.0>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2023-26136> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fdns-packet%405.4.0>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-23386> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2F%2540types%2Fdns-packet%405.2.4%23types%2Fdns-packet>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-23386> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fdebug%404.3.4> nvd:hasVulnerability
+    <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2017-16137> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fminimist%401.2.7>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-44906> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fansi-regex%405.0.1>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-3807> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2F%2540types%2Funderscore%401.11.4%23types%2Funderscore>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2021-23358> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fdecode-uri-component%400.2.2>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2022-38900> .
+
+<https://data.siemens-energy.com/cybersec/component/pkg%3Anpm%2Fbrowserify-sign%404.2.1>
+  nvd:hasVulnerability <https://data.siemens-energy.com/cybersec/vulnerability/CVE-2023-46234> .

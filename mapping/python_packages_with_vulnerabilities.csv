@@ -1,0 +1,963 @@
+cve,cve_description,dependecy_name,dependecy
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23211,"Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. A Jinja2 SSTI vulnerability allows any user to execute commands on the server. In the case of the provided Docker Compose file as root. This vulnerability is fixed in 1.5.24.",Jinja2,https://data.siemens-energy.com/cybersec/package/Jinja2
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1015,"The Thunderbird Address Book URI fields contained unsanitized links. This could be used by an attacker to create and export an address book containing a malicious payload in a field. For example, in the “Other” field of the Instant Messaging section. If another user imported the address book, clicking on the link could result in opening a web page inside Thunderbird, and that page could execute (unprivileged) JavaScript. This vulnerability affects Thunderbird < 128.7.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0860,"The VR-Frases (collect & share quotes) plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via several parameters in all versions up to, and including, 3.0.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0104,A reflected cross-site scripting (XSS) vulnerability in Palo Alto Networks Expedition enables attackers to execute malicious JavaScript code in the context of an authenticated Expedition user’s browser if that authenticated user clicks a malicious link that allows phishing attacks and could lead to Expedition browser-session theft.,click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0170,"The DWT - Directory & Listing WordPress Theme is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 3.3.3 due to insufficient input sanitization and output escaping on the 'sort_by' and 'token' parameters. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0215,"The UpdraftPlus: WP Backup & Migration Plugin plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the showdata and initiate_restore parameters in all versions up to, and including, 1.24.12 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an admin user into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0393,"The Royal Elementor Addons and Templates plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.7.1006. This is due to missing or incorrect nonce validation on the wpr_filter_grid_posts() function. This makes it possible for unauthenticated attackers to inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0470,"The Forminator Forms – Contact Form, Payment Form & Custom Form Builder plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the title parameter in all versions up to, and including, 1.38.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0729,A vulnerability was found in TP-Link TL-SG108E 1.0.0 Build 20201208 Rel. 40304. It has been rated as problematic. This issue affects some unknown processing. The manipulation leads to clickjacking. The attack may be initiated remotely. Upgrading to version 1.0.0 Build 20250124 Rel. 54920(Beta) is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early. They reacted very professional and provided a pre-fix version for their customers.,click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0808,"The Houzez Property Feed plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 2.4.21. This is due to missing or incorrect nonce validation on the ""deleteexport"" action. This makes it possible for unauthenticated attackers to delete property feed exports via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-20179,"A vulnerability in the web-based management interface of Cisco Expressway Series could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface.
+
+This vulnerability exists because the web-based management interface does not properly validate user-supplied input. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+Note:&nbsp;Cisco Expressway Series refers to Cisco Expressway Control (Expressway-C) devices and Cisco Expressway Edge (Expressway-E) devices.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-20180,"A vulnerability in the web-based management interface of Cisco AsyncOS Software for Cisco Secure Email and Web Manager and Secure Email Gateway could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack against a user of the interface.
+
+This vulnerability is due to insufficient validation of user input. An attacker could exploit this vulnerability by persuading a user of an affected interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. To exploit this vulnerability, the attacker must have valid credentials for a user account with at least the role of Operator.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23110,"An issue was discovered in REDCap 14.9.6. A Reflected cross-site scripting (XSS) vulnerability in the email-subject field exists while performing an upload of a CSV file containing a list of alert configurations. An attacker can send the victim a CSV file containing the XSS payload in the email-subject. Once the victim uploads the file, he automatically lands on a page to view the uploaded data. If the victim clicks on the email-subject value, it triggers the XSS payload.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23111,"An issue was discovered in REDCap 14.9.6. It allows HTML Injection via the Survey field name, exposing users to a redirection to a phishing website. An attacker can exploit this to trick the user that receives the survey into clicking on the field name, which redirects them to a phishing website. Thus, this allows malicious actions to be executed without user consent.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23112,"An issue was discovered in REDCap 14.9.6. A stored cross-site scripting (XSS) vulnerability allows authenticated users to inject malicious scripts into the Survey field name of Survey. When a user receive the survey, if he clicks on the field name, it triggers the XSS payload.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23113,"An issue was discovered in REDCap 14.9.6. It has an action=myprojects&logout=1 CSRF issue in the alert-title while performing an upload of a CSV file containing a list of alert configuration. An attacker can send the victim a CSV file containing an HTML injection payload in the alert-title. Once the victim uploads the file, he automatically lands on a page to view the uploaded data. If the victim click on the alert-title value, it can trigger a logout request and terminates their session, or redirect to a phishing website. This vulnerability stems from the absence of CSRF protections on the logout functionality.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23363,"A vulnerability has been identified in Teamcenter (All versions < V14.3.0.0). The SSO login service of affected applications accepts user-controlled input that could specify a link to an external site. This could allow an attacker to redirect the legitimate user to an attacker-chosen URL to steal valid session data. For a successful exploit, the legitimate user must actively click on an attacker-crafted link.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23535,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in clickandsell REAL WordPress Sidebar allows Stored XSS. This issue affects REAL WordPress Sidebar: from n/a through 0.1.,click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24017,"YesWiki is a wiki system written in PHP. Versions up to and including 4.4.5 are vulnerable to any end-user crafting a DOM based XSS on all of YesWiki's pages which is triggered when a user clicks on a malicious link. The vulnerability makes use of the search by tag feature. When a tag doesn't exist, the tag is reflected on the page and isn't properly sanitized on the server side which allows a malicious user to generate a link that will trigger an XSS on the client's side when clicked. This vulnerability allows any user to generate a malicious link that will trigger an account takeover when clicked, therefore allowing a user to steal other accounts, modify pages, comments, permissions, extract user data (emails), thus impacting the integrity, availability and confidentiality of a YesWiki instance. Version 4.5.0 contains a patch for the issue.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24503,A malicious actor can fix the session of a PAM user by tricking the user to click on a specially crafted link to the PAM server.,click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24867,"SAP BusinessObjects Platform (BI Launchpad) does not sufficiently handle user input, resulting in Cross-Site Scripting (XSS) vulnerability. The application allows an unauthenticated attacker to craft a URL that embeds a malicious script within an unprotected parameter. When a victim clicks the link, the script will be executed in the browser, giving the attacker the ability to access and/or modify information related to the web client with no effect on availability.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24868,"The User Account and Authentication service (UAA) for SAP HANA extended application services, advanced model (SAP HANA XS advanced model) allows an unauthenticated attacker to craft a malicious link, that, when clicked by a victim, redirects the browser to a malicious site due to insufficient redirect URL validation. On successful exploitation attacker can cause limited impact on confidentiality, integrity, and availability of the system.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24874,"SAP Commerce (Backoffice) uses the deprecated X-FRAME-OPTIONS header to protect against clickjacking. While this protection remains effective now, it may not be the case in the future as browsers might discontinue support for this header in favor of the frame-ancestors CSP directive. Hence, clickjacking could become possible then, and lead to exposure and modification of sensitive information.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25063,"An XSS issue was discovered in Backdrop CMS 1.28.x before 1.28.5 and 1.29.x before 1.29.3. It does not sufficiently validate uploaded SVG images to ensure they do not contain potentially dangerous SVG tags. SVG images can contain clickable links and executable scripting, and using a crafted SVG, it is possible to execute scripting in the browser when an SVG image is viewed. This issue is mitigated by the attacker needing to be able to upload SVG images, and that Backdrop embeds all uploaded SVG images within &lt;img&gt; tags, which prevents scripting from executing. The SVG must be viewed directly by its URL in order to run any embedded scripting.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25187,"Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. This vulnerability is caused by adding note titles to the document using React's `dangerouslySetInnerHTML`, without first escaping HTML entities. Joplin lacks a Content-Security-Policy with a restrictive `script-src`. This allows arbitrary JavaScript execution via inline `onclick`/`onload` event handlers in unsanitized HTML. Additionally, Joplin's main window is created with `nodeIntegration` set to `true`, allowing arbitrary JavaScript execution to result in arbitrary code execution. Anyone who 1) receives notes from unknown sources and 2) uses <kbd>ctrl</kbd>-<kbd>p</kbd> to search is impacted. This issue has been addressed in version 3.1.24 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25198,"mailcow: dockerized is an open source groupware/email suite based on docker. Prior to version 2025-01a, a vulnerability in mailcow's password reset functionality allows an attacker to manipulate the `Host HTTP` header to generate a password reset link pointing to an attacker-controlled domain. This can lead to account takeover if a user clicks the poisoned link. Version 2025-01a contains a patch. As a workaround, deactivate the password reset functionality by clearing `Notification email sender` and `Notification email subject` under System -> Configuration -> Options -> Password Settings.",click,https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0480,A vulnerability classified as problematic has been found in wuzhicms 4.1.0. This affects the function test of the file coreframe/app/search/admin/config.php. The manipulation of the argument sphinxhost/sphinxport leads to server-side request forgery. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.,sphinx,https://data.siemens-energy.com/cybersec/package/sphinx
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25200,"Koa is expressive middleware for Node.js using ES2017 async functions. Prior to versions 0.21.2, 1.7.1, 2.15.4, and 3.0.0-alpha.3, Koa uses an evil regex to parse the `X-Forwarded-Proto` and `X-Forwarded-Host` HTTP headers. This can be exploited to carry out a Denial-of-Service attack. Versions 0.21.2, 1.7.1, 2.15.4, and 3.0.0-alpha.3 fix the issue.",regex,https://data.siemens-energy.com/cybersec/package/regex
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25205,"Audiobookshelf is a self-hosted audiobook and podcast server. Starting in version 2.17.0 and prior to version 2.19.1, a flaw in the authentication bypass logic allows unauthenticated requests to match certain unanchored regex patterns in the URL. Attackers can craft URLs containing substrings like ""/api/items/1/cover"" in a query parameter (?r=/api/items/1/cover) to partially bypass authentication or trigger server crashes under certain routes. This could lead to information disclosure of otherwise protected data and, in some cases, a complete denial of service (server crash) if downstream code expects an authenticated user object. Version 2.19.1 contains a patch for the issue.",regex,https://data.siemens-energy.com/cybersec/package/regex
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1052,"Mintty Sixel Image Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Mintty. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of sixel images. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-23382.",six,https://data.siemens-energy.com/cybersec/package/six
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21675,"In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5: Clear port select structure when fail to create
+
+Clear the port select structure on error so no stale values left after
+definers are destroyed. That's because the mlx5_lag_destroy_definers()
+always try to destroy all lag definers in the tt_map, so in the flow
+below lag definers get double-destroyed and cause kernel crash:
+
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 1
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets destroyed
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 0
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets double-destroyed
+
+ Unable to handle kernel NULL pointer dereference at virtual address 0000000000000008
+ Mem abort info:
+   ESR = 0x0000000096000005
+   EC = 0x25: DABT (current EL), IL = 32 bits
+   SET = 0, FnV = 0
+   EA = 0, S1PTW = 0
+   FSC = 0x05: level 1 translation fault
+ Data abort info:
+   ISV = 0, ISS = 0x00000005, ISS2 = 0x00000000
+   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+ user pgtable: 64k pages, 48-bit VAs, pgdp=0000000112ce2e00
+ [0000000000000008] pgd=0000000000000000, p4d=0000000000000000, pud=0000000000000000
+ Internal error: Oops: 0000000096000005 [#1] PREEMPT SMP
+ Modules linked in: iptable_raw bonding ip_gre ip6_gre gre ip6_tunnel tunnel6 geneve ip6_udp_tunnel udp_tunnel ipip tunnel4 ip_tunnel rdma_ucm(OE) rdma_cm(OE) iw_cm(OE) ib_ipoib(OE) ib_cm(OE) ib_umad(OE) mlx5_ib(OE) ib_uverbs(OE) mlx5_fwctl(OE) fwctl(OE) mlx5_core(OE) mlxdevm(OE) ib_core(OE) mlxfw(OE) memtrack(OE) mlx_compat(OE) openvswitch nsh nf_conncount psample xt_conntrack xt_MASQUERADE nf_conntrack_netlink nfnetlink xfrm_user xfrm_algo xt_addrtype iptable_filter iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 br_netfilter bridge stp llc netconsole overlay efi_pstore sch_fq_codel zram ip_tables crct10dif_ce qemu_fw_cfg fuse ipv6 crc_ccitt [last unloaded: mlx_compat(OE)]
+  CPU: 3 UID: 0 PID: 217 Comm: kworker/u53:2 Tainted: G           OE      6.11.0+ #2
+  Tainted: [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+  Hardware name: QEMU KVM Virtual Machine, BIOS 0.0.0 02/06/2015
+  Workqueue: mlx5_lag mlx5_do_bond_work [mlx5_core]
+  pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+  pc : mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+  lr : mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+  sp : ffff800085fafb00
+  x29: ffff800085fafb00 x28: ffff0000da0c8000 x27: 0000000000000000
+  x26: ffff0000da0c8000 x25: ffff0000da0c8000 x24: ffff0000da0c8000
+  x23: ffff0000c31f81a0 x22: 0400000000000000 x21: ffff0000da0c8000
+  x20: 0000000000000000 x19: 0000000000000001 x18: 0000000000000000
+  x17: 0000000000000000 x16: 0000000000000000 x15: 0000ffff8b0c9350
+  x14: 0000000000000000 x13: ffff800081390d18 x12: ffff800081dc3cc0
+  x11: 0000000000000001 x10: 0000000000000b10 x9 : ffff80007ab7304c
+  x8 : ffff0000d00711f0 x7 : 0000000000000004 x6 : 0000000000000190
+  x5 : ffff00027edb3010 x4 : 0000000000000000 x3 : 0000000000000000
+  x2 : ffff0000d39b8000 x1 : ffff0000d39b8000 x0 : 0400000000000000
+  Call trace:
+   mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+   mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+   mlx5_lag_destroy_definers+0xa0/0x108 [mlx5_core]
+   mlx5_lag_port_sel_create+0x2d4/0x6f8 [mlx5_core]
+   mlx5_activate_lag+0x60c/0x6f8 [mlx5_core]
+   mlx5_do_bond_work+0x284/0x5c8 [mlx5_core]
+   process_one_work+0x170/0x3e0
+   worker_thread+0x2d8/0x3e0
+   kthread+0x11c/0x128
+   ret_from_fork+0x10/0x20
+  Code: a9025bf5 aa0003f6 a90363f7 f90023f9 (f9400400)
+  ---[ end trace 0000000000000000 ]---",pip,https://data.siemens-energy.com/cybersec/package/pip
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1077,"A security vulnerability has been identified in the IBL Software Engineering Visual Weather and derived products (NAMIS, Aero Weather, Satellite Weather). The vulnerability is present in the Product Delivery Service (PDS) component in specific server configurations where the PDS pipeline utilizes the IPDS pipeline with Message Editor Output Filters enabled.
+
+A remote unauthenticated
+
+attacker can exploit this vulnerability to send unauthenticated requests to execute the IPDS pipeline with specially crafted Form Properties, enabling remote execution of arbitrary Python code. This vulnerability could lead to a full system compromise of the affected server, particularly if Visual Weather services are run under a privileged user account—contrary to the documented installation best practices.
+
+
+
+Upgrade to the patched versions 7.3.10 (or higher), 8.6.0 (or higher).",pip,https://data.siemens-energy.com/cybersec/package/pip
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24355,"Updatecli is a tool used to apply file update strategies. Prior to version 0.93.0, private maven repository credentials may be leaked in application logs in case of unsuccessful retrieval operation. During the execution of an updatecli pipeline which contains a `maven` source configured with basic auth credentials, the credentials are being leaked in the application execution logs in case of failure. Credentials are properly sanitized when the operation is successful but not when for whatever reason there is a failure in the maven repository, e.g. wrong coordinates provided, not existing artifact or version. Version 0.93.0 contains a patch for the issue.",pip,https://data.siemens-energy.com/cybersec/package/pip
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23734,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Gigaom Sphinx allows Reflected XSS. This issue affects Gigaom Sphinx: from n/a through 0.1.,Sphinx,https://data.siemens-energy.com/cybersec/package/Sphinx
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22151,"Strawberry GraphQL is a library for creating GraphQL APIs. Starting in 0.182.0 and prior to version 0.257.0, a type confusion vulnerability exists in Strawberry GraphQL's relay integration that affects multiple ORM integrations (Django, SQLAlchemy, Pydantic). The vulnerability occurs when multiple GraphQL types are mapped to the same underlying model while using the relay node interface. When querying for a specific type using the global node field (e.g., FruitType:some-id), the resolver may incorrectly return an instance of a different type mapped to the same model (e.g., SpecialFruitType). This can lead to information disclosure if the alternate type exposes sensitive fields and potential privilege escalation if the alternate type contains data intended for restricted access. This vulnerability is fixed in 0.257.0.",SQLAlchemy,https://data.siemens-energy.com/cybersec/package/SQLAlchemy
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21675,"In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5: Clear port select structure when fail to create
+
+Clear the port select structure on error so no stale values left after
+definers are destroyed. That's because the mlx5_lag_destroy_definers()
+always try to destroy all lag definers in the tt_map, so in the flow
+below lag definers get double-destroyed and cause kernel crash:
+
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 1
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets destroyed
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 0
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets double-destroyed
+
+ Unable to handle kernel NULL pointer dereference at virtual address 0000000000000008
+ Mem abort info:
+   ESR = 0x0000000096000005
+   EC = 0x25: DABT (current EL), IL = 32 bits
+   SET = 0, FnV = 0
+   EA = 0, S1PTW = 0
+   FSC = 0x05: level 1 translation fault
+ Data abort info:
+   ISV = 0, ISS = 0x00000005, ISS2 = 0x00000000
+   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+ user pgtable: 64k pages, 48-bit VAs, pgdp=0000000112ce2e00
+ [0000000000000008] pgd=0000000000000000, p4d=0000000000000000, pud=0000000000000000
+ Internal error: Oops: 0000000096000005 [#1] PREEMPT SMP
+ Modules linked in: iptable_raw bonding ip_gre ip6_gre gre ip6_tunnel tunnel6 geneve ip6_udp_tunnel udp_tunnel ipip tunnel4 ip_tunnel rdma_ucm(OE) rdma_cm(OE) iw_cm(OE) ib_ipoib(OE) ib_cm(OE) ib_umad(OE) mlx5_ib(OE) ib_uverbs(OE) mlx5_fwctl(OE) fwctl(OE) mlx5_core(OE) mlxdevm(OE) ib_core(OE) mlxfw(OE) memtrack(OE) mlx_compat(OE) openvswitch nsh nf_conncount psample xt_conntrack xt_MASQUERADE nf_conntrack_netlink nfnetlink xfrm_user xfrm_algo xt_addrtype iptable_filter iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 br_netfilter bridge stp llc netconsole overlay efi_pstore sch_fq_codel zram ip_tables crct10dif_ce qemu_fw_cfg fuse ipv6 crc_ccitt [last unloaded: mlx_compat(OE)]
+  CPU: 3 UID: 0 PID: 217 Comm: kworker/u53:2 Tainted: G           OE      6.11.0+ #2
+  Tainted: [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+  Hardware name: QEMU KVM Virtual Machine, BIOS 0.0.0 02/06/2015
+  Workqueue: mlx5_lag mlx5_do_bond_work [mlx5_core]
+  pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+  pc : mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+  lr : mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+  sp : ffff800085fafb00
+  x29: ffff800085fafb00 x28: ffff0000da0c8000 x27: 0000000000000000
+  x26: ffff0000da0c8000 x25: ffff0000da0c8000 x24: ffff0000da0c8000
+  x23: ffff0000c31f81a0 x22: 0400000000000000 x21: ffff0000da0c8000
+  x20: 0000000000000000 x19: 0000000000000001 x18: 0000000000000000
+  x17: 0000000000000000 x16: 0000000000000000 x15: 0000ffff8b0c9350
+  x14: 0000000000000000 x13: ffff800081390d18 x12: ffff800081dc3cc0
+  x11: 0000000000000001 x10: 0000000000000b10 x9 : ffff80007ab7304c
+  x8 : ffff0000d00711f0 x7 : 0000000000000004 x6 : 0000000000000190
+  x5 : ffff00027edb3010 x4 : 0000000000000000 x3 : 0000000000000000
+  x2 : ffff0000d39b8000 x1 : ffff0000d39b8000 x0 : 0400000000000000
+  Call trace:
+   mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+   mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+   mlx5_lag_destroy_definers+0xa0/0x108 [mlx5_core]
+   mlx5_lag_port_sel_create+0x2d4/0x6f8 [mlx5_core]
+   mlx5_activate_lag+0x60c/0x6f8 [mlx5_core]
+   mlx5_do_bond_work+0x284/0x5c8 [mlx5_core]
+   process_one_work+0x170/0x3e0
+   worker_thread+0x2d8/0x3e0
+   kthread+0x11c/0x128
+   ret_from_fork+0x10/0x20
+  Code: a9025bf5 aa0003f6 a90363f7 f90023f9 (f9400400)
+  ---[ end trace 0000000000000000 ]---",tables,https://data.siemens-energy.com/cybersec/package/tables
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21688,"In the Linux kernel, the following vulnerability has been resolved:
+
+drm/v3d: Assign job pointer to NULL before signaling the fence
+
+In commit e4b5ccd392b9 (""drm/v3d: Ensure job pointer is set to NULL
+after job completion""), we introduced a change to assign the job pointer
+to NULL after completing a job, indicating job completion.
+
+However, this approach created a race condition between the DRM
+scheduler workqueue and the IRQ execution thread. As soon as the fence is
+signaled in the IRQ execution thread, a new job starts to be executed.
+This results in a race condition where the IRQ execution thread sets the
+job pointer to NULL simultaneously as the `run_job()` function assigns
+a new job to the pointer.
+
+This race condition can lead to a NULL pointer dereference if the IRQ
+execution thread sets the job pointer to NULL after `run_job()` assigns
+it to the new job. When the new job completes and the GPU emits an
+interrupt, `v3d_irq()` is triggered, potentially causing a crash.
+
+[  466.310099] Unable to handle kernel NULL pointer dereference at virtual address 00000000000000c0
+[  466.318928] Mem abort info:
+[  466.321723]   ESR = 0x0000000096000005
+[  466.325479]   EC = 0x25: DABT (current EL), IL = 32 bits
+[  466.330807]   SET = 0, FnV = 0
+[  466.333864]   EA = 0, S1PTW = 0
+[  466.337010]   FSC = 0x05: level 1 translation fault
+[  466.341900] Data abort info:
+[  466.344783]   ISV = 0, ISS = 0x00000005, ISS2 = 0x00000000
+[  466.350285]   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+[  466.355350]   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+[  466.360677] user pgtable: 4k pages, 39-bit VAs, pgdp=0000000089772000
+[  466.367140] [00000000000000c0] pgd=0000000000000000, p4d=0000000000000000, pud=0000000000000000
+[  466.375875] Internal error: Oops: 0000000096000005 [#1] PREEMPT SMP
+[  466.382163] Modules linked in: rfcomm snd_seq_dummy snd_hrtimer snd_seq snd_seq_device algif_hash algif_skcipher af_alg bnep binfmt_misc vc4 snd_soc_hdmi_codec drm_display_helper cec brcmfmac_wcc spidev rpivid_hevc(C) drm_client_lib brcmfmac hci_uart drm_dma_helper pisp_be btbcm brcmutil snd_soc_core aes_ce_blk v4l2_mem2mem bluetooth aes_ce_cipher snd_compress videobuf2_dma_contig ghash_ce cfg80211 gf128mul snd_pcm_dmaengine videobuf2_memops ecdh_generic sha2_ce ecc videobuf2_v4l2 snd_pcm v3d sha256_arm64 rfkill videodev snd_timer sha1_ce libaes gpu_sched snd videobuf2_common sha1_generic drm_shmem_helper mc rp1_pio drm_kms_helper raspberrypi_hwmon spi_bcm2835 gpio_keys i2c_brcmstb rp1 raspberrypi_gpiomem rp1_mailbox rp1_adc nvmem_rmem uio_pdrv_genirq uio i2c_dev drm ledtrig_pattern drm_panel_orientation_quirks backlight fuse dm_mod ip_tables x_tables ipv6
+[  466.458429] CPU: 0 UID: 1000 PID: 2008 Comm: chromium Tainted: G         C         6.13.0-v8+ #18
+[  466.467336] Tainted: [C]=CRAP
+[  466.470306] Hardware name: Raspberry Pi 5 Model B Rev 1.0 (DT)
+[  466.476157] pstate: 404000c9 (nZcv daIF +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[  466.483143] pc : v3d_irq+0x118/0x2e0 [v3d]
+[  466.487258] lr : __handle_irq_event_percpu+0x60/0x228
+[  466.492327] sp : ffffffc080003ea0
+[  466.495646] x29: ffffffc080003ea0 x28: ffffff80c0c94200 x27: 0000000000000000
+[  466.502807] x26: ffffffd08dd81d7b x25: ffffff80c0c94200 x24: ffffff8003bdc200
+[  466.509969] x23: 0000000000000001 x22: 00000000000000a7 x21: 0000000000000000
+[  466.517130] x20: ffffff8041bb0000 x19: 0000000000000001 x18: 0000000000000000
+[  466.524291] x17: ffffffafadfb0000 x16: ffffffc080000000 x15: 0000000000000000
+[  466.531452] x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+[  466.538613] x11: 0000000000000000 x10: 0000000000000000 x9 : ffffffd08c527eb0
+[  466.545777] x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+[  466.552941] x5 : ffffffd08c4100d0 x4 : ffffffafadfb0000 x3 : ffffffc080003f70
+[  466.560102] x2 : ffffffc0829e8058 x1 : 0000000000000001 x0 : 0000000000000000
+[  466.567263] Call trace:
+[  466.569711]  v3d_irq+0x118/0x2e0 [v3d] (P)
+[  466.
+---truncated---",tables,https://data.siemens-energy.com/cybersec/package/tables
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24530,An issue was discovered in phpMyAdmin 5.x before 5.2.2. An XSS vulnerability has been discovered for the check tables feature. A crafted table or database name could be used for XSS.,tables,https://data.siemens-energy.com/cybersec/package/tables
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24802,"Plonky2 is a SNARK implementation based on techniques from PLONK and FRI. Lookup tables, whose length is not divisible by 26 = floor(num_routed_wires / 3) always include the 0 -> 0 input-output pair. Thus a malicious prover can always prove that f(0) = 0 for any lookup table f (unless its length happens to be divisible by 26). The cause of problem is that the LookupTableGate-s are padded with zeros. A workaround from the user side is to extend the table (by repeating some entries) so that its length becomes divisible by 26. This vulnerability is fixed in 1.0.1.",tables,https://data.siemens-energy.com/cybersec/package/tables
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0391,"A vulnerability, which was classified as critical, has been found in Guangzhou Huayi Intelligent Technology Jeewms up to 20241229. This issue affects the function saveOrUpdate of the file org/jeecgframework/web/cgform/controller/build/CgFormBuildController. java. The manipulation leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 20250101 is able to address this issue. It is recommended to upgrade the affected component.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0858,A vulnerability was discovered in the firmware builds up to 8.2.1.0820 in Poly Edge E devices. The firmware flaw does not properly prevent path traversal and could lead to information disclosure.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22295,"Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Tripetto WordPress form builder plugin for contact forms, surveys and quizzes – Tripetto allows Stored XSS.This issue affects WordPress form builder plugin for contact forms, surveys and quizzes – Tripetto: from n/a through 8.0.5.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22716,Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Taskbuilder Team Taskbuilder allows SQL Injection. This issue affects Taskbuilder: from n/a through 3.0.6.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22867,"On Darwin, building a Go module which contains CGO can trigger arbitrary code execution when using the Apple version of ld, due to usage of the @executable_path, @loader_path, or @rpath special values in a ""#cgo LDFLAGS"" directive. This issue only affected go1.24rc2.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23042,"Gradio is an open-source Python package that allows quick building of demos and web application for machine learning models, API, or any arbitrary Python function. Gradio's Access Control List (ACL) for file paths can be bypassed by altering the letter case of a blocked file or directory path. This vulnerability arises due to the lack of case normalization in the file path validation logic. On case-insensitive file systems, such as those used by Windows and macOS, this flaw enables attackers to circumvent security restrictions and access sensitive files that should be protected. This issue can lead to unauthorized data access, exposing sensitive information and undermining the integrity of Gradio's security model. Given Gradio's popularity for building web applications, particularly in machine learning and AI, this vulnerability may pose a substantial threat if exploited in production environments. This issue has been addressed in release version 5.6.0. Users are advised to upgrade. There are no known workarounds for this vulnerability.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23211,"Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. A Jinja2 SSTI vulnerability allows any user to execute commands on the server. In the case of the provided Docker Compose file as root. This vulnerability is fixed in 1.5.24.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23212,"Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. The external storage feature allows any user to enumerate the name and content of files on the server. This vulnerability is fixed in 1.5.28.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23213,"Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. The file upload feature allows to upload arbitrary files, including html and svg. Both can contain malicious content (XSS Payloads). This vulnerability is fixed in 1.5.28.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23221,"Fedify is a TypeScript library for building federated server apps powered by ActivityPub and other standards. This vulnerability allows a user to maneuver the Webfinger mechanism to perform a GET request to any internal resource on any Host, Port, URL combination regardless of present security mechanisms, and forcing the victim’s server into an infinite loop causing Denial of Service. Moreover, this issue can also be maneuvered into performing a Blind SSRF attack. This vulnerability is fixed in 1.0.14, 1.1.11, 1.2.11, and 1.3.4.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24360,"Nuxt is an open-source web development framework for Vue.js. Starting in version 3.8.1 and prior to version 3.15.3, Nuxt allows any websites to send any requests to the development server and read the response due to default CORS settings. Users with the default server.cors option using Vite builder may get the source code stolen by malicious websites. Version 3.15.3 fixes the vulnerability.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24361,"Nuxt is an open-source web development framework for Vue.js. Source code may be stolen during dev when using version 3.0.0 through 3.15.12 of the webpack builder or version 3.12.2 through 3.152 of the rspack builder and a victim opens a malicious web site. Because the request for classic script by a script tag is not subject to same origin policy, an attacker can inject a malicious script in their site and run the script. By using `Function::toString` against the values in `window.webpackChunknuxt_app`, the attacker can get the source code. Version 3.15.13 of Nuxt patches this issue.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24363,"The HL7 FHIR IG publisher is a tool to take a set of inputs and create a standard FHIR IG. Prior to version 1.8.9, in CI contexts, the IG Publisher CLI uses git commands to determine the URL of the originating repo. If the repo was cloned, or otherwise set to use a repo that uses a username and credential based URL, the entire URL will be included in the built Implementation Guide, exposing username and credential. This does not impact users that clone public repos without credentials, such as those using the auto-ig-build continuous integration infrastructure. This problem has been patched in release 1.8.9. Some workarounds are available. Users should ensure the IG repo they are publishing does not have username or credentials included in the `origin` URL. Running the command `git remote origin url` should return a URL that contains no username, password, or token; or users should run the IG Publisher CLI with the `-repo` parameter and specify a URL that contains no username, password, or token.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24368,"Cacti is an open source performance and fault management framework. Some of the data stored in automation_tree_rules.php is not thoroughly checked and is used to concatenate the SQL statement in build_rule_item_filter() function from lib/api_automation.php, resulting in SQL injection. This vulnerability is fixed in 1.2.29.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24787,"WhoDB is an open source database management tool. In affected versions the application is vulnerable to parameter injection in database connection strings, which allows an attacker to read local files on the machine the application is running on. The application uses string concatenation to build database connection URIs which are then passed to corresponding libraries responsible for setting up the database connections. This string concatenation is done unsafely and without escaping or encoding the user input. This allows an user, in many cases, to inject arbitrary parameters into the URI string. These parameters can be potentially dangerous depending on the libraries used. One of these dangerous parameters is `allowAllFiles` in the library `github.com/go-sql-driver/mysql`. Should this be set to `true`, the library enables running the `LOAD DATA LOCAL INFILE` query on any file on the host machine (in this case, the machine that WhoDB is running on). By injecting `&allowAllFiles=true` into the connection URI and connecting to any MySQL server (such as an attacker-controlled one), the attacker is able to read local files. This issue has been addressed in version 0.45.0 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24826,Local privilege escalation due to insecure folder permissions. The following products are affected: Acronis Snap Deploy (Windows) before build 4625.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24827,Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis Cyber Protect Cloud Agent (Windows) before build 39378.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24828,Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis Cyber Protect Cloud Agent (Windows) before build 39378.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24829,Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis Cyber Protect Cloud Agent (Windows) before build 39378.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24830,Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis Cyber Protect Cloud Agent (Windows) before build 39378.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24831,Local privilege escalation due to unquoted search path vulnerability. The following products are affected: Acronis Cyber Protect Cloud Agent (Windows) before build 39378.,build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24872,"The ABAP Build Framework in SAP ABAP Platform allows an authenticated attacker to gain unauthorized access to a specific transaction. By executing the add-on build functionality within the ABAP Build Framework, an attacker could call the transaction and view its details. This has a limited impact on the confidentiality of the application with no effect on the integrity and availability of the application.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25199,"go-crypto-winnative Go crypto backend for Windows using Cryptography API: Next Generation (CNG). Prior to commit f49c8e1379ea4b147d5bff1b3be5b0ff45792e41, calls to `cng.TLS1PRF` don't release the key handle, producing a small memory leak every time. Commit f49c8e1379ea4b147d5bff1b3be5b0ff45792e41 contains a fix for the issue. The fix is included in versions 1.23.6-2 and 1.22.12-2 of the Microsoft build of go, as well as in the pseudoversion 0.0.0-20250211154640-f49c8e1379ea of the `github.com/microsoft/go-crypto-winnative` Go package.",build,https://data.siemens-energy.com/cybersec/package/build
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21675,"In the Linux kernel, the following vulnerability has been resolved:
+
+net/mlx5: Clear port select structure when fail to create
+
+Clear the port select structure on error so no stale values left after
+definers are destroyed. That's because the mlx5_lag_destroy_definers()
+always try to destroy all lag definers in the tt_map, so in the flow
+below lag definers get double-destroyed and cause kernel crash:
+
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 1
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets destroyed
+  mlx5_lag_port_sel_create()
+    mlx5_lag_create_definers()
+      mlx5_lag_create_definer()     <- Failed on tt 0
+        mlx5_lag_destroy_definers() <- definers[tt=0] gets double-destroyed
+
+ Unable to handle kernel NULL pointer dereference at virtual address 0000000000000008
+ Mem abort info:
+   ESR = 0x0000000096000005
+   EC = 0x25: DABT (current EL), IL = 32 bits
+   SET = 0, FnV = 0
+   EA = 0, S1PTW = 0
+   FSC = 0x05: level 1 translation fault
+ Data abort info:
+   ISV = 0, ISS = 0x00000005, ISS2 = 0x00000000
+   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+ user pgtable: 64k pages, 48-bit VAs, pgdp=0000000112ce2e00
+ [0000000000000008] pgd=0000000000000000, p4d=0000000000000000, pud=0000000000000000
+ Internal error: Oops: 0000000096000005 [#1] PREEMPT SMP
+ Modules linked in: iptable_raw bonding ip_gre ip6_gre gre ip6_tunnel tunnel6 geneve ip6_udp_tunnel udp_tunnel ipip tunnel4 ip_tunnel rdma_ucm(OE) rdma_cm(OE) iw_cm(OE) ib_ipoib(OE) ib_cm(OE) ib_umad(OE) mlx5_ib(OE) ib_uverbs(OE) mlx5_fwctl(OE) fwctl(OE) mlx5_core(OE) mlxdevm(OE) ib_core(OE) mlxfw(OE) memtrack(OE) mlx_compat(OE) openvswitch nsh nf_conncount psample xt_conntrack xt_MASQUERADE nf_conntrack_netlink nfnetlink xfrm_user xfrm_algo xt_addrtype iptable_filter iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 br_netfilter bridge stp llc netconsole overlay efi_pstore sch_fq_codel zram ip_tables crct10dif_ce qemu_fw_cfg fuse ipv6 crc_ccitt [last unloaded: mlx_compat(OE)]
+  CPU: 3 UID: 0 PID: 217 Comm: kworker/u53:2 Tainted: G           OE      6.11.0+ #2
+  Tainted: [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+  Hardware name: QEMU KVM Virtual Machine, BIOS 0.0.0 02/06/2015
+  Workqueue: mlx5_lag mlx5_do_bond_work [mlx5_core]
+  pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+  pc : mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+  lr : mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+  sp : ffff800085fafb00
+  x29: ffff800085fafb00 x28: ffff0000da0c8000 x27: 0000000000000000
+  x26: ffff0000da0c8000 x25: ffff0000da0c8000 x24: ffff0000da0c8000
+  x23: ffff0000c31f81a0 x22: 0400000000000000 x21: ffff0000da0c8000
+  x20: 0000000000000000 x19: 0000000000000001 x18: 0000000000000000
+  x17: 0000000000000000 x16: 0000000000000000 x15: 0000ffff8b0c9350
+  x14: 0000000000000000 x13: ffff800081390d18 x12: ffff800081dc3cc0
+  x11: 0000000000000001 x10: 0000000000000b10 x9 : ffff80007ab7304c
+  x8 : ffff0000d00711f0 x7 : 0000000000000004 x6 : 0000000000000190
+  x5 : ffff00027edb3010 x4 : 0000000000000000 x3 : 0000000000000000
+  x2 : ffff0000d39b8000 x1 : ffff0000d39b8000 x0 : 0400000000000000
+  Call trace:
+   mlx5_del_flow_rules+0x24/0x2c0 [mlx5_core]
+   mlx5_lag_destroy_definer+0x54/0x100 [mlx5_core]
+   mlx5_lag_destroy_definers+0xa0/0x108 [mlx5_core]
+   mlx5_lag_port_sel_create+0x2d4/0x6f8 [mlx5_core]
+   mlx5_activate_lag+0x60c/0x6f8 [mlx5_core]
+   mlx5_do_bond_work+0x284/0x5c8 [mlx5_core]
+   process_one_work+0x170/0x3e0
+   worker_thread+0x2d8/0x3e0
+   kthread+0x11c/0x128
+   ret_from_fork+0x10/0x20
+  Code: a9025bf5 aa0003f6 a90363f7 f90023f9 (f9400400)
+  ---[ end trace 0000000000000000 ]---",uv,https://data.siemens-energy.com/cybersec/package/uv
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23221,"Fedify is a TypeScript library for building federated server apps powered by ActivityPub and other standards. This vulnerability allows a user to maneuver the Webfinger mechanism to perform a GET request to any internal resource on any Host, Port, URL combination regardless of present security mechanisms, and forcing the victim’s server into an infinite loop causing Denial of Service. Moreover, this issue can also be maneuvered into performing a Blind SSRF attack. This vulnerability is fixed in 1.0.14, 1.1.11, 1.2.11, and 1.3.4.",uv,https://data.siemens-energy.com/cybersec/package/uv
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23908,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Rami Yushuvaev Pastebin allows Stored XSS.This issue affects Pastebin: from n/a through 1.5.,uv,https://data.siemens-energy.com/cybersec/package/uv
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1014,"Certificate length was not properly checked when added to a certificate store. In practice only trusted data was processed. This vulnerability affects Firefox < 135, Firefox ESR < 128.7, Thunderbird < 128.7, and Thunderbird < 135.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0239,"When using Alt-Svc, ALPN did not properly validate certificates when the original server is redirecting to an insecure site. This vulnerability affects Firefox < 134, Firefox ESR < 128.6, Thunderbird < 134, and Thunderbird < 128.6.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0343,"Swift ASN.1 can be caused to crash when parsing certain BER/DER constructions. This crash is caused by a confusion in the ASN.1 library itself which assumes that certain objects can only be provided in either constructed or primitive forms, and will trigger a preconditionFailure if that constraint isn't met.
+
+Importantly, these constraints are actually required to be true in DER, but that correctness wasn't enforced on the early node parser side so it was incorrect to rely on it later on in decoding, which is what the library did.
+
+These crashes can be triggered when parsing any DER/BER format object. There is no memory-safety issue here: the crash is a graceful one from the Swift runtime. The impact of this is that it can be used as a denial-of-service vector when parsing BER/DER data from unknown sources, e.g. when parsing TLS certificates.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1002,"MicroDicom DICOM Viewer version 2024.03
+
+fails to adequately verify the update server's certificate, which could make it possible for attackers in a privileged network position to alter network traffic and carry out a machine-in-the-middle (MITM) attack. This allows the attackers to modify the server's response and deliver a malicious update to the user.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1146,"CrowdStrike uses industry-standard TLS (transport layer security) to secure communications from the Falcon sensor to the CrowdStrike cloud. CrowdStrike has identified a validation logic error in the Falcon sensor for Linux, Falcon Kubernetes Admission Controller, and Falcon Container Sensor where our TLS connection routine to the CrowdStrike cloud can incorrectly process server certificate validation. This could allow an attacker with the ability to control network traffic to potentially conduct a man-in-the-middle (MiTM) attack. CrowdStrike identified this issue internally and released a security fix in all Falcon sensor for Linux, Falcon Kubernetes Admission Controller, and Falcon Container Sensor versions 7.06 and above.
+
+ 
+CrowdStrike identified this issue through our longstanding, rigorous security review process, which has been continually strengthened with deeper source code analysis and ongoing program enhancements as part of our commitment to security resilience. CrowdStrike has no indication of any exploitation of this issue in the wild. CrowdStrike has leveraged its world class threat hunting and intelligence capabilities to actively monitor for signs of abuse or usage of this flaw and will continue to do so. 
+
+
+Windows and Mac sensors are not affected by this.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-1193,"Improper host validation in the certificate validation component in Devolutions Remote Desktop Manager on 2024.3.19 and earlier on Windows allows an attacker to intercept and modify encrypted communications via a man-in-the-middle attack 
+by presenting a certificate for a different host.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-20126,"A vulnerability in certification validation routines of Cisco ThousandEyes Endpoint Agent for macOS and RoomOS could allow an unauthenticated, remote attacker to intercept or manipulate metrics information.
+
+This vulnerability exists because the affected software does not properly validate certificates for hosted metrics services. An on-path attacker could exploit this vulnerability by intercepting network traffic using a crafted certificate. A successful exploit could allow the attacker to masquerade as a trusted host and monitor or change communications between the remote metrics service and the vulnerable client.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23114,A vulnerability in Veeam Updater component allows Man-in-the-Middle attackers to execute arbitrary code on the affected server. This issue occurs due to a failure to properly validate TLS certificate.,certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-23419,"When multiple server blocks are configured to share the same IP address and port, an attacker can use session resumption to bypass client certificate authentication requirements on these servers. This vulnerability arises when  TLS Session Tickets https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_ticket_key  are used and/or the  SSL session cache https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_session_cache  are used in the default server and the default server is performing client certificate authentication.  
+
+Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24031,"PAM-PKCS#11 is a Linux-PAM login module that allows a X.509 certificate based user login. In versions 0.6.12 and prior, the pam_pkcs11 module segfaults when a user presses ctrl-c/ctrl-d when they are asked for a PIN. When a user enters no PIN at all, `pam_get_pwd` will never initialize the password buffer pointer and as such `cleanse` will try to dereference an uninitialized pointer. On my system this pointer happens to have the value 3 most of the time when running sudo and as such it will segfault. The most likely impact to a system affected by this issue is an availability impact due to a daemon that uses PAM crashing. As of time of publication, a patch for the issue is unavailable.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24032,"PAM-PKCS#11 is a Linux-PAM login module that allows a X.509 certificate based user login. Prior to version 0.6.13, if cert_policy is set to none (the default value), then pam_pkcs11 will only check if the user is capable of logging into the token. An attacker may create a different token with the user's public data (e.g. the user's certificate) and a PIN known to the attacker. If no signature with the private key is required, then the attacker may now login as user with that created token. The default to *not* check the private key's signature has been changed with commit commi6638576892b59a99389043c90a1e7dd4d783b921, so that all versions starting with pam_pkcs11-0.6.0 should be affected. As a workaround, in `pam_pkcs11.conf`, set at least `cert_policy = signature;`.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24976,"Distribution is a toolkit to pack, ship, store, and deliver container content. Systems running registry versions 3.0.0-beta.1 through 3.0.0-rc.2 with token authentication enabled may be vulnerable to an issue in which token authentication allows an attacker to inject an untrusted signing key in a JSON web token (JWT). The issue lies in how the JSON web key (JWK) verification is performed. When a JWT contains a JWK header without a certificate chain, the code only checks if the KeyID (`kid`) matches one of the trusted keys, but doesn't verify that the actual key material matches. A fix for the issue is available at commit 5ea9aa028db65ca5665f6af2c20ecf9dc34e5fcd and expected to be a part of version 3.0.0-rc.3. There is no way to work around this issue without patching if the system requires token authentication.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25201,"Nitrokey 3 Firmware is the the firmware of Nitrokey 3 USB keys. For release 1.8.0, and test releases with PIV enabled prior to 1.8.0, the PIV application could accept invalid keys for authentication of the admin key. This could lead to compromise of the integrity of the data stored in the application. An attacker without access to the proper administration key would be able to generate new keys and overwrite certificates. Such an attacker would not be able to read-out or extract existing private data, nor would they be able to gain access to cryptographic operations that would normally require PIN-based authentication. The issue is fixed in piv-authenticator 0.3.9, and in Nitrokey's firmware 1.8.1.",certifi,https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21689,"In the Linux kernel, the following vulnerability has been resolved:
+
+USB: serial: quatech2: fix null-ptr-deref in qt2_process_read_urb()
+
+This patch addresses a null-ptr-deref in qt2_process_read_urb() due to
+an incorrect bounds check in the following:
+
+       if (newport > serial->num_ports) {
+               dev_err(&port->dev,
+                       ""%s - port change to invalid port: %i\n"",
+                       __func__, newport);
+               break;
+       }
+
+The condition doesn't account for the valid range of the serial->port
+buffer, which is from 0 to serial->num_ports - 1. When newport is equal
+to serial->num_ports, the assignment of ""port"" in the
+following code is out-of-bounds and NULL:
+
+       serial_priv->current_port = newport;
+       port = serial->port[serial_priv->current_port];
+
+The fix checks if newport is greater than or equal to serial->num_ports
+indicating it is out-of-bounds.",h2,https://data.siemens-energy.com/cybersec/package/h2
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0218,"When batch jobs are executed by pgAgent, a script is created in a temporary directory and then executed. In versions of pgAgent prior to 4.2.3, an insufficiently seeded random number generator is used when generating the directory name, leading to the possibility for a local attacker to pre-create the directory and thus prevent pgAgent from executing jobs, disrupting scheduled tasks.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21596,"An Improper Handling of Exceptional Conditions vulnerability in the command-line processing of Juniper Networks Junos OS on SRX1500, SRX4100, and SRX4200 devices allows a local, low-privileged authenticated attacker executing the 'show chassis environment pem' command to cause the chassis daemon (chassisd) to crash and restart, resulting in a temporary Denial of Service (DoS). However, repeated execution of this command will eventually cause the chassisd process to fail to restart, impacting packet processing on the system.
+
+This issue affects Junos OS on SRX1500, SRX4100, SRX4200: 
+
+
+
+  *  All versions before 21.4R3-S9, 
+  *  from 22.2 before 22.2R3-S5, 
+  *  from 22.3 before 22.3R3-S4, 
+  *  from 22.4 before 22.4R3-S4, 
+  *  from 23.2 before 23.2R2-S3, 
+  *  from 23.4 before 23.4R2-S1.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21606,"stats is a macOS system monitor in for the menu bar. The Stats application is vulnerable to a local privilege escalation due to the insecure implementation of its XPC service. The application registers a Mach service under the name `eu.exelban.Stats.SMC.Helper`. The associated binary, eu.exelban.Stats.SMC.Helper, is a privileged helper tool designed to execute actions requiring elevated privileges on behalf of the client, such as setting fan modes, adjusting fan speeds, and executing the `powermetrics` command. The root cause of this vulnerability lies in the `shouldAcceptNewConnection` method, which unconditionally returns YES (or true), allowing any XPC client to connect to the service without any form of verification. As a result, unauthorized clients can establish a connection to the Mach service and invoke methods exposed by the HelperTool interface. An attacker can exploit this vulnerability to modify the hardware settings of the user’s device and execute arbitrary code with root privileges. This issue has been addressed in version 2.11.21 and all users are advised to upgrade. There are no known workarounds for this vulnerability.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22134,"When switching to other buffers using the :all command and visual mode still being active, this may cause a heap-buffer overflow, because Vim does not properly end visual mode and therefore may try to access beyond the end of a line in a buffer. In Patch 9.1.1003 Vim will correctly reset the visual mode before opening other windows and buffers and therefore fix this bug. In addition it does verify that it won't try to access a position if the position is greater than the corresponding buffer line. Impact is medium since the user must have switched on visual mode when executing the :all ex command. The Vim project would like to thank github user gandalf4a for reporting this issue. The issue has been fixed as of Vim patch v9.1.1003",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-22388,"An issue was discovered in Optimizely EPiServer.CMS.Core before 12.22.0. A high-severity Stored Cross-Site Scripting (XSS) vulnerability exists in the CMS, allowing malicious actors to inject and execute arbitrary JavaScript code, potentially compromising user data, escalating privileges, or executing unauthorized actions. The issue exists in multiple areas, including content editing, link management, and file uploads.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24792,Snowflake PHP PDO Driver is a driver that uses the PHP Data Objects (PDO) extension to connect to the Snowflake database. Snowflake discovered and remediated a vulnerability in the Snowflake PHP PDO Driver where executing unsupported queries like PUT or GET on stages causes a signed-to-unsigned conversion error that crashes the application using the Driver. This vulnerability affects versions 0.2.0 through 3.0.3. Snowflake fixed the issue in version 3.1.0.,executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24872,"The ABAP Build Framework in SAP ABAP Platform allows an authenticated attacker to gain unauthorized access to a specific transaction. By executing the add-on build functionality within the ABAP Build Framework, an attacker could call the transaction and view its details. This has a limited impact on the confidentiality of the application with no effect on the integrity and availability of the application.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-25063,"An XSS issue was discovered in Backdrop CMS 1.28.x before 1.28.5 and 1.29.x before 1.29.3. It does not sufficiently validate uploaded SVG images to ensure they do not contain potentially dangerous SVG tags. SVG images can contain clickable links and executable scripting, and using a crafted SVG, it is possible to execute scripting in the browser when an SVG image is viewed. This issue is mitigated by the attacker needing to be able to upload SVG images, and that Backdrop embeds all uploaded SVG images within &lt;img&gt; tags, which prevents scripting from executing. The SVG must be viewed directly by its URL in order to run any embedded scripting.",executing,https://data.siemens-energy.com/cybersec/package/executing
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21673,"In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: fix double free of TCP_Server_Info::hostname
+
+When shutting down the server in cifs_put_tcp_session(), cifsd thread
+might be reconnecting to multiple DFS targets before it realizes it
+should exit the loop, so @server->hostname can't be freed as long as
+cifsd thread isn't done.  Otherwise the following can happen:
+
+  RIP: 0010:__slab_free+0x223/0x3c0
+  Code: 5e 41 5f c3 cc cc cc cc 4c 89 de 4c 89 cf 44 89 44 24 08 4c 89
+  1c 24 e8 fb cf 8e 00 44 8b 44 24 08 4c 8b 1c 24 e9 5f fe ff ff <0f>
+  0b 41 f7 45 08 00 0d 21 00 0f 85 2d ff ff ff e9 1f ff ff ff 80
+  RSP: 0018:ffffb26180dbfd08 EFLAGS: 00010246
+  RAX: ffff8ea34728e510 RBX: ffff8ea34728e500 RCX: 0000000000800068
+  RDX: 0000000000800068 RSI: 0000000000000000 RDI: ffff8ea340042400
+  RBP: ffffe112041ca380 R08: 0000000000000001 R09: 0000000000000000
+  R10: 6170732e31303000 R11: 70726f632e786563 R12: ffff8ea34728e500
+  R13: ffff8ea340042400 R14: ffff8ea34728e500 R15: 0000000000800068
+  FS: 0000000000000000(0000) GS:ffff8ea66fd80000(0000)
+  000000
+  CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+  CR2: 00007ffc25376080 CR3: 000000012a2ba001 CR4:
+  PKRU: 55555554
+  Call Trace:
+   <TASK>
+   ? show_trace_log_lvl+0x1c4/0x2df
+   ? show_trace_log_lvl+0x1c4/0x2df
+   ? __reconnect_target_unlocked+0x3e/0x160 [cifs]
+   ? __die_body.cold+0x8/0xd
+   ? die+0x2b/0x50
+   ? do_trap+0xce/0x120
+   ? __slab_free+0x223/0x3c0
+   ? do_error_trap+0x65/0x80
+   ? __slab_free+0x223/0x3c0
+   ? exc_invalid_op+0x4e/0x70
+   ? __slab_free+0x223/0x3c0
+   ? asm_exc_invalid_op+0x16/0x20
+   ? __slab_free+0x223/0x3c0
+   ? extract_hostname+0x5c/0xa0 [cifs]
+   ? extract_hostname+0x5c/0xa0 [cifs]
+   ? __kmalloc+0x4b/0x140
+   __reconnect_target_unlocked+0x3e/0x160 [cifs]
+   reconnect_dfs_server+0x145/0x430 [cifs]
+   cifs_handle_standard+0x1ad/0x1d0 [cifs]
+   cifs_demultiplex_thread+0x592/0x730 [cifs]
+   ? __pfx_cifs_demultiplex_thread+0x10/0x10 [cifs]
+   kthread+0xdd/0x100
+   ? __pfx_kthread+0x10/0x10
+   ret_from_fork+0x29/0x50
+   </TASK>",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21680,"In the Linux kernel, the following vulnerability has been resolved:
+
+pktgen: Avoid out-of-bounds access in get_imix_entries
+
+Passing a sufficient amount of imix entries leads to invalid access to the
+pkt_dev->imix_entries array because of the incorrect boundary check.
+
+UBSAN: array-index-out-of-bounds in net/core/pktgen.c:874:24
+index 20 is out of range for type 'imix_pkt [20]'
+CPU: 2 PID: 1210 Comm: bash Not tainted 6.10.0-rc1 #121
+Hardware name: QEMU Standard PC (i440FX + PIIX, 1996)
+Call Trace:
+<TASK>
+dump_stack_lvl lib/dump_stack.c:117
+__ubsan_handle_out_of_bounds lib/ubsan.c:429
+get_imix_entries net/core/pktgen.c:874
+pktgen_if_write net/core/pktgen.c:1063
+pde_write fs/proc/inode.c:334
+proc_reg_write fs/proc/inode.c:346
+vfs_write fs/read_write.c:593
+ksys_write fs/read_write.c:644
+do_syscall_64 arch/x86/entry/common.c:83
+entry_SYSCALL_64_after_hwframe arch/x86/entry/entry_64.S:130
+
+Found by Linux Verification Center (linuxtesting.org) with SVACE.
+
+[ fp: allow to fill the array completely; minor changelog cleanup ]",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21658,"In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: avoid NULL pointer dereference if no valid extent tree
+
+[BUG]
+Syzbot reported a crash with the following call trace:
+
+  BTRFS info (device loop0): scrub: started on devid 1
+  BUG: kernel NULL pointer dereference, address: 0000000000000208
+  #PF: supervisor read access in kernel mode
+  #PF: error_code(0x0000) - not-present page
+  PGD 106e70067 P4D 106e70067 PUD 107143067 PMD 0
+  Oops: Oops: 0000 [#1] PREEMPT SMP NOPTI
+  CPU: 1 UID: 0 PID: 689 Comm: repro Kdump: loaded Tainted: G           O       6.13.0-rc4-custom+ #206
+  Tainted: [O]=OOT_MODULE
+  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS unknown 02/02/2022
+  RIP: 0010:find_first_extent_item+0x26/0x1f0 [btrfs]
+  Call Trace:
+   <TASK>
+   scrub_find_fill_first_stripe+0x13d/0x3b0 [btrfs]
+   scrub_simple_mirror+0x175/0x260 [btrfs]
+   scrub_stripe+0x5d4/0x6c0 [btrfs]
+   scrub_chunk+0xbb/0x170 [btrfs]
+   scrub_enumerate_chunks+0x2f4/0x5f0 [btrfs]
+   btrfs_scrub_dev+0x240/0x600 [btrfs]
+   btrfs_ioctl+0x1dc8/0x2fa0 [btrfs]
+   ? do_sys_openat2+0xa5/0xf0
+   __x64_sys_ioctl+0x97/0xc0
+   do_syscall_64+0x4f/0x120
+   entry_SYSCALL_64_after_hwframe+0x76/0x7e
+   </TASK>
+
+[CAUSE]
+The reproducer is using a corrupted image where extent tree root is
+corrupted, thus forcing to use ""rescue=all,ro"" mount option to mount the
+image.
+
+Then it triggered a scrub, but since scrub relies on extent tree to find
+where the data/metadata extents are, scrub_find_fill_first_stripe()
+relies on an non-empty extent root.
+
+But unfortunately scrub_find_fill_first_stripe() doesn't really expect
+an NULL pointer for extent root, it use extent_root to grab fs_info and
+triggered a NULL pointer dereference.
+
+[FIX]
+Add an extra check for a valid extent root at the beginning of
+scrub_find_fill_first_stripe().
+
+The new error path is introduced by 42437a6386ff (""btrfs: introduce
+mount option rescue=ignorebadroots""), but that's pretty old, and later
+commit b979547513ff (""btrfs: scrub: introduce helper to find and fill
+sector info for a scrub_stripe"") changed how we do scrub.
+
+So for kernels older than 6.6, the fix will need manual backport.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21631,"In the Linux kernel, the following vulnerability has been resolved:
+
+block, bfq: fix waker_bfqq UAF after bfq_split_bfqq()
+
+Our syzkaller report a following UAF for v6.6:
+
+BUG: KASAN: slab-use-after-free in bfq_init_rq+0x175d/0x17a0 block/bfq-iosched.c:6958
+Read of size 8 at addr ffff8881b57147d8 by task fsstress/232726
+
+CPU: 2 PID: 232726 Comm: fsstress Not tainted 6.6.0-g3629d1885222 #39
+Call Trace:
+ <TASK>
+ __dump_stack lib/dump_stack.c:88 [inline]
+ dump_stack_lvl+0x91/0xf0 lib/dump_stack.c:106
+ print_address_description.constprop.0+0x66/0x300 mm/kasan/report.c:364
+ print_report+0x3e/0x70 mm/kasan/report.c:475
+ kasan_report+0xb8/0xf0 mm/kasan/report.c:588
+ hlist_add_head include/linux/list.h:1023 [inline]
+ bfq_init_rq+0x175d/0x17a0 block/bfq-iosched.c:6958
+ bfq_insert_request.isra.0+0xe8/0xa20 block/bfq-iosched.c:6271
+ bfq_insert_requests+0x27f/0x390 block/bfq-iosched.c:6323
+ blk_mq_insert_request+0x290/0x8f0 block/blk-mq.c:2660
+ blk_mq_submit_bio+0x1021/0x15e0 block/blk-mq.c:3143
+ __submit_bio+0xa0/0x6b0 block/blk-core.c:639
+ __submit_bio_noacct_mq block/blk-core.c:718 [inline]
+ submit_bio_noacct_nocheck+0x5b7/0x810 block/blk-core.c:747
+ submit_bio_noacct+0xca0/0x1990 block/blk-core.c:847
+ __ext4_read_bh fs/ext4/super.c:205 [inline]
+ ext4_read_bh+0x15e/0x2e0 fs/ext4/super.c:230
+ __read_extent_tree_block+0x304/0x6f0 fs/ext4/extents.c:567
+ ext4_find_extent+0x479/0xd20 fs/ext4/extents.c:947
+ ext4_ext_map_blocks+0x1a3/0x2680 fs/ext4/extents.c:4182
+ ext4_map_blocks+0x929/0x15a0 fs/ext4/inode.c:660
+ ext4_iomap_begin_report+0x298/0x480 fs/ext4/inode.c:3569
+ iomap_iter+0x3dd/0x1010 fs/iomap/iter.c:91
+ iomap_fiemap+0x1f4/0x360 fs/iomap/fiemap.c:80
+ ext4_fiemap+0x181/0x210 fs/ext4/extents.c:5051
+ ioctl_fiemap.isra.0+0x1b4/0x290 fs/ioctl.c:220
+ do_vfs_ioctl+0x31c/0x11a0 fs/ioctl.c:811
+ __do_sys_ioctl fs/ioctl.c:869 [inline]
+ __se_sys_ioctl+0xae/0x190 fs/ioctl.c:857
+ do_syscall_x64 arch/x86/entry/common.c:51 [inline]
+ do_syscall_64+0x70/0x120 arch/x86/entry/common.c:81
+ entry_SYSCALL_64_after_hwframe+0x78/0xe2
+
+Allocated by task 232719:
+ kasan_save_stack+0x22/0x50 mm/kasan/common.c:45
+ kasan_set_track+0x25/0x30 mm/kasan/common.c:52
+ __kasan_slab_alloc+0x87/0x90 mm/kasan/common.c:328
+ kasan_slab_alloc include/linux/kasan.h:188 [inline]
+ slab_post_alloc_hook mm/slab.h:768 [inline]
+ slab_alloc_node mm/slub.c:3492 [inline]
+ kmem_cache_alloc_node+0x1b8/0x6f0 mm/slub.c:3537
+ bfq_get_queue+0x215/0x1f00 block/bfq-iosched.c:5869
+ bfq_get_bfqq_handle_split+0x167/0x5f0 block/bfq-iosched.c:6776
+ bfq_init_rq+0x13a4/0x17a0 block/bfq-iosched.c:6938
+ bfq_insert_request.isra.0+0xe8/0xa20 block/bfq-iosched.c:6271
+ bfq_insert_requests+0x27f/0x390 block/bfq-iosched.c:6323
+ blk_mq_insert_request+0x290/0x8f0 block/blk-mq.c:2660
+ blk_mq_submit_bio+0x1021/0x15e0 block/blk-mq.c:3143
+ __submit_bio+0xa0/0x6b0 block/blk-core.c:639
+ __submit_bio_noacct_mq block/blk-core.c:718 [inline]
+ submit_bio_noacct_nocheck+0x5b7/0x810 block/blk-core.c:747
+ submit_bio_noacct+0xca0/0x1990 block/blk-core.c:847
+ __ext4_read_bh fs/ext4/super.c:205 [inline]
+ ext4_read_bh_nowait+0x15a/0x240 fs/ext4/super.c:217
+ ext4_read_bh_lock+0xac/0xd0 fs/ext4/super.c:242
+ ext4_bread_batch+0x268/0x500 fs/ext4/inode.c:958
+ __ext4_find_entry+0x448/0x10f0 fs/ext4/namei.c:1671
+ ext4_lookup_entry fs/ext4/namei.c:1774 [inline]
+ ext4_lookup.part.0+0x359/0x6f0 fs/ext4/namei.c:1842
+ ext4_lookup+0x72/0x90 fs/ext4/namei.c:1839
+ __lookup_slow+0x257/0x480 fs/namei.c:1696
+ lookup_slow fs/namei.c:1713 [inline]
+ walk_component+0x454/0x5c0 fs/namei.c:2004
+ link_path_walk.part.0+0x773/0xda0 fs/namei.c:2331
+ link_path_walk fs/namei.c:3826 [inline]
+ path_openat+0x1b9/0x520 fs/namei.c:3826
+ do_filp_open+0x1b7/0x400 fs/namei.c:3857
+ do_sys_openat2+0x5dc/0x6e0 fs/open.c:1428
+ do_sys_open fs/open.c:1443 [inline]
+ __do_sys_openat fs/open.c:1459 [inline]
+ __se_sys_openat fs/open.c:1454 [inline]
+ __x64_sys_openat+0x148/0x200 fs/open.c:1454
+ do_syscall_x64 arch/x86/entry/common.c:51 [inline]
+ do_syscall_6
+---truncated---",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21667,"In the Linux kernel, the following vulnerability has been resolved:
+
+iomap: avoid avoid truncating 64-bit offset to 32 bits
+
+on 32-bit kernels, iomap_write_delalloc_scan() was inadvertently using a
+32-bit position due to folio_next_index() returning an unsigned long.
+This could lead to an infinite loop when writing to an xfs filesystem.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21665,"In the Linux kernel, the following vulnerability has been resolved:
+
+filemap: avoid truncating 64-bit offset to 32 bits
+
+On 32-bit kernels, folio_seek_hole_data() was inadvertently truncating a
+64-bit value to 32 bits, leading to a possible infinite loop when writing
+to an xfs filesystem.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21634,"In the Linux kernel, the following vulnerability has been resolved:
+
+cgroup/cpuset: remove kernfs active break
+
+A warning was found:
+
+WARNING: CPU: 10 PID: 3486953 at fs/kernfs/file.c:828
+CPU: 10 PID: 3486953 Comm: rmdir Kdump: loaded Tainted: G
+RIP: 0010:kernfs_should_drain_open_files+0x1a1/0x1b0
+RSP: 0018:ffff8881107ef9e0 EFLAGS: 00010202
+RAX: 0000000080000002 RBX: ffff888154738c00 RCX: dffffc0000000000
+RDX: 0000000000000007 RSI: 0000000000000004 RDI: ffff888154738c04
+RBP: ffff888154738c04 R08: ffffffffaf27fa15 R09: ffffed102a8e7180
+R10: ffff888154738c07 R11: 0000000000000000 R12: ffff888154738c08
+R13: ffff888750f8c000 R14: ffff888750f8c0e8 R15: ffff888154738ca0
+FS:  00007f84cd0be740(0000) GS:ffff8887ddc00000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: 0000555f9fbe00c8 CR3: 0000000153eec001 CR4: 0000000000370ee0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+Call Trace:
+ kernfs_drain+0x15e/0x2f0
+ __kernfs_remove+0x165/0x300
+ kernfs_remove_by_name_ns+0x7b/0xc0
+ cgroup_rm_file+0x154/0x1c0
+ cgroup_addrm_files+0x1c2/0x1f0
+ css_clear_dir+0x77/0x110
+ kill_css+0x4c/0x1b0
+ cgroup_destroy_locked+0x194/0x380
+ cgroup_rmdir+0x2a/0x140
+
+It can be explained by:
+rmdir 				echo 1 > cpuset.cpus
+				kernfs_fop_write_iter // active=0
+cgroup_rm_file
+kernfs_remove_by_name_ns	kernfs_get_active // active=1
+__kernfs_remove					  // active=0x80000002
+kernfs_drain			cpuset_write_resmask
+wait_event
+//waiting (active == 0x80000001)
+				kernfs_break_active_protection
+				// active = 0x80000001
+// continue
+				kernfs_unbreak_active_protection
+				// active = 0x80000002
+...
+kernfs_should_drain_open_files
+// warning occurs
+				kernfs_put_active
+
+This warning is caused by 'kernfs_break_active_protection' when it is
+writing to cpuset.cpus, and the cgroup is removed concurrently.
+
+The commit 3a5a6d0c2b03 (""cpuset: don't nest cgroup_mutex inside
+get_online_cpus()"") made cpuset_hotplug_workfn asynchronous, This change
+involves calling flush_work(), which can create a multiple processes
+circular locking dependency that involve cgroup_mutex, potentially leading
+to a deadlock. To avoid deadlock. the commit 76bb5ab8f6e3 (""cpuset: break
+kernfs active protection in cpuset_write_resmask()"") added
+'kernfs_break_active_protection' in the cpuset_write_resmask. This could
+lead to this warning.
+
+After the commit 2125c0034c5d (""cgroup/cpuset: Make cpuset hotplug
+processing synchronous""), the cpuset_write_resmask no longer needs to
+wait the hotplug to finish, which means that concurrent hotplug and cpuset
+operations are no longer possible. Therefore, the deadlock doesn't exist
+anymore and it does not have to 'break active protection' now. To fix this
+warning, just remove kernfs_break_active_protection operation in the
+'cpuset_write_resmask'.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21672,"In the Linux kernel, the following vulnerability has been resolved:
+
+afs: Fix merge preference rule failure condition
+
+syzbot reported a lock held when returning to userspace[1].  This is
+because if argc is less than 0 and the function returns directly, the held
+inode lock is not released.
+
+Fix this by store the error in ret and jump to done to clean up instead of
+returning directly.
+
+[dh: Modified Lizhi Xu's original patch to make it honour the error code
+from afs_split_string()]
+
+[1]
+WARNING: lock held when returning to user space!
+6.13.0-rc3-syzkaller-00209-g499551201b5f #0 Not tainted
+------------------------------------------------
+syz-executor133/5823 is leaving the kernel with locks still held!
+1 lock held by syz-executor133/5823:
+ #0: ffff888071cffc00 (&sb->s_type->i_mutex_key#9){++++}-{4:4}, at: inode_lock include/linux/fs.h:818 [inline]
+ #0: ffff888071cffc00 (&sb->s_type->i_mutex_key#9){++++}-{4:4}, at: afs_proc_addr_prefs_write+0x2bb/0x14e0 fs/afs/addr_prefs.c:388",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-0373,"On 64-bit systems, the implementation of VOP_VPTOFH() in the cd9660, tarfs and ext2fs filesystems overflows the destination FID buffer by 4 bytes, a stack buffer overflow.
+
+A NFS server that exports a cd9660, tarfs, or ext2fs file system can be made to panic by mounting and accessing the export with an NFS client.  Further exploitation (e.g., bypassing file permission checking or remote kernel code execution) is potentially possible, though this has not been demonstrated.  In particular, release kernels are compiled with stack protection enabled, and some instances of the overflow are caught by this mechanism, causing a panic.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21633,"In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/sqpoll: zero sqd->thread on tctx errors
+
+Syzkeller reports:
+
+BUG: KASAN: slab-use-after-free in thread_group_cputime+0x409/0x700 kernel/sched/cputime.c:341
+Read of size 8 at addr ffff88803578c510 by task syz.2.3223/27552
+ Call Trace:
+  <TASK>
+  ...
+  kasan_report+0x143/0x180 mm/kasan/report.c:602
+  thread_group_cputime+0x409/0x700 kernel/sched/cputime.c:341
+  thread_group_cputime_adjusted+0xa6/0x340 kernel/sched/cputime.c:639
+  getrusage+0x1000/0x1340 kernel/sys.c:1863
+  io_uring_show_fdinfo+0xdfe/0x1770 io_uring/fdinfo.c:197
+  seq_show+0x608/0x770 fs/proc/fd.c:68
+  ...
+
+That's due to sqd->task not being cleared properly in cases where
+SQPOLL task tctx setup fails, which can essentially only happen with
+fault injection to insert allocation errors.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21642,"In the Linux kernel, the following vulnerability has been resolved:
+
+mptcp: sysctl: sched: avoid using current->nsproxy
+
+Using the 'net' structure via 'current' is not recommended for different
+reasons.
+
+First, if the goal is to use it to read or write per-netns data, this is
+inconsistent with how the ""generic"" sysctl entries are doing: directly
+by only using pointers set to the table entry, e.g. table->data. Linked
+to that, the per-netns data should always be obtained from the table
+linked to the netns it had been created for, which may not coincide with
+the reader's or writer's netns.
+
+Another reason is that access to current->nsproxy->netns can oops if
+attempted when current->nsproxy had been dropped when the current task
+is exiting. This is what syzbot found, when using acct(2):
+
+  Oops: general protection fault, probably for non-canonical address 0xdffffc0000000005: 0000 [#1] PREEMPT SMP KASAN PTI
+  KASAN: null-ptr-deref in range [0x0000000000000028-0x000000000000002f]
+  CPU: 1 UID: 0 PID: 5924 Comm: syz-executor Not tainted 6.13.0-rc5-syzkaller-00004-gccb98ccef0e5 #0
+  Hardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 09/13/2024
+  RIP: 0010:proc_scheduler+0xc6/0x3c0 net/mptcp/ctrl.c:125
+  Code: 03 42 80 3c 38 00 0f 85 fe 02 00 00 4d 8b a4 24 08 09 00 00 48 b8 00 00 00 00 00 fc ff df 49 8d 7c 24 28 48 89 fa 48 c1 ea 03 <80> 3c 02 00 0f 85 cc 02 00 00 4d 8b 7c 24 28 48 8d 84 24 c8 00 00
+  RSP: 0018:ffffc900034774e8 EFLAGS: 00010206
+
+  RAX: dffffc0000000000 RBX: 1ffff9200068ee9e RCX: ffffc90003477620
+  RDX: 0000000000000005 RSI: ffffffff8b08f91e RDI: 0000000000000028
+  RBP: 0000000000000001 R08: ffffc90003477710 R09: 0000000000000040
+  R10: 0000000000000040 R11: 00000000726f7475 R12: 0000000000000000
+  R13: ffffc90003477620 R14: ffffc90003477710 R15: dffffc0000000000
+  FS:  0000000000000000(0000) GS:ffff8880b8700000(0000) knlGS:0000000000000000
+  CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+  CR2: 00007fee3cd452d8 CR3: 000000007d116000 CR4: 00000000003526f0
+  DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+  DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+  Call Trace:
+   <TASK>
+   proc_sys_call_handler+0x403/0x5d0 fs/proc/proc_sysctl.c:601
+   __kernel_write_iter+0x318/0xa80 fs/read_write.c:612
+   __kernel_write+0xf6/0x140 fs/read_write.c:632
+   do_acct_process+0xcb0/0x14a0 kernel/acct.c:539
+   acct_pin_kill+0x2d/0x100 kernel/acct.c:192
+   pin_kill+0x194/0x7c0 fs/fs_pin.c:44
+   mnt_pin_kill+0x61/0x1e0 fs/fs_pin.c:81
+   cleanup_mnt+0x3ac/0x450 fs/namespace.c:1366
+   task_work_run+0x14e/0x250 kernel/task_work.c:239
+   exit_task_work include/linux/task_work.h:43 [inline]
+   do_exit+0xad8/0x2d70 kernel/exit.c:938
+   do_group_exit+0xd3/0x2a0 kernel/exit.c:1087
+   get_signal+0x2576/0x2610 kernel/signal.c:3017
+   arch_do_signal_or_restart+0x90/0x7e0 arch/x86/kernel/signal.c:337
+   exit_to_user_mode_loop kernel/entry/common.c:111 [inline]
+   exit_to_user_mode_prepare include/linux/entry-common.h:329 [inline]
+   __syscall_exit_to_user_mode_work kernel/entry/common.c:207 [inline]
+   syscall_exit_to_user_mode+0x150/0x2a0 kernel/entry/common.c:218
+   do_syscall_64+0xda/0x250 arch/x86/entry/common.c:89
+   entry_SYSCALL_64_after_hwframe+0x77/0x7f
+  RIP: 0033:0x7fee3cb87a6a
+  Code: Unable to access opcode bytes at 0x7fee3cb87a40.
+  RSP: 002b:00007fffcccac688 EFLAGS: 00000202 ORIG_RAX: 0000000000000037
+  RAX: 0000000000000000 RBX: 00007fffcccac710 RCX: 00007fee3cb87a6a
+  RDX: 0000000000000041 RSI: 0000000000000000 RDI: 0000000000000003
+  RBP: 0000000000000003 R08: 00007fffcccac6ac R09: 00007fffcccacac7
+  R10: 00007fffcccac710 R11: 0000000000000202 R12: 00007fee3cd49500
+  R13: 00007fffcccac6ac R14: 0000000000000000 R15: 00007fee3cd4b000
+   </TASK>
+  Modules linked in:
+  ---[ end trace 0000000000000000 ]---
+  RIP: 0010:proc_scheduler+0xc6/0x3c0 net/mptcp/ctrl.c:125
+  Code: 03 42 80 3c 38 00 0f 85 fe 02 00 00 4d 8b a4 24 08 09 00 00 48 b8 00 00 00 00 00 fc
+---truncated---",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21643,"In the Linux kernel, the following vulnerability has been resolved:
+
+netfs: Fix kernel async DIO
+
+Netfslib needs to be able to handle kernel-initiated asynchronous DIO that
+is supplied with a bio_vec[] array.  Currently, because of the async flag,
+this gets passed to netfs_extract_user_iter() which throws a warning and
+fails because it only handles IOVEC and UBUF iterators.  This can be
+triggered through a combination of cifs and a loopback blockdev with
+something like:
+
+        mount //my/cifs/share /foo
+        dd if=/dev/zero of=/foo/m0 bs=4K count=1K
+        losetup --sector-size 4096 --direct-io=on /dev/loop2046 /foo/m0
+        echo hello >/dev/loop2046
+
+This causes the following to appear in syslog:
+
+        WARNING: CPU: 2 PID: 109 at fs/netfs/iterator.c:50 netfs_extract_user_iter+0x170/0x250 [netfs]
+
+and the write to fail.
+
+Fix this by removing the check in netfs_unbuffered_write_iter_locked() that
+causes async kernel DIO writes to be handled as userspace writes.  Note
+that this change relies on the kernel caller maintaining the existence of
+the bio_vec array (or kvec[] or folio_queue) until the op is complete.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21646,"In the Linux kernel, the following vulnerability has been resolved:
+
+afs: Fix the maximum cell name length
+
+The kafs filesystem limits the maximum length of a cell to 256 bytes, but a
+problem occurs if someone actually does that: kafs tries to create a
+directory under /proc/net/afs/ with the name of the cell, but that fails
+with a warning:
+
+        WARNING: CPU: 0 PID: 9 at fs/proc/generic.c:405
+
+because procfs limits the maximum filename length to 255.
+
+However, the DNS limits the maximum lookup length and, by extension, the
+maximum cell name, to 255 less two (length count and trailing NUL).
+
+Fix this by limiting the maximum acceptable cellname length to 253.  This
+also allows us to be sure we can create the ""/afs/.<cell>/"" mountpoint too.
+
+Further, split the YFS VL record cell name maximum to be the 256 allowed by
+the protocol and ignore the record retrieved by YFSVL.GetCellName if it
+exceeds 253.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21654,"In the Linux kernel, the following vulnerability has been resolved:
+
+ovl: support encoding fid from inode with no alias
+
+Dmitry Safonov reported that a WARN_ON() assertion can be trigered by
+userspace when calling inotify_show_fdinfo() for an overlayfs watched
+inode, whose dentry aliases were discarded with drop_caches.
+
+The WARN_ON() assertion in inotify_show_fdinfo() was removed, because
+it is possible for encoding file handle to fail for other reason, but
+the impact of failing to encode an overlayfs file handle goes beyond
+this assertion.
+
+As shown in the LTP test case mentioned in the link below, failure to
+encode an overlayfs file handle from a non-aliased inode also leads to
+failure to report an fid with FAN_DELETE_SELF fanotify events.
+
+As Dmitry notes in his analyzis of the problem, ovl_encode_fh() fails
+if it cannot find an alias for the inode, but this failure can be fixed.
+ovl_encode_fh() seldom uses the alias and in the case of non-decodable
+file handles, as is often the case with fanotify fid info,
+ovl_encode_fh() never needs to use the alias to encode a file handle.
+
+Defer finding an alias until it is actually needed so ovl_encode_fh()
+will not fail in the common case of FAN_DELETE_SELF fanotify events.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21660,"In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: fix unexpectedly changed path in ksmbd_vfs_kern_path_locked
+
+When `ksmbd_vfs_kern_path_locked` met an error and it is not the last
+entry, it will exit without restoring changed path buffer. But later this
+buffer may be used as the filename for creation.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21661,"In the Linux kernel, the following vulnerability has been resolved:
+
+gpio: virtuser: fix missing lookup table cleanups
+
+When a virtuser device is created via configfs and the probe fails due
+to an incorrect lookup table, the table is not removed. This prevents
+subsequent probe attempts from succeeding, even if the issue is
+corrected, unless the device is released. Additionally, cleanup is also
+needed in the less likely case of platform_device_register_full()
+failure.
+
+Besides, a consistent memory leak in lookup_table->dev_id was spotted
+using kmemleak by toggling the live state between 0 and 1 with a correct
+lookup table.
+
+Introduce gpio_virtuser_remove_lookup_table() as the counterpart to the
+existing gpio_virtuser_make_lookup_table() and call it from all
+necessary points to ensure proper cleanup.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21679,"In the Linux kernel, the following vulnerability has been resolved:
+
+btrfs: add the missing error handling inside get_canonical_dev_path
+
+Inside function get_canonical_dev_path(), we call d_path() to get the
+final device path.
+
+But d_path() can return error, and in that case the next strscpy() call
+will trigger an invalid memory access.
+
+Add back the missing error handling for d_path().",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21687,"In the Linux kernel, the following vulnerability has been resolved:
+
+vfio/platform: check the bounds of read/write syscalls
+
+count and offset are passed from user space and not checked, only
+offset is capped to 40 bits, which can be used to read/write out of
+bounds of the device.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21694,"In the Linux kernel, the following vulnerability has been resolved:
+
+fs/proc: fix softlockup in __read_vmcore (part 2)
+
+Since commit 5cbcb62dddf5 (""fs/proc: fix softlockup in __read_vmcore"") the
+number of softlockups in __read_vmcore at kdump time have gone down, but
+they still happen sometimes.
+
+In a memory constrained environment like the kdump image, a softlockup is
+not just a harmless message, but it can interfere with things like RCU
+freeing memory, causing the crashdump to get stuck.
+
+The second loop in __read_vmcore has a lot more opportunities for natural
+sleep points, like scheduling out while waiting for a data write to
+happen, but apparently that is not always enough.
+
+Add a cond_resched() to the second loop in __read_vmcore to (hopefully)
+get rid of the softlockups.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-21699,"In the Linux kernel, the following vulnerability has been resolved:
+
+gfs2: Truncate address space when flipping GFS2_DIF_JDATA flag
+
+Truncate an inode's address space when flipping the GFS2_DIF_JDATA flag:
+depending on that flag, the pages in the address space will either use
+buffer heads or iomap_folio_state structs, and we cannot mix the two.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-24359,"ASTEVAL is an evaluator of Python expressions and statements. Prior to version 1.0.6, if an attacker can control the input to the `asteval` library, they can bypass asteval's restrictions and execute arbitrary Python code in the context of the application using the library. The vulnerability is rooted in how `asteval` performs handling of `FormattedValue` AST nodes. In particular, the `on_formattedvalue` value uses the dangerous format method of the str class. The code allows an attacker to manipulate the value of the string used in the dangerous call `fmt.format(__fstring__=val)`. This vulnerability can be exploited to access protected attributes by intentionally triggering an `AttributeError` exception. The attacker can then catch the exception and use its `obj` attribute to gain arbitrary access to sensitive or protected object properties. Version 1.0.6 fixes this issue.",fs,https://data.siemens-energy.com/cybersec/package/fs
+https://data.siemens-energy.com/cybersec/cve/CVE-2025-26561,Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in elfsight Elfsight Yottie Lite allows Stored XSS. This issue affects Elfsight Yottie Lite: from n/a through 1.3.3.,fs,https://data.siemens-energy.com/cybersec/package/fs

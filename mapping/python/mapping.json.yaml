@@ -1,0 +1,40 @@
+prefixes: 
+  software_vocab: "http://ontologies.siemens-energy.com/software/"
+  cybersec_data: "https://data.siemens-energy.com/cybersec/"
+
+sources:
+  metadata-source: ['python.json~jsonpath', '$.installed[*].metadata']
+
+mappings:
+  package:
+    sources:
+      - metadata-source
+    s: cybersec_data:package/$(name)
+    po:
+      - [a, software_vocab:Software_package]
+      # - [schema:name, $(metadata.name)]
+      # - [schema:version, $(metadata.version)]
+      # - [schema:description, $(metadata.description)]
+      # - [schema:author, $(metadata.author)]
+      # - [schema:maintainer, $(metadata.maintainer_email)]
+      # - [schema:programmingLanguage, "Python"]
+      # - [schema:softwareVersion, $(metadata.version)]
+      # - [schema:license, "MIT License"]
+      # - [schema:requires, "Python >=3.9"]
+      # - [schema:url, $(metadata.project_url[0])]
+
+  # dependencies:
+  #   sources:
+  #     - metadata-source
+  #   s: cybersec_data:package/$(name)
+  #   po:
+  #     - [software_vocab:hasDependency, cybersec_data:dependency/$(requires_dist.[*].name)]
+
+  # dependency_version:
+  #   sources:
+  #     - metadata-source
+  #   s: cybersec_data:dependency/$(requires_dist[*].name),
+  #   po: 
+  #     - [software_vocab:hasVersion, $(requires_dist.[*].version)]
+          
+        

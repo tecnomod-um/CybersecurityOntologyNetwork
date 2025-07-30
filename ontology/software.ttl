@@ -1,0 +1,1218 @@
+@base <http://ontologies.siemens-energy.com/software#> .
+@prefix : <http://ontologies.siemens-energy.com/software#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+# 
+# http://purl.org/dc/elements/1.1/identifier
+# 
+# http://purl.org/dc/elements/1.1/title
+# 
+# http://purl.org/dc/terms/description
+# 
+# http://purl.org/dc/terms/hasVersion
+# 
+# http://purl.org/dc/terms/issued
+# 
+# http://purl.org/dc/terms/modified
+# 
+# http://purl.org/dc/terms/publisher
+# 
+# http://purl.org/dc/terms/title
+# 
+# http://www.w3.org/2004/02/skos/core#note
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ontologies.siemens-energy.com/software/author
+# 
+# http://ontologies.siemens-energy.com/software/bugs
+# 
+# http://ontologies.siemens-energy.com/software/contributors
+# 
+# http://ontologies.siemens-energy.com/software/dependency
+# 
+# http://ontologies.siemens-energy.com/software/dependsOn
+# 
+# http://ontologies.siemens-energy.com/software/devDependsOn
+# 
+# http://ontologies.siemens-energy.com/software/directories
+# 
+# http://ontologies.siemens-energy.com/software/dist
+# 
+# http://ontologies.siemens-energy.com/software/engines
+# 
+# http://ontologies.siemens-energy.com/software/exports
+# 
+# http://ontologies.siemens-energy.com/software/funding
+# 
+# http://ontologies.siemens-energy.com/software/hasVersion
+# 
+# http://ontologies.siemens-energy.com/software/includes
+# 
+# http://ontologies.siemens-energy.com/software/isVersionof
+# 
+# http://ontologies.siemens-energy.com/software/items
+# 
+# http://ontologies.siemens-energy.com/software/language
+# 
+# http://ontologies.siemens-energy.com/software/latestVersion
+# 
+# http://ontologies.siemens-energy.com/software/maintainer
+# 
+# http://ontologies.siemens-energy.com/software/managedBy
+# 
+# http://ontologies.siemens-energy.com/software/npmOperationalInternal
+# 
+# http://ontologies.siemens-energy.com/software/npmUser
+# 
+# http://ontologies.siemens-energy.com/software/repoCVS
+# 
+# http://ontologies.siemens-energy.com/software/requires
+# 
+# http://ontologies.siemens-energy.com/software/scripts
+# 
+# http://ontologies.siemens-energy.com/software/signatures
+# 
+# https://schema.org/inRepository
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ontologies.siemens-energy.com/software/command
+# 
+# http://ontologies.siemens-energy.com/software/created
+# 
+# http://ontologies.siemens-energy.com/software/fileCount
+# 
+# http://ontologies.siemens-energy.com/software/fundingType
+# 
+# http://ontologies.siemens-energy.com/software/gitHead
+# 
+# http://ontologies.siemens-energy.com/software/hasShrinkwrap
+# 
+# http://ontologies.siemens-energy.com/software/homepage
+# 
+# http://ontologies.siemens-energy.com/software/host
+# 
+# http://ontologies.siemens-energy.com/software/integrity
+# 
+# http://ontologies.siemens-energy.com/software/keyid
+# 
+# http://ontologies.siemens-energy.com/software/keywords
+# 
+# http://ontologies.siemens-energy.com/software/main
+# 
+# http://ontologies.siemens-energy.com/software/modified
+# 
+# http://ontologies.siemens-energy.com/software/module
+# 
+# http://ontologies.siemens-energy.com/software/nodeVersion
+# 
+# http://ontologies.siemens-energy.com/software/npm-signature
+# 
+# http://ontologies.siemens-energy.com/software/path
+# 
+# http://ontologies.siemens-energy.com/software/protocol
+# 
+# http://ontologies.siemens-energy.com/software/readme
+# 
+# http://ontologies.siemens-energy.com/software/readmeFilename
+# 
+# http://ontologies.siemens-energy.com/software/rev
+# 
+# http://ontologies.siemens-energy.com/software/shasum
+# 
+# http://ontologies.siemens-energy.com/software/sig
+# 
+# http://ontologies.siemens-energy.com/software/tarball
+# 
+# http://ontologies.siemens-energy.com/software/tmp
+# 
+# http://ontologies.siemens-energy.com/software/typings
+# 
+# http://ontologies.siemens-energy.com/software/unpackedSize
+# 
+# http://ontologies.siemens-energy.com/software/url
+# 
+# http://ontologies.siemens-energy.com/software/version
+# 
+# https://schema.org/email
+# 
+# https://schema.org/license
+# 
+# https://schema.org/name
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ontologies.siemens-energy.com/software/Bug
+# 
+# http://ontologies.siemens-energy.com/software/CodeRepository
+# 
+# http://ontologies.siemens-energy.com/software/Directory
+# 
+# http://ontologies.siemens-energy.com/software/Distribution
+# 
+# http://ontologies.siemens-energy.com/software/Engine
+# 
+# http://ontologies.siemens-energy.com/software/Export
+# 
+# http://ontologies.siemens-energy.com/software/ExportItem
+# 
+# http://ontologies.siemens-energy.com/software/Funding
+# 
+# http://ontologies.siemens-energy.com/software/GitRepository
+# 
+# http://ontologies.siemens-energy.com/software/NODEPKG
+# 
+# http://ontologies.siemens-energy.com/software/NPMOperationalnternal
+# 
+# http://ontologies.siemens-energy.com/software/Package_manager
+# 
+# http://ontologies.siemens-energy.com/software/ProgrammingLanguage
+# 
+# http://ontologies.siemens-energy.com/software/Script
+# 
+# http://ontologies.siemens-energy.com/software/Signature
+# 
+# http://ontologies.siemens-energy.com/software/SoftwareLibraryComponent
+# 
+# http://ontologies.siemens-energy.com/software/Software_library
+# 
+# http://ontologies.siemens-energy.com/software/Software_library_version
+# 
+# http://ontologies.siemens-energy.com/software/Software_package
+# 
+# http://ontologies.siemens-energy.com/software/VersionControlSoftware
+# 
+# https://schema.org/CreativeWork
+# 
+# https://schema.org/Person
+# 
+# https://schema.org/SoftwareSourceCode
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://ontologies.siemens-energy.com/software/git
+# 
+# http://ontologies.siemens-energy.com/software/javascript
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+
+<software> a owl:Ontology .
+
+<http://purl.org/dc/elements/1.1/description> a owl:AnnotationProperty;
+  <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "An account of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Description"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/identifier> a owl:AnnotationProperty;
+  <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "An unambiguous reference to the resource within a given context."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Identifier"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/identifier) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/title> a owl:AnnotationProperty;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "A name given to the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Title"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/title) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/terms/description> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/hasVersion> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/issued> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/modified> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/publisher> a owl:AnnotationProperty .
+
+<http://purl.org/dc/terms/title> a owl:AnnotationProperty .
+
+<http://www.w3.org/2004/02/skos/core#note> a owl:AnnotationProperty .
+
+xsd:date a rdfs:Datatype .
+
+<software/author> a owl:ObjectProperty;
+  rdfs:domain _:genid1;
+  rdfs:range <https://schema.org/Person> .
+
+_:genid1 a owl:Class;
+  owl:unionOf _:genid3 .
+
+_:genid3 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid2 .
+
+_:genid2 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/bugs> a owl:ObjectProperty;
+  rdfs:domain _:genid4;
+  rdfs:range <software/Bug> .
+
+_:genid4 a owl:Class;
+  owl:unionOf _:genid6 .
+
+_:genid6 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid5 .
+
+_:genid5 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/contributors> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <https://schema.org/Person> .
+
+<software/dependency> a owl:ObjectProperty .
+
+<software/dependsOn> a owl:ObjectProperty;
+  rdfs:subPropertyOf <software/dependency>;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Software_library_version> .
+
+<software/devDependsOn> a owl:ObjectProperty;
+  rdfs:subPropertyOf <software/dependency>;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Software_library_version> .
+
+<software/directories> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Directory> .
+
+<software/dist> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Distribution> .
+
+<software/engines> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Engine> .
+
+<software/exports> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Export> .
+
+<software/funding> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Funding> .
+
+<software/hasVersion> a owl:ObjectProperty;
+  owl:inverseOf <software/isVersionof>;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Software_library_version> .
+
+<software/includes> a owl:ObjectProperty;
+  rdfs:domain <software/Software_package>;
+  rdfs:range <software/Software_library_version> .
+
+<software/isVersionof> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Software_library> .
+
+<software/items> a owl:ObjectProperty;
+  rdfs:domain <software/Export>;
+  rdfs:range <software/ExportItem> .
+
+<software/language> a owl:ObjectProperty;
+  rdfs:domain _:genid7;
+  rdfs:range <software/ProgrammingLanguage> .
+
+_:genid7 a owl:Class;
+  owl:unionOf _:genid9 .
+
+_:genid9 a rdf:List;
+  rdf:first <software/NODEPKG>;
+  rdf:rest _:genid8 .
+
+_:genid8 a rdf:List;
+  rdf:first <software/Package_manager>;
+  rdf:rest rdf:nil .
+
+<software/latestVersion> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library>;
+  rdfs:range <software/Software_library_version> .
+
+<software/maintainer> a owl:ObjectProperty;
+  rdfs:domain _:genid10;
+  rdfs:range <https://schema.org/Person> .
+
+_:genid10 a owl:Class;
+  owl:unionOf _:genid12 .
+
+_:genid12 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid11 .
+
+_:genid11 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/managedBy> a owl:ObjectProperty;
+  rdfs:domain <software/Software_package>;
+  rdfs:range <software/Package_manager> .
+
+<software/npmOperationalInternal> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/NPMOperationalnternal> .
+
+<software/npmUser> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <https://schema.org/Person> .
+
+<software/repoCVS> a owl:ObjectProperty;
+  rdfs:domain <software/CodeRepository>;
+  rdfs:range <software/VersionControlSoftware> .
+
+<software/requires> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Software_library_version> .
+
+<software/scripts> a owl:ObjectProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range <software/Script> .
+
+<software/signatures> a owl:ObjectProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range <software/Signature> .
+
+<https://schema.org/inRepository> a owl:ObjectProperty;
+  rdfs:domain _:genid13;
+  rdfs:range <software/CodeRepository> .
+
+_:genid13 a owl:Class;
+  owl:unionOf _:genid15 .
+
+_:genid15 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid14 .
+
+_:genid14 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/command> a owl:DatatypeProperty;
+  rdfs:domain <software/Script>;
+  rdfs:range xsd:string .
+
+<software/created> a owl:DatatypeProperty;
+  rdfs:domain _:genid16;
+  rdfs:range xsd:dateTime .
+
+_:genid16 a owl:Class;
+  owl:unionOf _:genid18 .
+
+_:genid18 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid17 .
+
+_:genid17 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/fileCount> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:integer .
+
+<software/fundingType> a owl:DatatypeProperty;
+  rdfs:domain <software/Funding>;
+  rdfs:range xsd:string .
+
+<software/gitHead> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:string .
+
+<software/hasShrinkwrap> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:boolean .
+
+<software/homepage> a owl:DatatypeProperty;
+  rdfs:domain _:genid19;
+  rdfs:range xsd:anyURI .
+
+_:genid19 a owl:Class;
+  owl:unionOf _:genid21 .
+
+_:genid21 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid20 .
+
+_:genid20 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/host> a owl:DatatypeProperty;
+  rdfs:domain <software/NPMOperationalnternal>;
+  rdfs:range xsd:string .
+
+<software/integrity> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:string .
+
+<software/keyid> a owl:DatatypeProperty;
+  rdfs:domain <software/Signature>;
+  rdfs:range xsd:string .
+
+<software/keywords> a owl:DatatypeProperty;
+  rdfs:domain _:genid22;
+  rdfs:range xsd:string .
+
+_:genid22 a owl:Class;
+  owl:unionOf _:genid24 .
+
+_:genid24 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid23 .
+
+_:genid23 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<software/main> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:string;
+  rdfs:comment """The main field is a module ID that is the primary entry point to your program. That is, if your package is named foo, and a user installs it, and then does require(\"foo\"), then your main module's exports object will be returned.
+
+This should be a module relative to the root of your package folder.
+
+For most modules, it makes the most sense to have a main script and often not much else.
+
+If main is not set, it defaults to index.js in the package's root folder.""" .
+
+<software/modified> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library>;
+  rdfs:range xsd:dateTime;
+  rdfs:comment "last modification of the software library (latest version)" .
+
+<software/module> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:string .
+
+<software/nodeVersion> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:string .
+
+<software/npm-signature> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:string .
+
+<software/path> a owl:DatatypeProperty;
+  rdfs:domain _:genid25;
+  rdfs:range xsd:string .
+
+_:genid25 a owl:Class;
+  owl:unionOf _:genid27 .
+
+_:genid27 a rdf:List;
+  rdf:first <software/Directory>;
+  rdf:rest _:genid26 .
+
+_:genid26 a rdf:List;
+  rdf:first <software/ExportItem>;
+  rdf:rest rdf:nil .
+
+<software/protocol> a owl:DatatypeProperty;
+  rdfs:domain <software/VersionControlSoftware>;
+  rdfs:range xsd:string .
+
+<software/readme> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library>;
+  rdfs:range xsd:string .
+
+<software/readmeFilename> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library>;
+  rdfs:range xsd:string .
+
+<software/rev> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library>;
+  rdfs:range xsd:string .
+
+<software/shasum> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:string .
+
+<software/sig> a owl:DatatypeProperty;
+  rdfs:domain <software/Signature>;
+  rdfs:range xsd:string .
+
+<software/tarball> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:string .
+
+<software/tmp> a owl:DatatypeProperty;
+  rdfs:domain <software/NPMOperationalnternal>;
+  rdfs:range xsd:string .
+
+<software/typings> a owl:DatatypeProperty;
+  rdfs:domain <software/Software_library_version>;
+  rdfs:range xsd:string .
+
+<software/unpackedSize> a owl:DatatypeProperty;
+  rdfs:domain <software/Distribution>;
+  rdfs:range xsd:integer .
+
+<software/url> a owl:DatatypeProperty;
+  rdfs:domain _:genid28;
+  rdfs:range xsd:anyURI .
+
+_:genid28 a owl:Class;
+  owl:unionOf _:genid32 .
+
+_:genid32 a rdf:List;
+  rdf:first <software/Bug>;
+  rdf:rest _:genid31 .
+
+_:genid31 a rdf:List;
+  rdf:first <software/CodeRepository>;
+  rdf:rest _:genid30 .
+
+_:genid30 a rdf:List;
+  rdf:first <software/Funding>;
+  rdf:rest _:genid29 .
+
+_:genid29 a rdf:List;
+  rdf:first <https://schema.org/Person>;
+  rdf:rest rdf:nil .
+
+<software/version> a owl:DatatypeProperty .
+
+<https://schema.org/email> a owl:DatatypeProperty;
+  rdfs:domain _:genid33;
+  rdfs:range xsd:string .
+
+_:genid33 a owl:Class;
+  owl:unionOf _:genid35 .
+
+_:genid35 a rdf:List;
+  rdf:first <software/Bug>;
+  rdf:rest _:genid34 .
+
+_:genid34 a rdf:List;
+  rdf:first <https://schema.org/Person>;
+  rdf:rest rdf:nil .
+
+<https://schema.org/license> a owl:DatatypeProperty;
+  rdfs:domain _:genid36;
+  rdfs:range xsd:string;
+  rdfs:comment """You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.
+
+
+You can check the full list of SPDX license IDs. Ideally you should pick one that is OSI approved.""" .
+
+_:genid36 a owl:Class;
+  owl:unionOf _:genid38 .
+
+_:genid38 a rdf:List;
+  rdf:first <software/Software_library>;
+  rdf:rest _:genid37 .
+
+_:genid37 a rdf:List;
+  rdf:first <software/Software_library_version>;
+  rdf:rest rdf:nil .
+
+<https://schema.org/name> a owl:DatatypeProperty;
+  rdfs:domain _:genid39;
+  rdfs:range xsd:string .
+
+_:genid39 a owl:Class;
+  owl:unionOf _:genid45 .
+
+_:genid45 a rdf:List;
+  rdf:first <software/Directory>;
+  rdf:rest _:genid44 .
+
+_:genid44 a rdf:List;
+  rdf:first <software/Engine>;
+  rdf:rest _:genid43 .
+
+_:genid43 a rdf:List;
+  rdf:first <software/Export>;
+  rdf:rest _:genid42 .
+
+_:genid42 a rdf:List;
+  rdf:first <software/ExportItem>;
+  rdf:rest _:genid41 .
+
+_:genid41 a rdf:List;
+  rdf:first <software/Script>;
+  rdf:rest _:genid40 .
+
+_:genid40 a rdf:List;
+  rdf:first <https://schema.org/Person>;
+  rdf:rest rdf:nil .
+
+<software/Bug> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid46, _:genid47 .
+
+_:genid46 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/url> .
+
+_:genid47 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/email> .
+
+<software/CodeRepository> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid48, _:genid49 .
+
+_:genid48 a owl:Restriction;
+  owl:allValuesFrom <software/VersionControlSoftware>;
+  owl:onProperty <software/repoCVS> .
+
+_:genid49 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/url> .
+
+<software/Directory> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid50, _:genid51 .
+
+_:genid50 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/path> .
+
+_:genid51 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<software/Distribution> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid52, _:genid53, _:genid54,
+    _:genid55, _:genid56, _:genid57, _:genid58 .
+
+_:genid52 a owl:Restriction;
+  owl:allValuesFrom <software/Signature>;
+  owl:onProperty <software/signatures> .
+
+_:genid53 a owl:Restriction;
+  owl:allValuesFrom xsd:integer;
+  owl:onProperty <software/fileCount> .
+
+_:genid54 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/integrity> .
+
+_:genid55 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/npm-signature> .
+
+_:genid56 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/shasum> .
+
+_:genid57 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/tarball> .
+
+_:genid58 a owl:Restriction;
+  owl:allValuesFrom xsd:integer;
+  owl:onProperty <software/unpackedSize> .
+
+<software/Engine> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid59 .
+
+_:genid59 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<software/Export> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid60, _:genid61 .
+
+_:genid60 a owl:Restriction;
+  owl:allValuesFrom <software/ExportItem>;
+  owl:onProperty <software/items> .
+
+_:genid61 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<software/ExportItem> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid62, _:genid63 .
+
+_:genid62 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/path> .
+
+_:genid63 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<software/Funding> a owl:Class;
+  rdfs:subClassOf _:genid64, _:genid65 .
+
+_:genid64 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/fundingType> .
+
+_:genid65 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/url> .
+
+<software/GitRepository> a owl:Class;
+  rdfs:subClassOf <software/CodeRepository>, _:genid66 .
+
+_:genid66 a owl:Restriction;
+  owl:hasValue <software/git>;
+  owl:onProperty <software/repoCVS> .
+
+<software/NODEPKG> a owl:Class;
+  rdfs:subClassOf <software/Package_manager>, _:genid67;
+  rdfs:label "NodePKG manager for JS packages" .
+
+_:genid67 a owl:Restriction;
+  owl:hasValue <software/javascript>;
+  owl:onProperty <software/language> .
+
+<software/NPMOperationalnternal> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid68, _:genid69 .
+
+_:genid68 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/host> .
+
+_:genid69 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/tmp> .
+
+<software/Package_manager> a owl:Class;
+  rdfs:subClassOf _:genid70;
+  rdfs:label "Type of manager for the software package" .
+
+_:genid70 a owl:Restriction;
+  owl:allValuesFrom <software/ProgrammingLanguage>;
+  owl:onProperty <software/language> .
+
+<software/ProgrammingLanguage> a owl:Class .
+
+<software/Script> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid71, _:genid72 .
+
+_:genid71 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/command> .
+
+_:genid72 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<software/Signature> a owl:Class;
+  rdfs:subClassOf <software/SoftwareLibraryComponent>, _:genid73, _:genid74 .
+
+_:genid73 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/keyid> .
+
+_:genid74 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/sig> .
+
+<software/SoftwareLibraryComponent> a owl:Class .
+
+<software/Software_library> a owl:Class;
+  rdfs:subClassOf <https://schema.org/CreativeWork>, _:genid75, _:genid76, _:genid77,
+    _:genid78, _:genid79, _:genid80, _:genid81, _:genid82, _:genid83, _:genid84, _:genid85,
+    _:genid86, _:genid87, _:genid88;
+  <http://purl.org/dc/elements/1.1/description> "description of the software library";
+  <http://purl.org/dc/elements/1.1/identifier> "Identifier of the software library";
+  <http://purl.org/dc/elements/1.1/title> "Name of the software library (example @jridgewell/gen-mapping)";
+  rdfs:comment "name as label";
+  rdfs:label "Software library" .
+
+_:genid75 a owl:Restriction;
+  owl:someValuesFrom <software/CodeRepository>;
+  owl:onProperty <https://schema.org/inRepository> .
+
+_:genid76 a owl:Restriction;
+  owl:allValuesFrom <software/Bug>;
+  owl:onProperty <software/bugs> .
+
+_:genid77 a owl:Restriction;
+  owl:allValuesFrom <software/Software_library_version>;
+  owl:onProperty <software/hasVersion> .
+
+_:genid78 a owl:Restriction;
+  owl:allValuesFrom <https://schema.org/Person>;
+  owl:onProperty <software/maintainer> .
+
+_:genid79 a owl:Restriction;
+  owl:onClass <https://schema.org/Person>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <software/author> .
+
+_:genid80 a owl:Restriction;
+  owl:onClass <software/Software_library_version>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <software/latestVersion> .
+
+_:genid81 a owl:Restriction;
+  owl:allValuesFrom xsd:dateTime;
+  owl:onProperty <software/created> .
+
+_:genid82 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/homepage> .
+
+_:genid83 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/keywords> .
+
+_:genid84 a owl:Restriction;
+  owl:allValuesFrom xsd:dateTime;
+  owl:onProperty <software/modified> .
+
+_:genid85 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/readme> .
+
+_:genid86 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/readmeFilename> .
+
+_:genid87 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/rev> .
+
+_:genid88 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/license> .
+
+<software/Software_library_version> a owl:Class;
+  rdfs:subClassOf <https://schema.org/SoftwareSourceCode>, _:genid89, _:genid90, _:genid91,
+    _:genid92, _:genid93, _:genid94, _:genid95, _:genid96, _:genid97, _:genid98, _:genid99,
+    _:genid100, _:genid101, _:genid102, _:genid103, _:genid104, _:genid105, _:genid106,
+    _:genid107, _:genid108, _:genid109, _:genid110, _:genid111, _:genid112, _:genid113,
+    _:genid114, _:genid115;
+  <http://purl.org/dc/elements/1.1/description> "description of the version of the software library";
+  <http://purl.org/dc/elements/1.1/identifier> "For \"_id\"";
+  <http://purl.org/dc/elements/1.1/title> "name of the software library (example @jridgewell/gen-mapping)";
+  <http://purl.org/dc/terms/hasVersion> "Version of the software library";
+  rdfs:comment "name as label";
+  rdfs:label "Specific version of a software library" .
+
+_:genid89 a owl:Restriction;
+  owl:someValuesFrom <software/Software_library_version>;
+  owl:onProperty <software/requires> .
+
+_:genid90 a owl:Restriction;
+  owl:allValuesFrom <software/Bug>;
+  owl:onProperty <software/bugs> .
+
+_:genid91 a owl:Restriction;
+  owl:allValuesFrom <https://schema.org/Person>;
+  owl:onProperty <software/contributors> .
+
+_:genid92 a owl:Restriction;
+  owl:allValuesFrom <software/Software_library_version>;
+  owl:onProperty <software/dependsOn> .
+
+_:genid93 a owl:Restriction;
+  owl:allValuesFrom <software/Software_library_version>;
+  owl:onProperty <software/devDependsOn> .
+
+_:genid94 a owl:Restriction;
+  owl:allValuesFrom <software/Directory>;
+  owl:onProperty <software/directories> .
+
+_:genid95 a owl:Restriction;
+  owl:allValuesFrom <software/Distribution>;
+  owl:onProperty <software/dist> .
+
+_:genid96 a owl:Restriction;
+  owl:allValuesFrom <software/Engine>;
+  owl:onProperty <software/engines> .
+
+_:genid97 a owl:Restriction;
+  owl:allValuesFrom <software/Export>;
+  owl:onProperty <software/exports> .
+
+_:genid98 a owl:Restriction;
+  owl:allValuesFrom <software/Funding>;
+  owl:onProperty <software/funding> .
+
+_:genid99 a owl:Restriction;
+  owl:allValuesFrom <software/Software_library>;
+  owl:onProperty <software/isVersionof> .
+
+_:genid100 a owl:Restriction;
+  owl:allValuesFrom <https://schema.org/Person>;
+  owl:onProperty <software/maintainer> .
+
+_:genid101 a owl:Restriction;
+  owl:allValuesFrom <software/NPMOperationalnternal>;
+  owl:onProperty <software/npmOperationalInternal> .
+
+_:genid102 a owl:Restriction;
+  owl:allValuesFrom <https://schema.org/Person>;
+  owl:onProperty <software/npmUser> .
+
+_:genid103 a owl:Restriction;
+  owl:allValuesFrom <software/Script>;
+  owl:onProperty <software/scripts> .
+
+_:genid104 a owl:Restriction;
+  owl:allValuesFrom <software/CodeRepository>;
+  owl:onProperty <https://schema.org/inRepository> .
+
+_:genid105 a owl:Restriction;
+  owl:onClass <https://schema.org/Person>;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onProperty <software/author> .
+
+_:genid106 a owl:Restriction;
+  owl:allValuesFrom xsd:dateTime;
+  owl:onProperty <software/created> .
+
+_:genid107 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/gitHead> .
+
+_:genid108 a owl:Restriction;
+  owl:allValuesFrom xsd:boolean;
+  owl:onProperty <software/hasShrinkwrap> .
+
+_:genid109 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/homepage> .
+
+_:genid110 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/keywords> .
+
+_:genid111 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/main> .
+
+_:genid112 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/module> .
+
+_:genid113 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/nodeVersion> .
+
+_:genid114 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/typings> .
+
+_:genid115 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/license> .
+
+<software/Software_package> a owl:Class;
+  rdfs:subClassOf _:genid116, _:genid117;
+  rdfs:label "Software package" .
+
+_:genid116 a owl:Restriction;
+  owl:someValuesFrom <software/Software_library_version>;
+  owl:onProperty <software/includes> .
+
+_:genid117 a owl:Restriction;
+  owl:someValuesFrom <software/Package_manager>;
+  owl:onProperty <software/managedBy> .
+
+<software/VersionControlSoftware> a owl:Class;
+  rdfs:subClassOf <https://schema.org/CreativeWork>, _:genid118 .
+
+_:genid118 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <software/protocol> .
+
+<https://schema.org/CreativeWork> a owl:Class;
+  rdfs:label "Creative Work" .
+
+<https://schema.org/Person> a owl:Class;
+  rdfs:subClassOf _:genid119, _:genid120, _:genid121;
+  rdfs:label "Person" .
+
+_:genid119 a owl:Restriction;
+  owl:allValuesFrom xsd:anyURI;
+  owl:onProperty <software/url> .
+
+_:genid120 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/email> .
+
+_:genid121 a owl:Restriction;
+  owl:allValuesFrom xsd:string;
+  owl:onProperty <https://schema.org/name> .
+
+<https://schema.org/SoftwareSourceCode> a owl:Class;
+  rdfs:subClassOf <https://schema.org/CreativeWork> .
+
+<software/git> a owl:NamedIndividual, <software/VersionControlSoftware>;
+  <software/protocol> "git";
+  rdfs:label "git" .
+
+<software/javascript> a owl:NamedIndividual, <software/ProgrammingLanguage> .
+
+<http://purl.org/dc/elements/1.1/> <http://purl.org/dc/terms/modified> "2012-06-14"^^xsd:date;
+  <http://purl.org/dc/terms/publisher> <http://purl.org/dc/aboutdcmi#DCMI>;
+  <http://purl.org/dc/terms/title> "Dublin Core Metadata Element Set, Version 1.1"@en .
+
+<http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/terms/description>
+    "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "An entity responsible for making contributions to the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Contributor"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/coverage> <http://purl.org/dc/terms/description>
+    "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Coverage"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/coverage) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "An entity primarily responsible for making the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Creator"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/terms/description> "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Date"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/date) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/format> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)]."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "The file format, physical medium, or dimensions of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Format"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/format) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/language> <http://purl.org/dc/terms/description>
+    "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "A language of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Language"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/language) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/publisher> <http://purl.org/dc/terms/description>
+    "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "An entity responsible for making the resource available."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Publisher"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/relation> <http://purl.org/dc/terms/description>
+    "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "A related resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Relation"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/rights> <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "Information about rights held in and over the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Rights"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/rights) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/source> <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "A related resource from which the described resource is derived."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Source"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/source) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/subject> <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "The topic of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Subject"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/subject) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+<http://purl.org/dc/elements/1.1/type> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en;
+  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date;
+  rdfs:comment "The nature or genre of the resource."@en;
+  rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/>;
+  rdfs:label "Type"@en;
+  <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .

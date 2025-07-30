@@ -1,0 +1,223 @@
+# Cybersec domain prototype mapping from JSON to RDF
+
+# TODO: create URI scheme. 
+#   - URI base, prefixes, ...
+#   - Class names should be included in URI for bom, tool, org, ...
+#   - What to do with special characters? (See bellow)
+#   - What to do when an unique identifier cannot be generated directly from data
+
+# TODO: define mechanism for resolving entities. See, for example, "vendor": "Siemens AG": currently we are relying on Siemens being called "Siemens AG" always and everywhere
+
+# TODO: define named graph URI policy, and how to add metadata to each named graph (PROV, DCAT, VOID, ...)
+
+# TODO: implement mechanism for making sure that all the JSON entities have been converted to RDF
+
+# TODO: define quality mechanism for making sure that the values are the correct ones, e.g. the serial number complies with the regexp from the ontology
+
+# TODO: define what to do with special characters when creating URIs
+
+prefixes: 
+  se_sec_vocab: "https://vocab.siemens-energy.com/cybersec/"
+  se_sec_vocab_component: "https://vocab.siemens-energy.com/cybersec/component/"
+  se_sec_vocab_external_reference: "https://vocab.siemens-energy.com/cybersec/externalreference/"
+  se_sec_vocab_license: "https://vocab.siemens-energy.com/cybersec/license/"
+  se_sec_data: "https://data.siemens-energy.com/cybersec/"
+  se_sec_data_bom: "https://data.siemens-energy.com/cybersec/bom/"
+  se_sec_data_tool: "https://data.siemens-energy.com/cybersec/tool/"
+  se_sec_data_org: "https://data.siemens-energy.com/cybersec/organization/"
+  se_sec_data_external_reference: "https://data.siemens-energy.com/cybersec/externalreference/"
+  se_sec_data_component: "https://data.siemens-energy.com/cybersec/component/"
+  se_sec_data_license: "https://data.siemens-energy.com/cybersec/license/"
+  se_sec_data_dependency: "https://data.siemens-energy.com/cybersec/dependency"
+  schema: "https://schema.org/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+
+sources:
+  bom-source: ['ETL.json~jsonpath', '$']
+  tool-source: ['ETL.json~jsonpath', '$.*.tools[*]']
+  tool-external-reference-source: ['ETL.json~jsonpath', '$.*.tools[*].externalReferences[*]']
+  metadata-license-source: ['ETL.json~jsonpath', '$.*.licenses[*]']
+  components-source: ['ETL.json~jsonpath', '$.components[*]'] 
+  component-external-reference-source: ['ETL.json~jsonpath', '$.components[*].externalReferences[*]']
+  component-license-source: ['ETL.json~jsonpath', '$.components[*].licenses[*]']
+  dependencies-source: ['ETL.json~jsonpath', '$.dependencies[*]']
+
+mappings:
+  BOM:
+    sources:
+      - bom-source
+    s: se_sec_data_bom:$(serialNumber) # TODO: avoid special characters in URI? ("%3A" for ":")
+    po:
+      - [a, se_sec_vocab:BOM]
+      - p: rdfs:label # Added to make rendering in graph better looking
+        o:
+          value: $(serialNumber)
+          datatype: xsd:string
+      - p: se_sec_vocab:serialNumber # TODO: add logic to make sure it complies with regex from ontology
+        o:
+          value: $(serialNumber)
+          datatype: xsd:string
+      - p: schema:schemaVersion
+        o:
+          value: $($schema)
+          datatype: xsd:anyURI
+      - p: se_sec_vocab:specVersion
+        o:
+          value: $(specVersion)
+          datatype: xsd:double
+      - p: schema:version
+        o:
+          value: $(version)
+          datatype: xsd:integer
+      - p: schema:dateCreated
+        o:
+          value: $(metadata.timestamp)
+          datatype: xsd:dateTimeStamp
+      - p: se_sec_vocab:toolUsed
+        o:
+          mapping: Tools
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(metadata.tools.name)",s]
+              - [str2, "$(name)",o]
+      - p: se_sec_vocab:license
+        o:
+          mapping: MetadataLicense
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(metadata.licenses.license.id)",s]
+              - [str2, "$(license.id)",o]
+      - p: se_sec_vocab:component
+        o:
+          mapping: Components
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(components.purl)",s]
+              - [str2, "$(purl)",o]
+  MetadataLicense:
+    sources:
+      - metadata-license-source
+    s: se_sec_data_license:$(license.id)
+    po:
+      - [a, se_sec_vocab_license:CC0-1.0] # TODO: add logic to choose proper type
+      - p: schema:identifier
+        o: 
+          value: $(license.id)
+          datatype: xsd:string
+  Tools:
+    sources:
+      - tool-source
+    s: se_sec_data_tool:$(name)
+    po:
+      - [a, schema:SoftwareApplication]
+      - p: schema:seller
+        o: se_sec_data_org:$(vendor) # TODO: avoid special characters in URI? ("%20" for " ")
+      - p: rdfs:label
+        o:
+          value: $(name)
+          language: en
+      - p: schema:softwareVersion
+        o: 
+          value: $(version)
+          datatype: xsd:string
+      - p: se_sec_vocab:externalReference
+        o: 
+          mapping: ToolExternalReference
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(externalReferences.url)",s]
+              - [str2, "$(url)",o]
+  ToolExternalReference:
+    sources:
+      - tool-external-reference-source
+    s: se_sec_data_external_reference:$(url) # TODO: base+UUID instead of base+URL
+    po:
+      - [a, se_sec_vocab_external_reference:website] # TODO: add logic to choose proper type
+      - p: se_sec_vocab:url
+        o: 
+          value: $(url)
+          datatype: xsd:anyURI
+  # TODO: properties
+  Components:
+    sources:
+      - components-source
+    s: se_sec_data_component:$(purl)
+    po:
+      - [a, se_sec_vocab_component:library] # TODO: add logic to choose proper type
+      - p: se_sec_vocab:purl
+        o: 
+          value: $(purl)
+          datatype: xsd:anyURI
+      - p: rdfs:label
+        o: 
+          value: $(purl)
+          datatype: xsd:string
+      - p: se_sec_vocab:bom-ref
+        o: 
+          value: $(bom-ref)
+          datatype: xsd:string
+      - p: rdfs:label
+        o: 
+          value: $(name)
+          datatype: xsd:string
+      - p: se_sec_vocab:componentVersion
+        o: 
+          value: $(version)
+          datatype: xsd:string
+      - p: rdfs:comment
+        o: 
+          value: $(description)
+          datatype: xsd:string
+      - p: schema:license
+        o:
+          value: $(licenses.license.name)
+      - p: se_sec_vocab:externalReference
+        o: 
+          mapping: ComponentExternalReference
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(externalReferences.url)",s]
+              - [str2, "$(url)",o]
+      # TODO: properties
+  ComponentExternalReference:
+    sources:
+      - component-external-reference-source
+    s: se_sec_data_external_reference:$(url) # TODO: base+UUID instead of base+URL
+    po:
+      - [a, se_sec_vocab_external_reference:distribution] # TODO: add logic to choose proper type
+      - p: se_sec_vocab:url
+        o: 
+          value: $(url)
+          datatype: xsd:anyURI
+      - p: rdfs:comment
+        o: 
+          value: $(comment)
+          datatype: xsd:string
+      - p: rdfs:label
+        o: 
+          value: $(comment)
+          datatype: xsd:string
+            # TODO: dependencies
+            #
+  Dependencies:
+    sources:
+      - dependencies-source
+    s: se_sec_data_dependency:$(ref)
+    po:
+      - [a, se_sec_vocab:Dependency]
+      - p: se_sec_vocab:source
+        o:
+          value: $(ref)
+          datatype: xsd:anyURI
+      - p: se_sec_vocab:target
+        o:
+          list: dependsOn
+          value: $(this)
+          datatype: xsd:anyURI
+
+

@@ -1,0 +1,121 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+### Datasets (Named Graph per file) ###
+
+<urn:sbom-aws-asff-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/AWS-ASFF-SBOM/sbom/combined.nt> .
+
+    <file:///mapping/AWS-ASFF-SBOM/sbom/combined.nt> a prov:Entity ;
+        dcterms:identifier "mapping/AWS-ASFF-SBOM/sbom/combined.nt" ;
+        prov:wasDerivedFrom <file:///data/AWS-ASFF-SBOM/sbom/sbom.json> .
+
+        <file:///data/AWS-ASFF-SBOM/sbom/sbom.json> a prov:Entity ;
+            dcterms:identifier "data/AWS-ASFF-SBOM/sbom/sbom.json" .
+
+<urn:sbom-aws-asff> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/AWS-ASFF-SBOM/sbom/sbom_graph.nt> .
+
+    <file:///mapping/AWS-ASFF-SBOM/sbom/sbom_graph.nt> a prov:Entity ;
+        dcterms:identifier "mapping/AWS-ASFF-SBOM/sbom/sbom_graph.nt" ;
+        prov:wasDerivedFrom <file:///data/AWS-ASFF-SBOM/sbom/sbom.json> .
+
+        <file:///data/AWS-ASFF-SBOM/sbom/sbom.json> a prov:Entity ;
+            dcterms:identifier "data/AWS-ASFF-SBOM/sbom/sbom.json" .
+
+<urn:aws-asff> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm_graph.nt> .
+
+    <file:///mapping/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm_graph.nt> a prov:Entity ;
+        dcterms:identifier "mapping/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm_graph.nt" ;
+        prov:wasDerivedFrom <file:///data/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm.json> .
+
+        <file:///data/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm.json> a prov:Entity ;
+            dcterms:identifier "data/AWS-ASFF-SBOM/aws_cve_npm/aws_cve_npm.json" .
+
+<urn:nvd> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/nvd/cve_data.ttl> .
+
+    <file:///mapping/nvd/cve_data.ttl> a prov:Entity ;
+        dcterms:identifier "mapping/nvd/cve_data.ttl" ;
+        prov:wasDerivedFrom <file:///data/NVD/nvdcve-1.1-2025.json> .
+
+        <file:///data/NVD/nvdcve-1.1-2025.json> a prov:Entity ;
+            dcterms:identifier "data/NVD/nvdcve-1.1-2025.json" .
+
+<urn:python> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/python/output.ttl> .
+
+    <file:///mapping/python/output.ttl> a prov:Entity ;
+        dcterms:identifier "mapping/python/output.ttl" ;
+        prov:wasDerivedFrom <file:///data/python/python.json> .
+
+        <file:///data/python/python.json> a prov:Entity ;
+            dcterms:identifier "data/python/python.json" .
+
+<urn:sbom> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/SBOM/knowledge-graph.nt> .
+
+    <file:///mapping/SBOM/knowledge-graph.nt> a prov:Entity ;
+        dcterms:identifier "mapping/SBOM/knowledge-graph.nt" ;
+        prov:wasDerivedFrom <file:///data/SBOM/ETL.json> .
+
+        <file:///data/SBOM/ETL.json> a prov:Entity ;
+            dcterms:identifier "data/SBOM/ETL.json" .
+
+### Links (Named Graph per file) ###
+
+<urn:links:nvd:python> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/links_nvd_python.ttl> .
+
+    <file:///mapping/links_nvd_python.ttl> a prov:Entity ;
+        dcterms:identifier "mapping/links_nvd_python.ttl" ;
+        rdfs:comment "Manually created links between the NVD vulnerabilities (urn:nvd graph) and the Python packages (urn:python graph) that are vulnerable to them. The links are manually created by parsing the results from python_packages_with_vulnerabilities.rq. Most of them are false positives, e.g. click is a package name but also a very frequent word in CVE descriptions. This linking process should be implemented properly with automatic methods and a validating procedure should be put on place."@en .
+
+<urn:links:nvd:sbom> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/links_nvd_sbom.ttl> .
+
+    <file:///mapping/links_nvd_sbom.ttl> a prov:Entity ;
+        dcterms:identifier "mapping/links_nvd_sbom.ttl" ;
+        rdfs:comment "Manually created  links between the NVD vulnerabilities (urn:nvd graph) and the Components of SBOMs (urn:sbom graph) that are vulnerable to them. The links are manually created by parsing the results from python_packages_with_vulnerabilities.rq. Most of them are false positives, e.g. click is a package name but also a very frequent word in CVE descriptions. This linking process should be implemented properly with automatic methods and a validating procedure should be put on place."@en .
+
+<urn:links:sbom:python> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/links_sbom_python.ttl> .
+
+    <file:///mapping/links_sbom_python.ttl> a prov:Entity ;
+        dcterms:identifier "mapping/links_sbom_python.ttl" ;
+        rdfs:comment "Manually created links between Python packages (urn:python graph) and SBOM components (urn:sbom graph) that represent the same entity. The links are manually created from links_nvd_python.ttl and links_nvd_sbom.ttl, by assuming that if a vulnerability affects both entities (Python package and SBOM component), and they have the same name, then they represent the same entity. This linking process should be implemented properly with automatic methods and a validating procedure should be put on place."@en .
+
+<urn:links:sbom:aws:asff> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/sbom_components_with_aws_asff_vulnerabilities.rq> .
+
+    <file:///mapping/sbom_components_with_aws_asff_vulnerabilities.rq> a prov:Entity ;
+        dcterms:identifier "mapping/sbom_components_with_aws_asff_vulnerabilities.rq" ;
+        rdfs:comment "Manually created links between AWS ASSF findings vulnerabilities (urn:aws-asff graph) and SBOM components (urn:sbom-aws-asff graph) that are vulnerable to them. The links are created with the query sbom_components_with_aws_asff_vulnerabilities.rq, by assuming that if a vulnerability affects a package with a name (e.g. ansi-regex), and the SBOM contains a library with that name (e.g. ansi-regex), the hasVulnerability link can be inserted (Also available at links_sbom_aws_asff.ttl). This linking process should be implemented properly with automatic methods and a validating procedure should be put on place."@en .
+
+<urn:links:sbom:aws:asff-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35> a prov:Entity ;
+    a void:Dataset ;
+    prov:wasDerivedFrom <file:///mapping/sbom_components_with_aws_asff_vulnerabilities-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35.rq> .
+
+    <file:///mapping/sbom_components_with_aws_asff_vulnerabilities-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35.rq> a prov:Entity ;
+        dcterms:identifier "mapping/sbom_components_with_aws_asff_vulnerabilities-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35.rq" ;
+        rdfs:comment "Manually created links between AWS ASSF findings vulnerabilities (urn:aws-asff graph) and SBOM components (urn:sbom-aws-asff-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35graph) that are vulnerable to them. The links are created with the query sbom_components_with_aws_asff_vulnerabilities-commit-9dd243a775f96d642f463ae7fd9622b2c058eb35.rq, by assuming that if a vulnerability affects a package with a name (e.g. ansi-regex), and the SBOM contains a library with that name (e.g. ansi-regex), the hasVulnerability link can be inserted (Also available at links_sbom_aws_asff.ttl). This linking process should be implemented properly with automatic methods and a validating procedure should be put on place."@en .
+
+
+        

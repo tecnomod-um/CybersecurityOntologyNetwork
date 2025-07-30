@@ -1,0 +1,1438 @@
+@prefix : <https://scap.nist.gov/schema/nvd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://scap.nist.gov/schema/nvd#> .
+
+<https://ontology.siemens-energy.com/nvd> rdf:type owl:Ontology ;
+                                           rdfs:comment "http://json-schema.org/draft-04/schema#" ,
+                                                        "https://scap.nist.gov/schema/nvd/feed/1.1/nvd_cve_feed_json_1.1.schema" ;
+                                           rdfs:label "NVD Vulnerability Data Feed version 1.1" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ontology.siemens-energy.com/nvd/CVE_metadata
+<https://ontology.siemens-energy.com/nvd/CVE_metadata> rdf:type owl:ObjectProperty .
+
+
+###  https://ontology.siemens-energy.com/nvd/availablityImpact
+<https://ontology.siemens-energy.com/nvd/availablityImpact> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricImpact> ;
+                                                            rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                            rdfs:range <https://ontology.siemens-energy.com/nvd/ImpactLevel> .
+
+
+###  https://ontology.siemens-energy.com/nvd/baseMetricV2
+<https://ontology.siemens-energy.com/nvd/baseMetricV2> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Impact> ;
+                                                       rdfs:range <https://ontology.siemens-energy.com/nvd/Base_metricV2> .
+
+
+###  https://ontology.siemens-energy.com/nvd/baseMetricV3
+<https://ontology.siemens-energy.com/nvd/baseMetricV3> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Impact> ;
+                                                       rdfs:range <https://ontology.siemens-energy.com/nvd/Base_metricV3> .
+
+
+###  https://ontology.siemens-energy.com/nvd/baseSeverity
+<https://ontology.siemens-energy.com/nvd/baseSeverity> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                       rdfs:range <https://ontology.siemens-energy.com/nvd/Severity> .
+
+
+###  https://ontology.siemens-energy.com/nvd/children
+<https://ontology.siemens-energy.com/nvd/children> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Node> ;
+                                                   rdfs:range <https://ontology.siemens-energy.com/nvd/CVE_Node> .
+
+
+###  https://ontology.siemens-energy.com/nvd/confidentialityImpact
+<https://ontology.siemens-energy.com/nvd/confidentialityImpact> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricImpact> ;
+                                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                                rdfs:range <https://ontology.siemens-energy.com/nvd/ImpactLevel> .
+
+
+###  https://ontology.siemens-energy.com/nvd/configurations
+<https://ontology.siemens-energy.com/nvd/configurations> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                         rdfs:range <https://ontology.siemens-energy.com/nvd/CVE_Configuration> .
+
+
+###  https://ontology.siemens-energy.com/nvd/impact
+<https://ontology.siemens-energy.com/nvd/impact> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                 rdfs:range <https://ontology.siemens-energy.com/nvd/CVE_Impact> .
+
+
+###  https://ontology.siemens-energy.com/nvd/integrityImpact
+<https://ontology.siemens-energy.com/nvd/integrityImpact> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricImpact> ;
+                                                          rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                          rdfs:range <https://ontology.siemens-energy.com/nvd/ImpactLevel> .
+
+
+###  https://ontology.siemens-energy.com/nvd/item
+<https://ontology.siemens-energy.com/nvd/item> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CPE_Match>
+                                                                           <https://ontology.siemens-energy.com/nvd/CVE_Node>
+                                                                           <https://ontology.siemens-energy.com/nvd/CVE_Record>
+                                                                         )
+                                                           ] ;
+                                               rdfs:range [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CPE_Match>
+                                                                          <https://ontology.siemens-energy.com/nvd/CPE_Name>
+                                                                          <https://ontology.siemens-energy.com/nvd/CVE>
+                                                                        )
+                                                          ] ;
+                                               rdfs:comment "CVE_items in JSON" .
+
+
+###  https://ontology.siemens-energy.com/nvd/metricImpact
+<https://ontology.siemens-energy.com/nvd/metricImpact> rdf:type owl:ObjectProperty .
+
+
+###  https://ontology.siemens-energy.com/nvd/nodes
+<https://ontology.siemens-energy.com/nvd/nodes> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Configuration> ;
+                                                rdfs:range <https://ontology.siemens-energy.com/nvd/CVE_Node> .
+
+
+###  https://ontology.siemens-energy.com/nvd/problems
+<https://ontology.siemens-energy.com/nvd/problems> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                   rdfs:range <https://ontology.siemens-energy.com/nvd/Problem_Type> .
+
+
+###  https://ontology.siemens-energy.com/nvd/reference
+<https://ontology.siemens-energy.com/nvd/reference> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                    rdfs:range <https://ontology.siemens-energy.com/nvd/Reference> ;
+                                                    rdfs:comment "references" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://ontology.siemens-energy.com/nvd/CVE_data_format
+<https://ontology.siemens-energy.com/nvd/CVE_data_format> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                                          rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_data_numberOfCVEs
+<https://ontology.siemens-energy.com/nvd/CVE_data_numberOfCVEs> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                                                rdfs:range xsd:int ;
+                                                                rdfs:comment "NVD adds number of CVE in this feed" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_data_time_stamp
+<https://ontology.siemens-energy.com/nvd/CVE_data_time_stamp> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                                              rdfs:range xsd:dateTimeStamp ;
+                                                              rdfs:comment "NVD adds feed date timestamp" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_data_type
+<https://ontology.siemens-energy.com/nvd/CVE_data_type> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                                        rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_data_version
+<https://ontology.siemens-energy.com/nvd/CVE_data_version> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CVE_Configuration>
+                                                                                       <https://ontology.siemens-energy.com/nvd/CVE_Record>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/ID
+<https://ontology.siemens-energy.com/nvd/ID> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                             rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/acInsufInfo
+<https://ontology.siemens-energy.com/nvd/acInsufInfo> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                      rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/accessComplexityType
+<https://ontology.siemens-energy.com/nvd/accessComplexityType> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                               rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                               rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/accessVectorType
+<https://ontology.siemens-energy.com/nvd/accessVectorType> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/refsource> ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                                       <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/assigner
+<https://ontology.siemens-energy.com/nvd/assigner> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Record> ;
+                                                   rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/attackComplexityType
+<https://ontology.siemens-energy.com/nvd/attackComplexityType> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                               rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                               rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/attackVectorType
+<https://ontology.siemens-energy.com/nvd/attackVectorType> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                           rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                           rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/authenticationType
+<https://ontology.siemens-energy.com/nvd/authenticationType> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                             rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                             rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/baseScore
+<https://ontology.siemens-energy.com/nvd/baseScore> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/score> ;
+                                                    rdfs:range xsd:float .
+
+
+###  https://ontology.siemens-energy.com/nvd/baseVector
+<https://ontology.siemens-energy.com/nvd/baseVector> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                     rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/ciaRequirementType
+<https://ontology.siemens-energy.com/nvd/ciaRequirementType> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                             rdfs:domain [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                                         <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                                       )
+                                                                         ] ;
+                                                             rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/ciaType
+<https://ontology.siemens-energy.com/nvd/ciaType> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                              <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                            )
+                                                              ] ;
+                                                  rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/collateralDamagePotentialType
+<https://ontology.siemens-energy.com/nvd/collateralDamagePotentialType> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                        rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                                        rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/confidenceType
+<https://ontology.siemens-energy.com/nvd/confidenceType> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                         rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                         rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/cpe22uri
+<https://ontology.siemens-energy.com/nvd/cpe22uri> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CPE_Match>
+                                                                               <https://ontology.siemens-energy.com/nvd/CPE_Name>
+                                                                             )
+                                                               ] ;
+                                                   rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/cpe23uri
+<https://ontology.siemens-energy.com/nvd/cpe23uri> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CPE_Match>
+                                                                               <https://ontology.siemens-energy.com/nvd/CPE_Name>
+                                                                             )
+                                                               ] ;
+                                                   rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/cve
+<https://ontology.siemens-energy.com/nvd/cve> rdf:type owl:DatatypeProperty ;
+                                              rdfs:range xsd:anyURI .
+
+
+###  https://ontology.siemens-energy.com/nvd/cvssV2
+<https://ontology.siemens-energy.com/nvd/cvssV2> rdf:type owl:DatatypeProperty .
+
+
+###  https://ontology.siemens-energy.com/nvd/cvssV3
+<https://ontology.siemens-energy.com/nvd/cvssV3> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:range xsd:anyURI .
+
+
+###  https://ontology.siemens-energy.com/nvd/description
+<https://ontology.siemens-energy.com/nvd/description> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                      rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/exploitCodeMaturityType
+<https://ontology.siemens-energy.com/nvd/exploitCodeMaturityType> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                  rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                                  rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/exploitabilityScore
+<https://ontology.siemens-energy.com/nvd/exploitabilityScore> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/subscore> .
+
+
+###  https://ontology.siemens-energy.com/nvd/exploitabilityType
+<https://ontology.siemens-energy.com/nvd/exploitabilityType> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                             rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                             rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/impactScore
+<https://ontology.siemens-energy.com/nvd/impactScore> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/subscore> .
+
+
+###  https://ontology.siemens-energy.com/nvd/lastModifiedData
+<https://ontology.siemens-energy.com/nvd/lastModifiedData> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <https://ontology.siemens-energy.com/nvd/CPE_Name>
+                                                                                       <https://ontology.siemens-energy.com/nvd/CVE>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range xsd:dateTime .
+
+
+###  https://ontology.siemens-energy.com/nvd/metricDPs
+<https://ontology.siemens-energy.com/nvd/metricDPs> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:comment "Shapes are required to control the values of the subproperties" .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedAttackComplexityType
+<https://ontology.siemens-energy.com/nvd/modifiedAttackComplexityType> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                                       rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedAttackVectorType
+<https://ontology.siemens-energy.com/nvd/modifiedAttackVectorType> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                   rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedCiaType
+<https://ontology.siemens-energy.com/nvd/modifiedCiaType> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                          rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                          rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedPrivilegesRequiredType
+<https://ontology.siemens-energy.com/nvd/modifiedPrivilegesRequiredType> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                         rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                                         rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedScopeType
+<https://ontology.siemens-energy.com/nvd/modifiedScopeType> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                            rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                            rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/modifiedUserInteractionType
+<https://ontology.siemens-energy.com/nvd/modifiedUserInteractionType> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                      rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                                      rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/negate
+<https://ontology.siemens-energy.com/nvd/negate> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Node> ;
+                                                 rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/obtainAllPrivilege
+<https://ontology.siemens-energy.com/nvd/obtainAllPrivilege> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/obtainPrivilege> ;
+                                                             rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                             rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/obtainOtherPrivilege
+<https://ontology.siemens-energy.com/nvd/obtainOtherPrivilege> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/obtainPrivilege> ;
+                                                               rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                               rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/obtainPrivilege
+<https://ontology.siemens-energy.com/nvd/obtainPrivilege> rdf:type owl:DatatypeProperty .
+
+
+###  https://ontology.siemens-energy.com/nvd/obtainUserPrivilege
+<https://ontology.siemens-energy.com/nvd/obtainUserPrivilege> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/obtainPrivilege> ;
+                                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                              rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/operator
+<https://ontology.siemens-energy.com/nvd/operator> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE_Node> ;
+                                                   rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/privilegesRequiredType
+<https://ontology.siemens-energy.com/nvd/privilegesRequiredType> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                 rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/problemtype_data
+<https://ontology.siemens-energy.com/nvd/problemtype_data> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://ontology.siemens-energy.com/nvd/Problem_Type> ;
+                                                           rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/publishedData
+<https://ontology.siemens-energy.com/nvd/publishedData> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <https://ontology.siemens-energy.com/nvd/CVE> ;
+                                                        rdfs:range xsd:dateTime .
+
+
+###  https://ontology.siemens-energy.com/nvd/refsource
+<https://ontology.siemens-energy.com/nvd/refsource> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <https://ontology.siemens-energy.com/nvd/Reference> ;
+                                                    rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/remediationLevelType
+<https://ontology.siemens-energy.com/nvd/remediationLevelType> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                                           <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                                         )
+                                                                           ] .
+
+
+###  https://ontology.siemens-energy.com/nvd/reportConfidenceType
+<https://ontology.siemens-energy.com/nvd/reportConfidenceType> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                               rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                               rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/scopeType
+<https://ontology.siemens-energy.com/nvd/scopeType> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                    rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                    rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/score
+<https://ontology.siemens-energy.com/nvd/score> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> .
+
+
+###  https://ontology.siemens-energy.com/nvd/scoreType
+<https://ontology.siemens-energy.com/nvd/scoreType> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                    rdfs:domain [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                                <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                              )
+                                                                ] ;
+                                                    rdfs:range xsd:float .
+
+
+###  https://ontology.siemens-energy.com/nvd/severityType
+<https://ontology.siemens-energy.com/nvd/severityType> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                       rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/subscore
+<https://ontology.siemens-energy.com/nvd/subscore> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/score> ;
+                                                   rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                owl:onDatatype xsd:float ;
+                                                                owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                       ]
+                                                                                       [ xsd:maxInclusive "10.0"^^xsd:float
+                                                                                       ]
+                                                                                     )
+                                                              ] .
+
+
+###  https://ontology.siemens-energy.com/nvd/tag
+<https://ontology.siemens-energy.com/nvd/tag> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/Reference> ;
+                                              rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/targetDistributionType
+<https://ontology.siemens-energy.com/nvd/targetDistributionType> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                                 rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                                 rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/url
+<https://ontology.siemens-energy.com/nvd/url> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/Reference> ;
+                                              rdfs:range xsd:anyURI .
+
+
+###  https://ontology.siemens-energy.com/nvd/userInteractionPrivilege
+<https://ontology.siemens-energy.com/nvd/userInteractionPrivilege> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/obtainPrivilege> ;
+                                                                   rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV2> ;
+                                                                   rdfs:range xsd:boolean .
+
+
+###  https://ontology.siemens-energy.com/nvd/userInteractionType
+<https://ontology.siemens-energy.com/nvd/userInteractionType> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metricV3> ;
+                                                              rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/vectorString
+<https://ontology.siemens-energy.com/nvd/vectorString> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <https://ontology.siemens-energy.com/nvd/metricDPs> ;
+                                                       rdfs:domain <https://ontology.siemens-energy.com/nvd/Base_metric> ;
+                                                       rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/version
+<https://ontology.siemens-energy.com/nvd/version> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <https://ontology.siemens-energy.com/nvd/Base_metric>
+                                                                              <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                              <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                            )
+                                                              ] ;
+                                                  rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/versionEndExcluding
+<https://ontology.siemens-energy.com/nvd/versionEndExcluding> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/CPE_Match> ;
+                                                              rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/versionEndIncluding
+<https://ontology.siemens-energy.com/nvd/versionEndIncluding> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://ontology.siemens-energy.com/nvd/CPE_Match> ;
+                                                              rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/versionStartExcluding
+<https://ontology.siemens-energy.com/nvd/versionStartExcluding> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/CPE_Match> ;
+                                                                rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/versionStartIncluding
+<https://ontology.siemens-energy.com/nvd/versionStartIncluding> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <https://ontology.siemens-energy.com/nvd/CPE_Match> ;
+                                                                rdfs:range xsd:string .
+
+
+###  https://ontology.siemens-energy.com/nvd/vulnerable
+<https://ontology.siemens-energy.com/nvd/vulnerable> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <https://ontology.siemens-energy.com/nvd/CPE_Match> ;
+                                                     rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ontology.siemens-energy.com/nvd/Base_metric
+<https://ontology.siemens-energy.com/nvd/Base_metric> rdf:type owl:Class ;
+                                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/baseSeverity> ;
+                                                                        owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/Severity>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/availablityImpact> ;
+                                                                        owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/ImpactLevel>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/confidentialityImpact> ;
+                                                                        owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/ImpactLevel>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/integrityImpact> ;
+                                                                        owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/ImpactLevel>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/baseScore> ;
+                                                                        owl:someValuesFrom xsd:float
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/vectorString> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/version> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/baseVector> ;
+                                                                        owl:allValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/exploitabilityScore> ;
+                                                                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                            owl:onDatatype xsd:float ;
+                                                                                            owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                                                   ]
+                                                                                                                   [ xsd:maxInclusive "10.0"^^xsd:float
+                                                                                                                   ]
+                                                                                                                 )
+                                                                                          ]
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://ontology.siemens-energy.com/nvd/impactScore> ;
+                                                                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                            owl:onDatatype xsd:float ;
+                                                                                            owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                                                   ]
+                                                                                                                   [ xsd:maxInclusive "10.0"^^xsd:float
+                                                                                                                   ]
+                                                                                                                 )
+                                                                                          ]
+                                                                      ] ;
+                                                      rdfs:label "Base metric" ,
+                                                                 "CVSS score" .
+
+
+###  https://ontology.siemens-energy.com/nvd/Base_metricV2
+<https://ontology.siemens-energy.com/nvd/Base_metricV2> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://ontology.siemens-energy.com/nvd/Base_metric> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/acInsufInfo> ;
+                                                                          owl:someValuesFrom xsd:boolean
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/accessComplexityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "MEDIUM" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/authenticationType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "MULTIPLE" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NONE" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "SINGLE" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/ciaRequirementType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "MEDIUM" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NOT_DEFINED" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/ciaType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "COMPLETE" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NONE" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "PARTIAL" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/collateralDamagePotentialType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "LOW_MEDIUM" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "MEDIUM_HIGH" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "NONE" ;
+                                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                  rdf:first "NOT_DEFINED" ;
+                                                                                                                                                                  rdf:rest rdf:nil
+                                                                                                                                                                ]
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/exploitabilityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "FUNCTIONAL" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "HIGH" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NOT_DEFINED" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "PROOF_OF_CONCEPT" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "UNPROVEN" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/obtainAllPrivilege> ;
+                                                                          owl:someValuesFrom xsd:boolean
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/obtainOtherPrivilege> ;
+                                                                          owl:someValuesFrom xsd:boolean
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/obtainUserPrivilege> ;
+                                                                          owl:someValuesFrom xsd:boolean
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/remediationLevelType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "NOT_DEFINED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "OFFICIAL_FIX" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "TEMPORARY_FIX" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "UNAVAILABLE" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "WORKAROUND" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/reportConfidenceType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "CONFIRMED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NOT_DEFINED" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "UNCONFIRMED" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "UNCORROBORATED" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/targetDistributionType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "MEDIUM" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NONE" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "NOT_DEFINED" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/userInteractionPrivilege> ;
+                                                                          owl:someValuesFrom xsd:boolean
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/accessVectorType> ;
+                                                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:oneOf [ rdf:type rdf:List ;
+                                                                                                          rdf:first "ADJACENT_NETWORK" ;
+                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                     rdf:first "LOCAL" ;
+                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                rdf:first "NETWORK" ;
+                                                                                                                                rdf:rest rdf:nil
+                                                                                                                              ]
+                                                                                                                   ]
+                                                                                                        ]
+                                                                                            ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/scoreType> ;
+                                                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:onDatatype xsd:float ;
+                                                                                              owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                                                     ]
+                                                                                                                     [ xsd:maxInclusive "10.0"^^xsd:float
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                            ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/version> ;
+                                                                          owl:hasValue "2.0"
+                                                                        ] ;
+                                                        rdfs:comment """Pattern for vectorString:
+\"^((AV:[NAL]|AC:[LMH]|Au:[MSN]|[CIA]:[NPC]|E:(U|POC|F|H|ND)|RL:(OF|TF|W|U|ND)|RC:(UC|UR|C|ND)|CDP:(N|L|LM|MH|H|ND)|TD:(N|L|M|H|ND)|[CIA]R:(L|M|H|ND))/)*(AV:[NAL]|AC:[LMH]|Au:[MSN]|[CIA]:[NPC]|E:(U|POC|F|H|ND)|RL:(OF|TF|W|U|ND)|RC:(UC|UR|C|ND)|CDP:(N|L|LM|MH|H|ND)|TD:(N|L|M|H|ND)|[CIA]R:(L|M|H|ND))$\"""" ;
+                                                        rdfs:label "CVSS V2.0 score" ;
+                                                        rdfs:seeAlso "https://csrc.nist.gov/schema/nvd/feed/1.1-Beta/cvss-v2.0_beta.json" .
+
+
+###  https://ontology.siemens-energy.com/nvd/Base_metricV3
+<https://ontology.siemens-energy.com/nvd/Base_metricV3> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://ontology.siemens-energy.com/nvd/Base_metric> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/attackComplexityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest rdf:nil
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/attackVectorType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "ADJACENT_NETWORK" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOCAL" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NETWORK" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "PHYSICAL" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/ciaRequirementType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "MEDIUM" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NOT_DEFINED" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/ciaType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "COMPLETE" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NONE" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "PARTIAL" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/confidenceType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "CONFIRMED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NOT_DEFINED" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "REASONABLE" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "UNKNOWN" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/exploitCodeMaturityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "FUNCTIONAL" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "HIGH" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NOT_DEFINED" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "PROOF_OF_CONCEPT" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "UNPROVEN" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedAttackComplexityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NOT_DEFINED" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedAttackVectorType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "ADJACENT_NETWORK" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOCAL" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NETWORK" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NOT_DEFINED" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "PHYSICAL" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedCiaType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NONE" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NOT_DEFINED" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedPrivilegesRequiredType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NONE" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "NOT_DEFINED" ;
+                                                                                                                                            rdf:rest rdf:nil
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedScopeType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "CHANGED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NOT_DEFINED" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "UNCHANGED" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/modifiedUserInteractionType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "NONE" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "NOT_DEFINED" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "REQUIRED" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/privilegesRequiredType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "HIGH" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "LOW" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "NONE" ;
+                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/remediationLevelType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "NOT_DEFINED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "OFFICIAL_FIX" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "TEMPORARY_FIX" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "UNAVAILABLE" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "WORKAROUND" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/scopeType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "CHANGED" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "UNCHANGED" ;
+                                                                                                                      rdf:rest rdf:nil
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/severityType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "CRITICAL" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "HIGH" ;
+                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                 rdf:first "LOW" ;
+                                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                            rdf:first "MEDIUM" ;
+                                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                       rdf:first "NONE" ;
+                                                                                                                                                       rdf:rest rdf:nil
+                                                                                                                                                     ]
+                                                                                                                                          ]
+                                                                                                                               ]
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/userInteractionType> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "NONE" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "REQUIRED" ;
+                                                                                                                      rdf:rest rdf:nil
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/version> ;
+                                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                                                           rdf:first "3.0" ;
+                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                      rdf:first "3.1" ;
+                                                                                                                      rdf:rest rdf:nil
+                                                                                                                    ]
+                                                                                                         ]
+                                                                                             ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/accessVectorType> ;
+                                                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:oneOf [ rdf:type rdf:List ;
+                                                                                                          rdf:first "ADJACENT_NETWORK" ;
+                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                     rdf:first "LOCAL" ;
+                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                rdf:first "NETWORK" ;
+                                                                                                                                rdf:rest rdf:nil
+                                                                                                                              ]
+                                                                                                                   ]
+                                                                                                        ]
+                                                                                            ]
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://ontology.siemens-energy.com/nvd/scoreType> ;
+                                                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:onDatatype xsd:float ;
+                                                                                              owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                                                                                     ]
+                                                                                                                     [ xsd:maxInclusive "10.0"^^xsd:float
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                            ]
+                                                                        ] ;
+                                                        rdfs:comment """Pattern for vectorString
+
+\"^CVSS:3.[01]/((AV:[NALP]|AC:[LH]|PR:[UNLH]|UI:[NR]|S:[UC]|[CIA]:[NLH]|E:[XUPFH]|RL:[XOTWU]|RC:[XURC]|[CIA]R:[XLMH]|MAV:[XNALP]|MAC:[XLH]|MPR:[XUNLH]|MUI:[XNR]|MS:[XUC]|M[CIA]:[XNLH])/)*(AV:[NALP]|AC:[LH]|PR:[UNLH]|UI:[NR]|S:[UC]|[CIA]:[NLH]|E:[XUPFH]|RL:[XOTWU]|RC:[XURC]|[CIA]R:[XLMH]|MAV:[XNALP]|MAC:[XLH]|MPR:[XUNLH]|MUI:[XNR]|MS:[XUC]|M[CIA]:[XNLH])$\"""" ;
+                                                        rdfs:label "CVSS V3.x score" ;
+                                                        rdfs:seeAlso "https://csrc.nist.gov/schema/nvd/feed/1.1-Beta/cvss-v3.x_beta.json" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CPE_Match
+<https://ontology.siemens-energy.com/nvd/CPE_Match> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/item> ;
+                                                                      owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/CPE_Name>
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/cpe22uri> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/versionEndExcluding> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/versionEndIncluding> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/versionStartExcluding> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/versionStartIncluding> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/cpe23uri> ;
+                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                      owl:onDataRange xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/vulnerable> ;
+                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                      owl:onDataRange xsd:boolean
+                                                                    ] ;
+                                                    rdfs:label "CPE match string or range" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CPE_Name
+<https://ontology.siemens-energy.com/nvd/CPE_Name> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/cpe22uri> ;
+                                                                     owl:allValuesFrom xsd:string
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/lastModifiedData> ;
+                                                                     owl:allValuesFrom xsd:dateTime
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/cpe23uri> ;
+                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                     owl:onDataRange xsd:string
+                                                                   ] ;
+                                                   rdfs:label "CPE name" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE
+<https://ontology.siemens-energy.com/nvd/CVE> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/configurations> ;
+                                                                owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/CVE_Configuration>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/impact> ;
+                                                                owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/CVE_Impact>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/problems> ;
+                                                                owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/Problem_Type>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/reference> ;
+                                                                owl:allValuesFrom <https://ontology.siemens-energy.com/nvd/Reference>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/lastModifiedData> ;
+                                                                owl:allValuesFrom xsd:dateTime
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <https://ontology.siemens-energy.com/nvd/publishedData> ;
+                                                                owl:allValuesFrom xsd:dateTime
+                                                              ] ;
+                                              rdfs:label "Common Vulnerability and Exposure (CVE)" ;
+                                              rdfs:seeAlso "https://csrc.nist.gov/schema/nvd/feed/1.1-Beta/CVE_JSON_4.0_min_1.1_beta.schema" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_Configuration
+<https://ontology.siemens-energy.com/nvd/CVE_Configuration> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://ontology.siemens-energy.com/nvd/nodes> ;
+                                                                              owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/CVE_Node>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_version> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange xsd:string
+                                                                            ] ;
+                                                            rdfs:label "Set of product configurations for a NVD applicability statement" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_Impact
+<https://ontology.siemens-energy.com/nvd/CVE_Impact> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/baseMetricV2> ;
+                                                                       owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/Base_metricV2>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/baseMetricV3> ;
+                                                                       owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/Base_metricV3>
+                                                                     ] ;
+                                                     rdfs:label "Impact scores for a vulnerability as found on NVD" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_Node
+<https://ontology.siemens-energy.com/nvd/CVE_Node> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/children> ;
+                                                                     owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/CVE_Node>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/item> ;
+                                                                     owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/CPE_Match>
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/negate> ;
+                                                                     owl:allValuesFrom xsd:boolean
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <https://ontology.siemens-energy.com/nvd/operator> ;
+                                                                     owl:allValuesFrom xsd:string
+                                                                   ] ;
+                                                   rdfs:label "Node or sub-node in an NVD applicability statement" .
+
+
+###  https://ontology.siemens-energy.com/nvd/CVE_Record
+<https://ontology.siemens-energy.com/nvd/CVE_Record> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/item> ;
+                                                                       owl:someValuesFrom <https://ontology.siemens-energy.com/nvd/CVE>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_format> ;
+                                                                       owl:allValuesFrom xsd:string
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_numberOfCVEs> ;
+                                                                       owl:allValuesFrom xsd:int
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_time_stamp> ;
+                                                                       owl:allValuesFrom xsd:dateTimeStamp
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_type> ;
+                                                                       owl:allValuesFrom xsd:string
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/CVE_data_version> ;
+                                                                       owl:allValuesFrom xsd:string
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/ID> ;
+                                                                       owl:allValuesFrom xsd:string
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://ontology.siemens-energy.com/nvd/assigner> ;
+                                                                       owl:allValuesFrom xsd:string
+                                                                     ] ;
+                                                     rdfs:label "Common Vulnerability and Exposure Record" .
+
+
+###  https://ontology.siemens-energy.com/nvd/ImpactLevel
+<https://ontology.siemens-energy.com/nvd/ImpactLevel> rdf:type owl:Class ;
+                                                      rdfs:label "Level of impact" .
+
+
+###  https://ontology.siemens-energy.com/nvd/Problem_Type
+<https://ontology.siemens-energy.com/nvd/Problem_Type> rdf:type owl:Class ;
+                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <https://ontology.siemens-energy.com/nvd/problemtype_data> ;
+                                                                         owl:allValuesFrom xsd:string
+                                                                       ] ;
+                                                       rdfs:label "Type of problem" .
+
+
+###  https://ontology.siemens-energy.com/nvd/Reference
+<https://ontology.siemens-energy.com/nvd/Reference> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/refsource> ;
+                                                                      owl:allValuesFrom xsd:anyURI
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/tag> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://ontology.siemens-energy.com/nvd/url> ;
+                                                                      owl:allValuesFrom xsd:anyURI
+                                                                    ] ;
+                                                    rdfs:label "Reference for a vulnerability" .
+
+
+###  https://ontology.siemens-energy.com/nvd/Severity
+<https://ontology.siemens-energy.com/nvd/Severity> rdf:type owl:Class ;
+                                                   rdfs:label "Severity" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ontology.siemens-energy.com/nvd/adjacent_network
+<https://ontology.siemens-energy.com/nvd/adjacent_network> rdf:type owl:NamedIndividual .
+
+
+###  https://ontology.siemens-energy.com/nvd/local
+<https://ontology.siemens-energy.com/nvd/local> rdf:type owl:NamedIndividual .
+
+
+###  https://ontology.siemens-energy.com/nvd/network
+<https://ontology.siemens-energy.com/nvd/network> rdf:type owl:NamedIndividual .
+
+
+###  https://ontology.siemens-energy.com/nvd/physical
+<https://ontology.siemens-energy.com/nvd/physical> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

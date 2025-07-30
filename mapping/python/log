@@ -1,0 +1,530 @@
+https://data.siemens-energy.com/cybersec/package/blinker
+https://data.siemens-energy.com/cybersec/package/itsdangerous
+https://data.siemens-energy.com/cybersec/package/Werkzeug
+MarkupSafe >= 2.1.1
+watchdog >= 2.3
+https://data.siemens-energy.com/cybersec/package/annotated-types
+typing-extensions >= 4.0.0
+https://data.siemens-energy.com/cybersec/package/arrow
+python-dateutil >= 2.7.0
+types-python-dateutil >= 2.8.10
+sphinx >= 7.0.0
+sphinx_rtd_theme >= 1.3.0
+dateparser == 1.
+pytz == 2021.1
+simplejson == 3.
+https://data.siemens-energy.com/cybersec/package/astroid
+typing-extensions >= 4.0.0
+https://data.siemens-energy.com/cybersec/package/asttokens
+six >= 1.12.0
+astroid < 2
+astroid < 4
+astroid < 2
+astroid < 4
+https://data.siemens-energy.com/cybersec/package/attrs
+mypy >= 1.11.1
+pytest >= 4.3.0
+mypy >= 1.11.1
+pytest >= 4.3.0
+mypy >= 1.11.1
+pytest >= 4.3.0
+towncrier < 24.7
+mypy >= 1.11.1
+pytest >= 4.3.0
+mypy >= 1.11.1
+https://data.siemens-energy.com/cybersec/package/backcall
+https://data.siemens-energy.com/cybersec/package/beautifulsoup4
+soupsieve > 1.2
+https://data.siemens-energy.com/cybersec/package/bleach
+six >= 1.9.0
+tinycss2 < 1.3
+https://data.siemens-energy.com/cybersec/package/boolean.py
+https://data.siemens-energy.com/cybersec/package/boto3
+https://data.siemens-energy.com/cybersec/package/botocore
+https://data.siemens-energy.com/cybersec/package/build
+packaging >= 19.1
+importlib-metadata >= 4.6
+tomli >= 1.1.0
+furo >= 2023.08.17
+sphinx-argparse-cli >= 1.5
+sphinx-autodoc-typehints >= 1.10
+sphinx-issues >= 3.0.0
+filelock >= 3
+pytest >= 6.2.4
+pytest-cov >= 2.12
+pytest-mock >= 2
+pytest-rerunfailures >= 9.1
+pytest-xdist >= 1.34
+wheel >= 0.36.0
+setuptools >= 42.0.0
+setuptools >= 56.0.0
+setuptools >= 56.0.0
+setuptools >= 67.8.0
+importlib-metadata >= 5.1
+typing-extensions >= 3.7.4.3
+uv >= 0.1.18
+virtualenv >= 20.0.35
+https://data.siemens-energy.com/cybersec/package/capycli
+https://data.siemens-energy.com/cybersec/package/certifi
+https://data.siemens-energy.com/cybersec/package/chardet
+https://data.siemens-energy.com/cybersec/package/charset-normalizer
+https://data.siemens-energy.com/cybersec/package/click
+https://data.siemens-energy.com/cybersec/package/cli-support
+https://data.siemens-energy.com/cybersec/package/colorama
+https://data.siemens-energy.com/cybersec/package/contourpy
+numpy >= 1.23
+sphinx >= 7.2
+mypy == 1.11.1
+https://data.siemens-energy.com/cybersec/package/cycler
+https://data.siemens-energy.com/cybersec/package/cyclonedx-bom
+https://data.siemens-energy.com/cybersec/package/cyclonedx-python-lib
+https://data.siemens-energy.com/cybersec/package/dateparser
+regex != 2019.02.19
+https://data.siemens-energy.com/cybersec/package/decorator
+https://data.siemens-energy.com/cybersec/package/defusedxml
+https://data.siemens-energy.com/cybersec/package/dill
+objgraph >= 1.7.2
+gprof2dot >= 2022.7.29
+https://data.siemens-energy.com/cybersec/package/distlib
+https://data.siemens-energy.com/cybersec/package/docopt
+https://data.siemens-energy.com/cybersec/package/doxypypy
+https://data.siemens-energy.com/cybersec/package/et-xmlfile
+https://data.siemens-energy.com/cybersec/package/executing
+asttokens >= 2.1.0
+https://data.siemens-energy.com/cybersec/package/fastjsonschema
+https://data.siemens-energy.com/cybersec/package/filelock
+furo >= 2023.9.10
+sphinx-autodoc-typehints != 1.23.4
+sphinx >= 7.2.6
+covdefaults >= 2.3
+coverage >= 7.3.2
+diff-cover >= 8.0.1
+pytest-asyncio >= 0.21
+pytest-cov >= 4.1
+pytest-mock >= 3.12
+pytest-timeout >= 2.2
+pytest >= 7.4.3
+virtualenv >= 20.26.2
+typing-extensions >= 4.8
+https://data.siemens-energy.com/cybersec/package/Flask
+Werkzeug >= 3.1
+Jinja2 >= 3.1.2
+itsdangerous >= 2.2
+click >= 8.1.3
+blinker >= 1.9
+importlib-metadata >= 3.6
+asgiref >= 3.2
+https://data.siemens-energy.com/cybersec/package/fonttools
+fs < 3
+lxml >= 4.0
+brotli >= 1.0.1
+brotlicffi >= 0.8.0
+zopfli >= 0.1.4
+unicodedata2 >= 15.1.0
+lz4 >= 1.7.4.2
+skia-pathops >= 0.5.0
+uharfbuzz >= 0.23.0
+fs < 3
+lxml >= 4.0
+brotli >= 1.0.1
+brotlicffi >= 0.8.0
+zopfli >= 0.1.4
+unicodedata2 >= 15.1.0
+lz4 >= 1.7.4.2
+skia-pathops >= 0.5.0
+uharfbuzz >= 0.23.0
+https://data.siemens-energy.com/cybersec/package/fqdn
+https://data.siemens-energy.com/cybersec/package/idna
+https://data.siemens-energy.com/cybersec/package/importlib-resources
+https://data.siemens-energy.com/cybersec/package/ipython
+jedi >= 0.16
+prompt-toolkit != 3.0.37
+pygments >= 2.4.0
+traitlets >= 5
+pexpect > 4.3
+setuptools >= 18.5
+sphinx >= 1.3
+pytest < 7
+pytest < 7.1
+matplotlib != 3.2.0
+numpy >= 1.21
+setuptools >= 18.5
+sphinx >= 1.3
+pytest < 7
+pytest < 7.1
+pytest < 7.1
+pytest < 7.1
+matplotlib != 3.2.0
+numpy >= 1.21
+https://data.siemens-energy.com/cybersec/package/isoduration
+https://data.siemens-energy.com/cybersec/package/isort
+https://data.siemens-energy.com/cybersec/package/jedi
+https://data.siemens-energy.com/cybersec/package/Jinja2
+MarkupSafe >= 2.0
+Babel >= 2.7
+https://data.siemens-energy.com/cybersec/package/jmespath
+https://data.siemens-energy.com/cybersec/package/jsonpointer
+https://data.siemens-energy.com/cybersec/package/jsonschema
+attrs >= 22.2.0
+importlib-resources >= 1.4.0
+jsonschema-specifications >= 2023.03.6
+pkgutil-resolve-name >= 1.3.10
+referencing >= 0.28.4
+rpds-py >= 0.7.1
+jsonpointer > 1.13
+webcolors >= 1.11
+jsonpointer > 1.13
+rfc3986-validator > 0.1.0
+webcolors >= 24.6.0
+https://data.siemens-energy.com/cybersec/package/jsonschema-specifications
+importlib-resources >= 1.4.0
+referencing >= 0.31.0
+https://data.siemens-energy.com/cybersec/package/jupyterlab_pygments
+https://data.siemens-energy.com/cybersec/package/jupyter_client
+importlib-metadata >= 4.8.3
+jupyter-core != 5.0.
+python-dateutil >= 2.8.2
+pyzmq >= 23.0
+tornado >= 6.2
+traitlets >= 5.3
+sphinx >= 4
+ipykernel >= 6.14
+pytest < 8.2.0
+https://data.siemens-energy.com/cybersec/package/jupyter_core
+platformdirs >= 2.5
+pywin32 >= 300
+traitlets >= 5.3
+pytest < 8
+https://data.siemens-energy.com/cybersec/package/kiwisolver
+https://data.siemens-energy.com/cybersec/package/lib4sbom
+https://data.siemens-energy.com/cybersec/package/license-expression
+Sphinx >= 5.0.2
+sphinx-rtd-theme >= 1.0.0
+sphinxcontrib-apidoc >= 0.4.0
+sphinx-reredirects >= 0.1.2
+doc8 >= 0.11.2
+sphinx-rtd-dark-mode >= 1.3.0
+pytest != 7.0.0
+pytest-xdist >= 2
+https://data.siemens-energy.com/cybersec/package/lxml
+cssselect >= 0.7
+Cython >= 3.0.11
+https://data.siemens-energy.com/cybersec/package/MarkupSafe
+https://data.siemens-energy.com/cybersec/package/matplotlib
+contourpy >= 1.0.1
+cycler >= 0.10
+fonttools >= 4.22.0
+kiwisolver >= 1.3.1
+numpy >= 1.23
+packaging >= 20.0
+pillow >= 8
+pyparsing >= 2.3.1
+python-dateutil >= 2.7
+meson-python < 0.17.0
+pybind11 != 2.13.3
+setuptools_scm >= 7
+setuptools >= 64
+https://data.siemens-energy.com/cybersec/package/matplotlib-inline
+https://data.siemens-energy.com/cybersec/package/mccabe
+https://data.siemens-energy.com/cybersec/package/mistune
+https://data.siemens-energy.com/cybersec/package/nbclient
+jupyter-client >= 6.1.12
+jupyter-core != 5.0.
+nbformat >= 5.1
+traitlets >= 5.4
+sphinx >= 1.7
+ipykernel >= 6.19.3
+nbconvert >= 7.0.0
+pytest-cov >= 4.0
+pytest < 8
+https://data.siemens-energy.com/cybersec/package/nbconvert
+bleach != 5.0.0
+importlib-metadata >= 3.6
+jinja2 >= 3.0
+jupyter-core >= 4.7
+markupsafe >= 2.0
+mistune < 4
+nbclient >= 0.5.0
+nbformat >= 5.7
+pandocfilters >= 1.4.1
+pygments >= 2.4.1
+traitlets >= 5.1
+ipywidgets >= 7.5
+nbsphinx >= 0.2.12
+pyqtwebengine >= 5.15
+pytest >= 7
+sphinx == 5.0.2
+tornado >= 6.1
+nbsphinx >= 0.2.12
+sphinx == 5.0.2
+pyqtwebengine >= 5.15
+pyqtwebengine >= 5.15
+tornado >= 6.1
+ipywidgets >= 7.5
+pytest >= 7
+https://data.siemens-energy.com/cybersec/package/nbformat
+fastjsonschema >= 2.15
+jsonschema >= 2.6
+jupyter-core != 5.0.
+traitlets >= 5.1
+https://data.siemens-energy.com/cybersec/package/numpy
+https://data.siemens-energy.com/cybersec/package/openpyxl
+https://data.siemens-energy.com/cybersec/package/packageurl-python
+sqlalchemy >= 2.0.0
+https://data.siemens-energy.com/cybersec/package/packaging
+https://data.siemens-energy.com/cybersec/package/pandas
+numpy >= 1.22.4
+numpy >= 1.23.2
+numpy >= 1.26.0
+python-dateutil >= 2.8.2
+pytz >= 2020.1
+tzdata >= 2022.7
+hypothesis >= 6.46.1
+pytest >= 7.3.2
+pytest-xdist >= 2.2.0
+pyarrow >= 10.0.1
+bottleneck >= 1.3.6
+numba >= 0.56.4
+numexpr >= 2.8.4
+scipy >= 1.10.0
+xarray >= 2022.12.0
+fsspec >= 2022.11.0
+s3fs >= 2022.11.0
+gcsfs >= 2022.11.0
+pandas-gbq >= 0.19.0
+odfpy >= 1.4.1
+openpyxl >= 3.1.0
+python-calamine >= 0.1.7
+pyxlsb >= 1.0.10
+xlrd >= 2.0.1
+xlsxwriter >= 3.0.5
+pyarrow >= 10.0.1
+pyarrow >= 10.0.1
+tables >= 3.8.0
+pyreadstat >= 1.2.0
+SQLAlchemy >= 2.0.0
+psycopg2 >= 2.9.6
+adbc-driver-postgresql >= 0.8.0
+SQLAlchemy >= 2.0.0
+pymysql >= 1.0.2
+SQLAlchemy >= 2.0.0
+adbc-driver-postgresql >= 0.8.0
+adbc-driver-sqlite >= 0.8.0
+beautifulsoup4 >= 4.11.2
+html5lib >= 1.1
+lxml >= 4.9.2
+lxml >= 4.9.2
+matplotlib >= 3.6.3
+jinja2 >= 3.1.2
+tabulate >= 0.9.0
+PyQt5 >= 5.15.9
+qtpy >= 2.3.0
+zstandard >= 0.19.0
+dataframe-api-compat >= 0.1.7
+adbc-driver-postgresql >= 0.8.0
+adbc-driver-sqlite >= 0.8.0
+beautifulsoup4 >= 4.11.2
+bottleneck >= 1.3.6
+dataframe-api-compat >= 0.1.7
+fastparquet >= 2022.12.0
+fsspec >= 2022.11.0
+gcsfs >= 2022.11.0
+html5lib >= 1.1
+hypothesis >= 6.46.1
+jinja2 >= 3.1.2
+lxml >= 4.9.2
+matplotlib >= 3.6.3
+numba >= 0.56.4
+numexpr >= 2.8.4
+odfpy >= 1.4.1
+openpyxl >= 3.1.0
+pandas-gbq >= 0.19.0
+psycopg2 >= 2.9.6
+pyarrow >= 10.0.1
+pymysql >= 1.0.2
+PyQt5 >= 5.15.9
+pyreadstat >= 1.2.0
+pytest >= 7.3.2
+pytest-xdist >= 2.2.0
+python-calamine >= 0.1.7
+pyxlsb >= 1.0.10
+qtpy >= 2.3.0
+scipy >= 1.10.0
+s3fs >= 2022.11.0
+SQLAlchemy >= 2.0.0
+tables >= 3.8.0
+tabulate >= 0.9.0
+xarray >= 2022.12.0
+xlrd >= 2.0.1
+xlsxwriter >= 3.0.5
+zstandard >= 0.19.0
+https://data.siemens-energy.com/cybersec/package/pandocfilters
+https://data.siemens-energy.com/cybersec/package/parso
+https://data.siemens-energy.com/cybersec/package/pickleshare
+https://data.siemens-energy.com/cybersec/package/pillow
+sphinx >= 8.1
+coverage >= 7.4.2
+trove-classifiers >= 2024.10.12
+https://data.siemens-energy.com/cybersec/package/pip
+https://data.siemens-energy.com/cybersec/package/pipreqs
+https://data.siemens-energy.com/cybersec/package/pip-requirements-parser
+https://data.siemens-energy.com/cybersec/package/pip-tools
+build >= 1.0.0
+click >= 8
+pip >= 22.2
+pytest >= 7.2.0
+flit-core < 4
+poetry-core >= 1.0.0
+https://data.siemens-energy.com/cybersec/package/platformdirs
+furo >= 2023.9.10
+proselint >= 0.13
+sphinx-autodoc-typehints >= 1.25.2
+sphinx >= 7.2.6
+appdirs == 1.4.4
+covdefaults >= 2.3
+pytest-cov >= 4.1
+pytest-mock >= 3.12
+pytest >= 7.4.3
+mypy >= 1.8
+https://data.siemens-energy.com/cybersec/package/prompt_toolkit
+https://data.siemens-energy.com/cybersec/package/pure_eval
+https://data.siemens-energy.com/cybersec/package/pydantic
+annotated-types >= 0.6.0
+pydantic-core == 2.23.4
+typing-extensions >= 4.12.2
+typing-extensions >= 4.6.1
+email-validator >= 2.0.0
+https://data.siemens-energy.com/cybersec/package/pydantic_core
+typing-extensions >= 4.6.0
+https://data.siemens-energy.com/cybersec/package/Pygments
+colorama >= 0.4.6
+https://data.siemens-energy.com/cybersec/package/PyJWT
+https://data.siemens-energy.com/cybersec/package/pylint
+platformdirs >= 2.2.0
+astroid <= 3.4.0
+isort != 5.13.0
+mccabe < 0.8
+tomlkit >= 0.10.1
+typing-extensions >= 3.10.0
+dill >= 0.2
+tomli >= 1.1.0
+dill >= 0.3.6
+dill >= 0.3.7
+colorama >= 0.4.5
+gitpython > 3
+https://data.siemens-energy.com/cybersec/package/pyparsing
+https://data.siemens-energy.com/cybersec/package/pyproject_hooks
+https://data.siemens-energy.com/cybersec/package/python-dateutil
+six >= 1.5
+https://data.siemens-energy.com/cybersec/package/pytz
+https://data.siemens-energy.com/cybersec/package/pywin32
+https://data.siemens-energy.com/cybersec/package/PyYAML
+https://data.siemens-energy.com/cybersec/package/pyzmq
+https://data.siemens-energy.com/cybersec/package/py-serializable
+https://data.siemens-energy.com/cybersec/package/rdflib
+https://data.siemens-energy.com/cybersec/package/referencing
+attrs >= 22.2.0
+rpds-py >= 0.7.0
+https://data.siemens-energy.com/cybersec/package/regex
+https://data.siemens-energy.com/cybersec/package/requests
+charset-normalizer < 4
+idna < 4
+urllib3 < 3
+certifi >= 2017.4.17
+PySocks != 1.5.7
+chardet < 6
+https://data.siemens-energy.com/cybersec/package/requirements-parser
+https://data.siemens-energy.com/cybersec/package/rfc3339-validator
+https://data.siemens-energy.com/cybersec/package/rfc3987
+https://data.siemens-energy.com/cybersec/package/rpds-py
+https://data.siemens-energy.com/cybersec/package/s3transfer
+https://data.siemens-energy.com/cybersec/package/sbommerge
+https://data.siemens-energy.com/cybersec/package/semantic-version
+https://data.siemens-energy.com/cybersec/package/semver
+https://data.siemens-energy.com/cybersec/package/setuptools
+pytest-checkdocs >= 2.4
+pytest-ruff >= 0.2.1
+ruff >= 0.5.2
+packaging >= 24
+more-itertools >= 8.8
+wheel >= 0.43.0
+platformdirs >= 2.6.2
+importlib-metadata >= 6
+tomli >= 2.0.1
+importlib-resources >= 5.10.2
+sphinx >= 3.5
+pygments-github-lexers == 0.0.5
+sphinx-notfound-page < 2
+pyproject-hooks != 1.1
+towncrier < 24.7
+pytest-enabler >= 2.2
+pytest != 8.1.
+virtualenv >= 13.0.0
+wheel >= 0.44.0
+pip >= 19.1
+packaging >= 23.2
+pytest-xdist >= 3
+filelock >= 3.4.0
+tomli-w >= 1.0.0
+pytest-home >= 0.5
+pyproject-hooks != 1.1
+mypy == 1.11.
+importlib-metadata >= 7.0.2
+https://data.siemens-energy.com/cybersec/package/six
+https://data.siemens-energy.com/cybersec/package/sortedcontainers
+https://data.siemens-energy.com/cybersec/package/soupsieve
+https://data.siemens-energy.com/cybersec/package/stack-data
+executing >= 1.2.0
+asttokens >= 2.1.0
+https://data.siemens-energy.com/cybersec/package/sw360
+https://data.siemens-energy.com/cybersec/package/tinycss2
+webencodings >= 0.4
+https://data.siemens-energy.com/cybersec/package/toml
+https://data.siemens-energy.com/cybersec/package/tomli
+https://data.siemens-energy.com/cybersec/package/tomlkit
+https://data.siemens-energy.com/cybersec/package/tornado
+https://data.siemens-energy.com/cybersec/package/traitlets
+argcomplete >= 3.0.3
+mypy >= 1.7.0
+pytest < 8.2
+https://data.siemens-energy.com/cybersec/package/types-python-dateutil
+https://data.siemens-energy.com/cybersec/package/types-setuptools
+https://data.siemens-energy.com/cybersec/package/typing_extensions
+https://data.siemens-energy.com/cybersec/package/tzdata
+https://data.siemens-energy.com/cybersec/package/tzlocal
+https://data.siemens-energy.com/cybersec/package/uri-template
+https://data.siemens-energy.com/cybersec/package/urllib3
+brotli >= 1.0.9
+brotlicffi >= 0.8.0
+h2 < 5
+pysocks != 1.5.7
+zstandard >= 0.18.0
+https://data.siemens-energy.com/cybersec/package/virtualenv
+distlib < 1
+filelock < 4
+importlib-metadata >= 6.6
+platformdirs < 5
+furo >= 2023.7.26
+proselint >= 0.13
+sphinx != 7.3
+sphinx-argparse >= 0.4
+sphinxcontrib-towncrier >= 0.2.1
+towncrier >= 23.6
+covdefaults >= 2.3
+coverage-enable-subprocess >= 1
+coverage >= 7.2.7
+flaky >= 3.7
+packaging >= 23.1
+pytest-env >= 0.8.2
+pytest-freezer >= 0.4.8
+pytest-mock >= 3.11.1
+pytest-randomly >= 3.12
+pytest-timeout >= 2.1
+pytest >= 7.4
+setuptools >= 68
+time-machine >= 2.10
+https://data.siemens-energy.com/cybersec/package/wcwidth
+https://data.siemens-energy.com/cybersec/package/webcolors
+https://data.siemens-energy.com/cybersec/package/webencodings
+https://data.siemens-energy.com/cybersec/package/wheel
+https://data.siemens-energy.com/cybersec/package/yarg

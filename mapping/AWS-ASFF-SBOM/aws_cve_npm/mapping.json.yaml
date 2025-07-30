@@ -1,0 +1,242 @@
+prefixes:
+  se_sec_vocab: "https://vocab.siemens-energy.com/cybersec/"
+  se_sec_vocab_finding: "https://vocab.siemens-energy.com/cybersec/finding/"
+  se_sec_vocab_vulnerability: "https://vocab.siemens-energy.com/cybersec/vulnerability/"
+  se_sec_vocab_resource: "https://vocab.siemens-energy.com/cybersec/resource/"
+  se_sec_data: "https://data.siemens-energy.com/cybersec/"
+  se_sec_data_finding: "https://data.siemens-energy.com/cybersec/finding/"
+  se_sec_data_vulnerability: "https://data.siemens-energy.com/cybersec/vulnerability/"
+  se_sec_data_resource: "https://data.siemens-energy.com/cybersec/resource/"
+  schema: "https://schema.org/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+  xsd: "http://www.w3.org/2001/XMLSchema"
+
+sources:
+  findings-source: ['aws_cve_npm.json~jsonpath', '$.Findings[*]']
+  vulnerabilities-source: ['aws_cve_npm.json~jsonpath', '$.Findings[*].Vulnerabilities[*]']
+  resources-source: ['aws_cve_npm.json~jsonpath', '$.Findings[*].Resources[*]']
+
+mappings:
+  Findings:
+    sources:
+      - findings-source
+    s: se_sec_data_finding:$(Id)
+    po:
+      - [a, se_sec_vocab:SecurityFinding]
+      - p: rdfs:label
+        o:
+          value: $(Title)
+          datatype: xsd:string
+      - p: se_sec_vocab:findingId
+        o:
+          value: $(Id)
+          datatype: xsd:string
+      - p: se_sec_vocab:schemaVersion
+        o:
+          value: $(SchemaVersion)
+          datatype: xsd:string
+      - p: se_sec_vocab:productName
+        o:
+          value: $(ProductName)
+          datatype: xsd:string
+      - p: se_sec_vocab:companyName
+        o:
+          value: $(CompanyName)
+          datatype: xsd:string
+      - p: se_sec_vocab:region
+        o:
+          value: $(Region)
+          datatype: xsd:string
+      - p: se_sec_vocab:awsAccountId
+        o:
+          value: $(AwsAccountId)
+          datatype: xsd:string
+      - p: rdfs:comment
+        o:
+          value: $(Description)
+          datatype: xsd:string
+      - p: schema:dateCreated
+        o:
+          value: $(CreatedAt)
+          datatype: xsd:dateTime
+      - p: schema:dateModified
+        o:
+          value: $(UpdatedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:firstObservedAt
+        o:
+          value: $(FirstObservedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:lastObservedAt
+        o:
+          value: $(LastObservedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:severityLabel
+        o:
+          value: $(Severity.Label)
+          datatype: xsd:string
+      - p: se_sec_vocab:severityNormalized
+        o:
+          value: $(Severity.Normalized)
+          datatype: xsd:integer
+      - p: se_sec_vocab:workflowState
+        o:
+          value: $(WorkflowState)
+          datatype: xsd:string
+      - p: se_sec_vocab:recordState
+        o:
+          value: $(RecordState)
+          datatype: xsd:string
+      - p: se_sec_vocab:processedAt
+        o:
+          value: $(ProcessedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:awsAccountName
+        o:
+          value: $(AwsAccountName)
+          datatype: xsd:string
+      - p: se_sec_vocab:hasVulnerability
+        o:
+          mapping: Vulnerabilities
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(Vulnerabilities.Id)",s]
+              - [str2, "$(Id)",o]
+      - p: se_sec_vocab:hasResource
+        o:
+          mapping: Resources
+          condition:
+            function: equal
+            parameters:
+              - [str1, "$(Resources.Id)",s]
+              - [str2, "$(Id)",o]
+
+  Vulnerabilities:
+    sources:
+      - vulnerabilities-source
+    s: se_sec_data_vulnerability:$(Id)
+    po:
+      - [a, se_sec_vocab_vulnerability:Vulnerability]
+      - p: se_sec_vocab:vulnerabilityId
+        o:
+          value: $(Id)
+          datatype: xsd:string
+      - p: se_sec_vocab:fixAvailable
+        o:
+          value: $(FixAvailable)
+          datatype: xsd:string
+      - p: se_sec_vocab:exploitAvailable
+        o:
+          value: $(ExploitAvailable)
+          datatype: xsd:string
+      - p: se_sec_vocab:vendorName
+        o:
+          value: $(Vendor.Name)
+          datatype: xsd:string
+      - p: se_sec_vocab:vendorUrl
+        o:
+          value: $(Vendor.Url)
+          datatype: xsd:anyURI
+      - p: se_sec_vocab:vendorSeverity
+        o:
+          value: $(Vendor.VendorSeverity)
+          datatype: xsd:string
+      - p: se_sec_vocab:vendorCreatedAt
+        o:
+          value: $(Vendor.VendorCreatedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:vendorUpdatedAt
+        o:
+          value: $(Vendor.VendorUpdatedAt)
+          datatype: xsd:dateTime
+      - p: se_sec_vocab:cvssVersion
+        o:
+          value: $(Cvss.Version)
+          datatype: xsd:string
+      - p: se_sec_vocab:cvssBaseScore
+        o:
+          value: $(Cvss.BaseScore)
+          datatype: xsd:float
+      - p: se_sec_vocab:cvssBaseVector
+        o:
+          value: $(Cvss.BaseVector)
+          datatype: xsd:string
+      - p: se_sec_vocab:cvssSource
+        o:
+          value: $(Cvss.Source)
+          datatype: xsd:string
+      - p: se_sec_vocab:vulnerablePackageName
+        o:
+          value: $(VulnerablePackages.Name)
+          datatype: xsd:string
+      - p: se_sec_vocab:vulnerablePackageVersion
+        o:
+          value: $(VulnerablePackages.Version)
+          datatype: xsd:string
+      - p: se_sec_vocab:vulnerablePackageFixedInVersion
+        o:
+          value: $(VulnerablePackages.FixedInVersion)
+          datatype: xsd:string
+      - p: se_sec_vocab:vulnerablePackageFilePath
+        o:
+          value: $(VulnerablePackages.FilePath)
+          datatype: xsd:string
+      - p: se_sec_vocab:vulnerablePackageRemediation
+        o:
+          value: $(VulnerablePackages.Remediation)
+          datatype: xsd:string
+
+  Resources:
+    sources:
+      - resources-source
+    s: se_sec_data_resource:$(Id)
+    po:
+      - [a, se_sec_vocab_resource:Resource]
+      - p: se_sec_vocab:resourceId
+        o:
+          value: $(Id)
+          datatype: xsd:string
+      - p: se_sec_vocab:resourceType
+        o:
+          value: $(Type)
+          datatype: xsd:string
+      - p: se_sec_vocab:resourcePartition
+        o:
+          value: $(Partition)
+          datatype: xsd:string
+      - p: se_sec_vocab:resourceRegion
+        o:
+          value: $(Region)
+          datatype: xsd:string
+      - p: se_sec_vocab:registryId
+        o:
+          value: $(Details.AwsEcrContainerImage.RegistryId)
+          datatype: xsd:string
+      - p: se_sec_vocab:repositoryName
+        o:
+          value: $(Details.AwsEcrContainerImage.RepositoryName)
+          datatype: xsd:string
+      - p: se_sec_vocab:architecture
+        o:
+          value: $(Details.AwsEcrContainerImage.Architecture)
+          datatype: xsd:string
+      - p: se_sec_vocab:imageDigest
+        o:
+          value: $(Details.AwsEcrContainerImage.ImageDigest)
+          datatype: xsd:string
+      - p: se_sec_vocab:imagePublishedAt
+        o:
+          value: $(Details.AwsEcrContainerImage.ImagePublishedAt)
+          datatype: xsd:dateTime
+  ResourceImageTags:
+    sources:
+      - resources-source
+    iterator: $.Details.AwsEcrContainerImage.ImageTags
+    s: se_sec_data_resource:$(Id)
+    po:
+      - p: se_sec_vocab:imageTags
+        o:
+          value: $(this)
+          datatype: xsd:string
+

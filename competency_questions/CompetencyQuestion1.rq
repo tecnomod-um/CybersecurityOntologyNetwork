@@ -1,0 +1,16 @@
+PREFIX software_vocab: <http://ontologies.siemens-energy.com/software/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX se_sec_nvd_vocab: <https://ontology.siemens-energy.com/nvd/>
+PREFIX cve: <https://data.siemens-energy.com/cybersec/cve/>
+
+# Which import ID I can reach for a vulnerability defined in a NVD database?
+# Vulnerabilty: CVE-2025-23211
+
+SELECT ?vulnerable_package ?downward_dependecy ?upward_dependency
+WHERE {
+    ?vulnerable_package rdf:type software_vocab:Software_package .
+    ?vulnerable_package se_sec_nvd_vocab:hasVulnerability cve:CVE-2025-23211 .
+    # We don´t know in which place of the hierarchy this package lives, so we have to go upwards and downwards
+    ?vulnerable_package software_vocab:hasDependency+ ?downward_dependecy .
+    ?upward_dependency software_vocab:hasDependency+ ?vulnerable_package .
+}

@@ -1,0 +1,3 @@
+vulnerable_package,downward_dependecy,upward_dependency
+https://data.siemens-energy.com/cybersec/package/Jinja2,https://data.siemens-energy.com/cybersec/package/Babel,https://data.siemens-energy.com/cybersec/package/Flask
+https://data.siemens-energy.com/cybersec/package/Jinja2,https://data.siemens-energy.com/cybersec/package/MarkupSafe,https://data.siemens-energy.com/cybersec/package/Flask
