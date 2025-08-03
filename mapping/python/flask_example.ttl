@@ -1,9 +1,0 @@
-prefix  software_vocab: <http://ontologies.siemens-energy.com/software/>
-prefix cybersec_data: <https://data.siemens-energy.com/cybersec/>
-
-
-cybersec_data:flask a software_vocab:SoftwarePackage ;
-    software_vocab:hasDependency cybersec_data:blinker .
-
-cybersec_data:blinker a software_vocab:SoftwarePackage ;
-    software_vocab:hasVersion "1.9.0" .

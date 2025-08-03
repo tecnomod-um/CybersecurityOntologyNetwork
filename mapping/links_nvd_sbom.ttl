@@ -1,3 +1,0 @@
-<https://data.siemens-energy.com/cybersec/component/pkg%3Apypi%2Fjinja2%403.1.2> <https://ontology.siemens-energy.com/nvd/hasVulnerability> <https://data.siemens-energy.com/cybersec/cve/CVE-2025-23211> .
-<https://data.siemens-energy.com/cybersec/component/pkg%3Apypi%2Fsqlalchemy%401.4.46> <https://ontology.siemens-energy.com/nvd/hasVulnerability> <https://data.siemens-energy.com/cybersec/cve/CVE-2025-22151> .
-
