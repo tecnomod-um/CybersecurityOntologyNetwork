@@ -1,0 +1,1017 @@
+@prefix :      <http://ontologies.siemens-energy.com/software#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#c5c866ff5d6ba568b3f234a55e9f051b>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/tmp> .
+
+<https://astrea.linkeddata.es/shapes#0bd3b9a57f3996dfefd887b3d1bd4acb>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npmUser> .
+
+<https://astrea.linkeddata.es/shapes#a2be7f1a9b3d420c6cd98f685999aec6>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/typings> .
+
+<https://astrea.linkeddata.es/shapes#f649456a8ea17abcdf906eeace30edef>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#cef79bd000f605c498e955dc74686742> , <https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e> , <https://astrea.linkeddata.es/shapes#43c8c32d697e68f4e204f15e1204c93c> , <https://astrea.linkeddata.es/shapes#66779fcf9fc27b328cb75d6e4c7c0e0f> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Bug> .
+
+<https://astrea.linkeddata.es/shapes#1b16687416dedb6b1f8b52ff793002e3>
+        a                       sh:PropertyShape ;
+        sh:nodeKind             sh:IRIOrLiteral ;
+        sh:path                 <http://ontologies.siemens-energy.com/software/author> ;
+        sh:qualifiedMaxCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedValueShape  [ sh:class  <https://schema.org/Person> ] .
+
+<https://astrea.linkeddata.es/shapes#60e70dff7acfbb7a19a10c211f224811>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/rev> .
+
+<https://astrea.linkeddata.es/shapes#a100a3cde39b2095281cdc20c5387d18>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Distribution> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/dist> .
+
+<https://astrea.linkeddata.es/shapes#1c9b1876b1d10666a34ff82afdc5053e>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Directory> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/directories> .
+
+<https://astrea.linkeddata.es/shapes#2281dddb80c836719b5ff7e9c5207efb>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/fileCount> .
+
+<https://astrea.linkeddata.es/shapes#a7bd17f90fba3f9144514531e8bfdaec>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#f44edefbab94319eba3ef82ba6f7f800>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/fundingType> .
+
+<https://astrea.linkeddata.es/shapes#c694f4ba3ebe04e3e086fe3d1d80c5e7>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/path> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#44aeeaada14a6479735b490bb913723e>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Signature> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/signatures> .
+
+<https://astrea.linkeddata.es/shapes#a3db9aa54d5dffd8906e50ade969f545>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#52c1e095dd94a1adfe773c900efad219>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/keywords> .
+
+<https://astrea.linkeddata.es/shapes#43f064f83452373b38767cff3c605712>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/keywords> .
+
+<https://astrea.linkeddata.es/shapes#e478a70207bc9300f649a92b739f54c6>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npmUser> .
+
+<https://astrea.linkeddata.es/shapes#ea8a85354484536f1c911df7acdb9017>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/managedBy> .
+
+<https://astrea.linkeddata.es/shapes#fca999c99da79010561dda5e5b13d023>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/inRepository> .
+
+<https://astrea.linkeddata.es/shapes#67c639746760d3b14e62568731937b4c>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/shasum> .
+
+<https://astrea.linkeddata.es/shapes#3c1bb41f35b14abd39ecc0f642b7f1bb>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/readmeFilename> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#5c3bc0de3c28ae2af9bab26b8d3d530c>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/gitHead> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#80c765ae64c6bb07982ac40670899ddf>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/module> .
+
+<https://astrea.linkeddata.es/shapes#0b90c6a46a5a0e9d382e30d405573151>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#a3db9aa54d5dffd8906e50ade969f545> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Engine> .
+
+<https://astrea.linkeddata.es/shapes#bf51233a687d04f4dae68d9476994e61>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/latestVersion> .
+
+<https://astrea.linkeddata.es/shapes#32785f141d72a6776c911dd57d3a6ccc>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/ExportItem> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/items> .
+
+<https://astrea.linkeddata.es/shapes#d736b4507d22b136e907eed11feec3e9>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/url> .
+
+<https://astrea.linkeddata.es/shapes#17d1c93354b9fbc0b375e1adec2191dd>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/ProgrammingLanguage> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/language> .
+
+<https://astrea.linkeddata.es/shapes#3dc43eb1ada4bb4feac2d16a7f7261df>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/CodeRepository> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/inRepository> .
+
+<https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <https://schema.org/name> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#43c8c32d697e68f4e204f15e1204c93c>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/email> .
+
+<https://astrea.linkeddata.es/shapes#999e1f645c648d1afcfab47cc95132a7>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/dependency> .
+
+<https://astrea.linkeddata.es/shapes#7d2ca70d717e2bea4e2fe19dba09ad3c>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/email> .
+
+<https://astrea.linkeddata.es/shapes#9aa4cd19e097230ef4c0710dfd2dd7cd>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/homepage> .
+
+<https://astrea.linkeddata.es/shapes#8c9b24ee9e83c3de386d60b78a4e564f>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/ExportItem> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/items> .
+
+<https://astrea.linkeddata.es/shapes#f491b63e0c0c4df2d0cf99558ffe97e2>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/maintainer> .
+
+<https://astrea.linkeddata.es/shapes#e09b72925afca3a4dcd269048fed1d9a>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Bug> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/bugs> .
+
+<https://astrea.linkeddata.es/shapes#62af04468e06ecd1a9e2ba254138b3ed>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Distribution> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/dist> .
+
+<https://astrea.linkeddata.es/shapes#9b60f4544f70767f0593d621d7af3359>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/sig> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#157b1068b2ecfa2c7f5e52a7fa3ce80a>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#c694f4ba3ebe04e3e086fe3d1d80c5e7> , <https://astrea.linkeddata.es/shapes#2b2a27eed5b61d3900d291e98df9d40c> , <https://astrea.linkeddata.es/shapes#9ff45c233dc3d9772084558ce7c09b19> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/ExportItem> .
+
+<https://astrea.linkeddata.es/shapes#0592f4c173dcfcbdf8c29186c7619056>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/created> .
+
+<https://astrea.linkeddata.es/shapes#5738211eae80d40e33103190666fa853>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#44c384cd03928dd14c667b4ee5528155> , <https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e> , <https://astrea.linkeddata.es/shapes#25083232e413a32d9be313350117a156> , <https://astrea.linkeddata.es/shapes#f44edefbab94319eba3ef82ba6f7f800> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Funding> .
+
+<https://astrea.linkeddata.es/shapes#cae895d2b67c50bccf7740ec5cb78e63>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:boolean ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/hasShrinkwrap> ;
+        sh:pattern   "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#3c9bc9471dd9c8c2ee072be968ec8776>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/homepage> ;
+        sh:pattern   "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
+
+<https://astrea.linkeddata.es/shapes#6bbe20ef9b977633de1acceb4252f94a>
+        a               sh:NodeShape ;
+        rdfs:label      "Type of manager for the software package" ;
+        sh:name         "Type of manager for the software package" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#2de5e1c83badfe7128acd5fa567507fb> , <https://astrea.linkeddata.es/shapes#17d1c93354b9fbc0b375e1adec2191dd> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Package_manager> .
+
+<https://astrea.linkeddata.es/shapes#ee7f83310da9beaeab77eff1c4cdb0e5>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/SoftwareSourceCode> .
+
+<https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/url> ;
+        sh:pattern   "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?" .
+
+<https://astrea.linkeddata.es/shapes#e4aef7849cce5bd548a1dd50e2e1bba5>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/license> .
+
+<https://astrea.linkeddata.es/shapes#27eb623404958946fda5be06b5852cc0>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Funding> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/funding> .
+
+<https://astrea.linkeddata.es/shapes#c2e468cb3bd755604be294a499f5cbc5>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/readme> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#9cb187adca705e228c53461fa8811767>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/hasVersion> .
+
+<https://astrea.linkeddata.es/shapes#b8ca176a3ffc286a2157cd9f5e31b638>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/host> .
+
+<https://astrea.linkeddata.es/shapes#8481cadedf63088d49bb9f125e721b4a>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/keywords> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#f7fee0e64104a916251e3a6fbb52f879>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#23d929d0f8804b299e57fcd9abfea6b4> , <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#23e6194df356ec4138e27438b22dec1e> , <https://astrea.linkeddata.es/shapes#1b5ba73f3b182d42f1e3f1b20e424c2b> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Script> .
+
+<https://astrea.linkeddata.es/shapes#2282560fd31f5a43f0e1dfae0f6cd6a2>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/unpackedSize> .
+
+<https://astrea.linkeddata.es/shapes#532c9c6c21cb6cd091572ca4439429d9>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/requires> .
+
+<https://astrea.linkeddata.es/shapes#abb86c011bcc584d50e50bf8f079120a>
+        a               sh:NodeShape ;
+        rdfs:label      "Creative Work" ;
+        sh:name         "Creative Work" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/CreativeWork> .
+
+<https://astrea.linkeddata.es/report/0620946147>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#9e9cb48c1174c31afed273d1a674e5ba>
+        a               sh:NodeShape ;
+        rdfs:label      "Person" ;
+        sh:name         "Person" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#a7bd17f90fba3f9144514531e8bfdaec> , <https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e> , <https://astrea.linkeddata.es/shapes#7d2ca70d717e2bea4e2fe19dba09ad3c> , <https://astrea.linkeddata.es/shapes#d736b4507d22b136e907eed11feec3e9> , <https://astrea.linkeddata.es/shapes#cef79bd000f605c498e955dc74686742> ;
+        sh:targetClass  <https://schema.org/Person> .
+
+<https://astrea.linkeddata.es/shapes#4e9996271f6821da42c7bbf4dee41703>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/gitHead> .
+
+<https://astrea.linkeddata.es/shapes#cef79bd000f605c498e955dc74686742>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <https://schema.org/email> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#1b5ba73f3b182d42f1e3f1b20e424c2b>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/command> .
+
+<https://astrea.linkeddata.es/shapes#e8192d63ae4cc6d09c8a1de7b1662ff3>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Engine> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/engines> .
+
+<https://astrea.linkeddata.es/shapes#9ff45c233dc3d9772084558ce7c09b19>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/path> .
+
+<https://astrea.linkeddata.es/shapes#4921f9b9e4b7d670b6748eed28492ff0>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/created> ;
+        sh:pattern   "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#66779fcf9fc27b328cb75d6e4c7c0e0f>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/url> .
+
+<https://astrea.linkeddata.es/shapes#dbcd73bb96ccd7e62b142f19daa38f33>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/tarball> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#514172f0ef325fe73f114767e4c53667>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/dependsOn> .
+
+<https://astrea.linkeddata.es/shapes#62b7c53c6f70d251c1bf0493dd57ede2>
+        a               sh:PropertyShape ;
+        rdfs:label      "last modification of the software library (latest version)" ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "last modification of the software library (latest version)" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <http://ontologies.siemens-energy.com/software/modified> ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#3aeb34b7f87f36184aba646b8864c7a2>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/CodeRepository> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/inRepository> .
+
+<https://astrea.linkeddata.es/shapes#90e8886236d324993882014afe393ee5>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npm-signature> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#23d929d0f8804b299e57fcd9abfea6b4>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/command> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#75bbb0520ec95261c0e65dfec83403fa>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/hasVersion> .
+
+<https://astrea.linkeddata.es/shapes#e79cca38059519ab8923ddb6773f93a5>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#3c027f3bee700478b3014170b8ae84c7> , <https://astrea.linkeddata.es/shapes#1efb914f10b43b1433c4ce8cc3bf23c1> , <https://astrea.linkeddata.es/shapes#44aeeaada14a6479735b490bb913723e> , <https://astrea.linkeddata.es/shapes#fad12079897f637454248ca71b87fda2> , <https://astrea.linkeddata.es/shapes#cf4221cc46bbdb7aef8145a04a67cc5d> , <https://astrea.linkeddata.es/shapes#dbcd73bb96ccd7e62b142f19daa38f33> , <https://astrea.linkeddata.es/shapes#7247c98e4ab3e6e3849f0539b3a24ba6> , <https://astrea.linkeddata.es/shapes#2281dddb80c836719b5ff7e9c5207efb> , <https://astrea.linkeddata.es/shapes#67c639746760d3b14e62568731937b4c> , <https://astrea.linkeddata.es/shapes#46d0983aab141ff6001afeab85c890f8> , <https://astrea.linkeddata.es/shapes#1478b283254a82fc1bc6d5377b676901> , <https://astrea.linkeddata.es/shapes#2282560fd31f5a43f0e1dfae0f6cd6a2> , <https://astrea.linkeddata.es/shapes#90e8886236d324993882014afe393ee5> , <https://astrea.linkeddata.es/shapes#6a273d0de1702eedc7f362b128efcafb> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Distribution> .
+
+<https://astrea.linkeddata.es/shapes#7fbca54edbc4bb0ad0d6a1072ff2325f>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#da501479d7723241ac9ced0cb1ea1f67> , <https://astrea.linkeddata.es/shapes#18b0d4eafe58c0873008c99f447bef55> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/VersionControlSoftware> .
+
+<https://astrea.linkeddata.es/shapes#5936d2695fbbc8b225b3fdd6adfdb8ae>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Directory> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/directories> .
+
+<https://astrea.linkeddata.es/shapes#40a094c9baf15ad399e71dbe40433e54>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/readme> .
+
+<https://astrea.linkeddata.es/shapes#288e1d727cefa98f32334ea33c9a3e4f>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/requires> .
+
+<https://astrea.linkeddata.es/shapes#dfa985b037f08978efde3dc2a2a260ed>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/rev> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#c241beb6b5786f17394c0280c66cb971>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#c694f4ba3ebe04e3e086fe3d1d80c5e7> , <https://astrea.linkeddata.es/shapes#1a179c321a636f62df9d26027881bc80> , <https://astrea.linkeddata.es/shapes#68cd110dc45a8e6964cfc4b88bf26080> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Directory> .
+
+<https://astrea.linkeddata.es/shapes#a20f2dc3c5a07cdb77c84aa95ee5eba5>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/maintainer> .
+
+<https://astrea.linkeddata.es/shapes#6a273d0de1702eedc7f362b128efcafb>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/integrity> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#a89930c3f6449ece2c6f673655012132>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/modified> .
+
+<https://astrea.linkeddata.es/shapes#44c384cd03928dd14c667b4ee5528155>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/fundingType> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#7247c98e4ab3e6e3849f0539b3a24ba6>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/fileCount> ;
+        sh:pattern   "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#9053e40e3283f23ec02c02d08859f712>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/nodeVersion> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#ea74b4b8fe5b5227e123eac24367b481>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/nodeVersion> .
+
+<https://astrea.linkeddata.es/shapes#8db1748d919c96b66faae712bdf5516e>
+        a               sh:NodeShape ;
+        rdfs:label      "Software library" ;
+        sh:description  "name as label" ;
+        sh:name         "Software library" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#a20f2dc3c5a07cdb77c84aa95ee5eba5> , <https://astrea.linkeddata.es/shapes#3c1bb41f35b14abd39ecc0f642b7f1bb> , <https://astrea.linkeddata.es/shapes#cddd8b678c55b79833984d640143e01a> , <https://astrea.linkeddata.es/shapes#fca999c99da79010561dda5e5b13d023> , <https://astrea.linkeddata.es/shapes#8481cadedf63088d49bb9f125e721b4a> , <https://astrea.linkeddata.es/shapes#521c805b2951cfca395755ab231d5bcc> , <https://astrea.linkeddata.es/shapes#fae6a70bb23e6ac7614ccf93268635fc> , <https://astrea.linkeddata.es/shapes#c2e468cb3bd755604be294a499f5cbc5> , <https://astrea.linkeddata.es/shapes#bf51233a687d04f4dae68d9476994e61> , <https://astrea.linkeddata.es/shapes#e09b72925afca3a4dcd269048fed1d9a> , <https://astrea.linkeddata.es/shapes#52c1e095dd94a1adfe773c900efad219> , <https://astrea.linkeddata.es/shapes#9cb187adca705e228c53461fa8811767> , <https://astrea.linkeddata.es/shapes#b38aa31301f29490ec7d0f204c0a378f> , <https://astrea.linkeddata.es/shapes#dfa985b037f08978efde3dc2a2a260ed> , <https://astrea.linkeddata.es/shapes#45b80312e54e48356b35f4ff3cd74726> , <https://astrea.linkeddata.es/shapes#fe5575ce267e049ce69eb4653584fc5b> , <https://astrea.linkeddata.es/shapes#369acdfc99847de394938ed2bcf85413> , <https://astrea.linkeddata.es/shapes#3aeb34b7f87f36184aba646b8864c7a2> , <https://astrea.linkeddata.es/shapes#e4aef7849cce5bd548a1dd50e2e1bba5> , <https://astrea.linkeddata.es/shapes#a89930c3f6449ece2c6f673655012132> , <https://astrea.linkeddata.es/shapes#c9ef7a727fc6cd1f8e36e5163091f774> , <https://astrea.linkeddata.es/shapes#40a094c9baf15ad399e71dbe40433e54> , <https://astrea.linkeddata.es/shapes#62b7c53c6f70d251c1bf0493dd57ede2> , <https://astrea.linkeddata.es/shapes#92173fdf846040a45a4bdffa7bc00d92> , <https://astrea.linkeddata.es/shapes#3c9bc9471dd9c8c2ee072be968ec8776> , <https://astrea.linkeddata.es/shapes#4921f9b9e4b7d670b6748eed28492ff0> , <https://astrea.linkeddata.es/shapes#60e70dff7acfbb7a19a10c211f224811> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Software_library> .
+
+<https://astrea.linkeddata.es/shapes#2de5e1c83badfe7128acd5fa567507fb>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/ProgrammingLanguage> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/language> .
+
+<https://astrea.linkeddata.es/shapes#c9ef7a727fc6cd1f8e36e5163091f774>
+        a                       sh:PropertyShape ;
+        sh:nodeKind             sh:IRIOrLiteral ;
+        sh:path                 <http://ontologies.siemens-energy.com/software/author> ;
+        sh:qualifiedMaxCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedValueShape  [ sh:class  <https://schema.org/Person> ] .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#da501479d7723241ac9ced0cb1ea1f67> , <https://astrea.linkeddata.es/shapes#62b7c53c6f70d251c1bf0493dd57ede2> , <https://astrea.linkeddata.es/shapes#0bd3b9a57f3996dfefd887b3d1bd4acb> , <https://astrea.linkeddata.es/shapes#9e9cb48c1174c31afed273d1a674e5ba> , <https://astrea.linkeddata.es/shapes#23d929d0f8804b299e57fcd9abfea6b4> , <https://astrea.linkeddata.es/shapes#67c639746760d3b14e62568731937b4c> , <https://astrea.linkeddata.es/shapes#06e3d79131d65126ab2c1c8d9f43e2e6> , <https://astrea.linkeddata.es/shapes#63c32ffcc60b2920ea109515f1683137> , <https://astrea.linkeddata.es/shapes#ea8a85354484536f1c911df7acdb9017> , <https://astrea.linkeddata.es/shapes#b8b32f49df0ad8309d76d88f4a7ade71> , <https://astrea.linkeddata.es/shapes#cf4221cc46bbdb7aef8145a04a67cc5d> , <https://astrea.linkeddata.es/shapes#9cb187adca705e228c53461fa8811767> , <https://astrea.linkeddata.es/shapes#3aeb34b7f87f36184aba646b8864c7a2> , <https://astrea.linkeddata.es/shapes#e25292f55b0607fa02421e1e50f8fb19> , <https://astrea.linkeddata.es/shapes#0f6eb80a326f6ece250a65d8fd1ab5f6> , <https://astrea.linkeddata.es/shapes#8db1748d919c96b66faae712bdf5516e> , <https://astrea.linkeddata.es/shapes#a20f2dc3c5a07cdb77c84aa95ee5eba5> , <https://astrea.linkeddata.es/shapes#9b60f4544f70767f0593d621d7af3359> , <https://astrea.linkeddata.es/shapes#4e9996271f6821da42c7bbf4dee41703> , <https://astrea.linkeddata.es/shapes#617e52eb4430a54107aaab4760b25eed> , <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#27eb623404958946fda5be06b5852cc0> , <https://astrea.linkeddata.es/shapes#c6762e4b9c6d64864bf08e20780f7da8> , <https://astrea.linkeddata.es/shapes#cef79bd000f605c498e955dc74686742> , <https://astrea.linkeddata.es/shapes#521c805b2951cfca395755ab231d5bcc> , <https://astrea.linkeddata.es/shapes#a89930c3f6449ece2c6f673655012132> , <https://astrea.linkeddata.es/shapes#1c9b1876b1d10666a34ff82afdc5053e> , <https://astrea.linkeddata.es/shapes#d736b4507d22b136e907eed11feec3e9> , <https://astrea.linkeddata.es/shapes#abb86c011bcc584d50e50bf8f079120a> , <https://astrea.linkeddata.es/shapes#999e1f645c648d1afcfab47cc95132a7> , <https://astrea.linkeddata.es/shapes#5d3c7b08f28f55c657db91da7c4b0170> , <https://astrea.linkeddata.es/shapes#f44edefbab94319eba3ef82ba6f7f800> , <https://astrea.linkeddata.es/shapes#52c1e095dd94a1adfe773c900efad219> , <https://astrea.linkeddata.es/shapes#23e6194df356ec4138e27438b22dec1e> , <https://astrea.linkeddata.es/shapes#480564553bb39a132422d4be970c7a30> , <https://astrea.linkeddata.es/shapes#157b1068b2ecfa2c7f5e52a7fa3ce80a> , <https://astrea.linkeddata.es/shapes#532c9c6c21cb6cd091572ca4439429d9> , <https://astrea.linkeddata.es/shapes#e478a70207bc9300f649a92b739f54c6> , <https://astrea.linkeddata.es/shapes#7247c98e4ab3e6e3849f0539b3a24ba6> , <https://astrea.linkeddata.es/shapes#cd37f98788940dbeea9ee308a2d585eb> , <https://astrea.linkeddata.es/shapes#1a179c321a636f62df9d26027881bc80> , <https://astrea.linkeddata.es/shapes#a3db9aa54d5dffd8906e50ade969f545> , <https://astrea.linkeddata.es/shapes#1a735aeb8a7a622764896a0cc043e8ef> , <https://astrea.linkeddata.es/shapes#1b5ba73f3b182d42f1e3f1b20e424c2b> , <https://astrea.linkeddata.es/shapes#d2e08536edd35355def24aff4e9ad0b1> , <https://astrea.linkeddata.es/shapes#7299cf70c59871b42a3ce930bb1e8248> , <https://astrea.linkeddata.es/shapes#45b80312e54e48356b35f4ff3cd74726> , <https://astrea.linkeddata.es/shapes#369acdfc99847de394938ed2bcf85413> , <https://astrea.linkeddata.es/shapes#903a8c115b1c843bb8bf32f48be4484d> , <https://astrea.linkeddata.es/shapes#ec6bb0b73302a1c62792e20934554d9f> , <https://astrea.linkeddata.es/shapes#a7bd17f90fba3f9144514531e8bfdaec> , <https://astrea.linkeddata.es/shapes#7fbca54edbc4bb0ad0d6a1072ff2325f> , <https://astrea.linkeddata.es/shapes#c241beb6b5786f17394c0280c66cb971> , <https://astrea.linkeddata.es/shapes#92173fdf846040a45a4bdffa7bc00d92> , <https://astrea.linkeddata.es/shapes#fe5575ce267e049ce69eb4653584fc5b> , <https://astrea.linkeddata.es/shapes#9aa4cd19e097230ef4c0710dfd2dd7cd> , <https://astrea.linkeddata.es/shapes#337fe2f993469fa4a681d42ea423a04b> , <https://astrea.linkeddata.es/shapes#5c3bc0de3c28ae2af9bab26b8d3d530c> , <https://astrea.linkeddata.es/shapes#68cd110dc45a8e6964cfc4b88bf26080> , <https://astrea.linkeddata.es/shapes#596775134cc10a922e5eb90fa5e3cb13> , <https://astrea.linkeddata.es/shapes#1478b283254a82fc1bc6d5377b676901> , <https://astrea.linkeddata.es/shapes#4921f9b9e4b7d670b6748eed28492ff0> , <https://astrea.linkeddata.es/shapes#288e1d727cefa98f32334ea33c9a3e4f> , <https://astrea.linkeddata.es/shapes#6bbe20ef9b977633de1acceb4252f94a> , <https://astrea.linkeddata.es/shapes#037ec4e30ade1a3c1981d8bec1252195> , <https://astrea.linkeddata.es/shapes#b8ca176a3ffc286a2157cd9f5e31b638> , <https://astrea.linkeddata.es/shapes#44c384cd03928dd14c667b4ee5528155> , <https://astrea.linkeddata.es/shapes#8ec8a60b31b7991c205b00fa125427a2> , <https://astrea.linkeddata.es/shapes#a100a3cde39b2095281cdc20c5387d18> , <https://astrea.linkeddata.es/shapes#7e31832e417c40de0296529271f9132a> , <https://astrea.linkeddata.es/shapes#e09b72925afca3a4dcd269048fed1d9a> , <https://astrea.linkeddata.es/shapes#2281dddb80c836719b5ff7e9c5207efb> , <https://astrea.linkeddata.es/shapes#32785f141d72a6776c911dd57d3a6ccc> , <https://astrea.linkeddata.es/shapes#e4aef7849cce5bd548a1dd50e2e1bba5> , <https://astrea.linkeddata.es/shapes#2b2a27eed5b61d3900d291e98df9d40c> , <https://astrea.linkeddata.es/shapes#de80373b861f1cf5fe7d8b62404d6408> , <https://astrea.linkeddata.es/shapes#514172f0ef325fe73f114767e4c53667> , <https://astrea.linkeddata.es/shapes#c92a71c6748488c6e013f784278d31d1> , <https://astrea.linkeddata.es/shapes#46d0983aab141ff6001afeab85c890f8> , <https://astrea.linkeddata.es/shapes#0b90c6a46a5a0e9d382e30d405573151> , <https://astrea.linkeddata.es/shapes#2d0f4686528c908850a0fa71d17e41ca> , <https://astrea.linkeddata.es/shapes#5936d2695fbbc8b225b3fdd6adfdb8ae> , <https://astrea.linkeddata.es/shapes#2f613664f1bce8b246e4168f60a99a4e> , <https://astrea.linkeddata.es/shapes#fad12079897f637454248ca71b87fda2> , <https://astrea.linkeddata.es/shapes#0872c666945cce5289a37e78dbc43c15> , <https://astrea.linkeddata.es/shapes#25083232e413a32d9be313350117a156> , <https://astrea.linkeddata.es/shapes#3c027f3bee700478b3014170b8ae84c7> , <https://astrea.linkeddata.es/shapes#fae6a70bb23e6ac7614ccf93268635fc> , <https://astrea.linkeddata.es/shapes#df1591db368f5eed6ea211dfc61b01cf> , <https://astrea.linkeddata.es/shapes#1e0555dd2d6e690c766f6dad701ec8d9> , <https://astrea.linkeddata.es/shapes#e79cca38059519ab8923ddb6773f93a5> , <https://astrea.linkeddata.es/shapes#bce356590e4b077637afb9cb285ae0d2> , <https://astrea.linkeddata.es/shapes#8c9b24ee9e83c3de386d60b78a4e564f> , <https://astrea.linkeddata.es/shapes#e529c7053278001ef3b85c4844794556> , <https://astrea.linkeddata.es/shapes#62af04468e06ecd1a9e2ba254138b3ed> , <https://astrea.linkeddata.es/shapes#6fd786d22aa0c5397d629c6e040e2922> , <https://astrea.linkeddata.es/shapes#18b0d4eafe58c0873008c99f447bef55> , <https://astrea.linkeddata.es/shapes#ac2c418f89bca68ac497d29880bd1341> , <https://astrea.linkeddata.es/shapes#bf51233a687d04f4dae68d9476994e61> , <https://astrea.linkeddata.es/shapes#7d2ca70d717e2bea4e2fe19dba09ad3c> , <https://astrea.linkeddata.es/shapes#8aa612be99ce1f3c7d9ab466a6717d63> , <https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca> , <https://astrea.linkeddata.es/shapes#66779fcf9fc27b328cb75d6e4c7c0e0f> , <https://astrea.linkeddata.es/shapes#1efb914f10b43b1433c4ce8cc3bf23c1> , <https://astrea.linkeddata.es/shapes#c2e468cb3bd755604be294a499f5cbc5> , <https://astrea.linkeddata.es/shapes#1b16687416dedb6b1f8b52ff793002e3> , <https://astrea.linkeddata.es/shapes#d0176ce9ac24c737fec044dfd8127c87> , <https://astrea.linkeddata.es/shapes#cddd8b678c55b79833984d640143e01a> , <https://astrea.linkeddata.es/shapes#f649456a8ea17abcdf906eeace30edef> , <https://astrea.linkeddata.es/shapes#2282560fd31f5a43f0e1dfae0f6cd6a2> , <https://astrea.linkeddata.es/shapes#c2fd0f25b92da48fb4e03dd5c2430335> , <https://astrea.linkeddata.es/shapes#ceb2b73c051e30ecc744db840f614ec5> , <https://astrea.linkeddata.es/shapes#75bbb0520ec95261c0e65dfec83403fa> , <https://astrea.linkeddata.es/shapes#dbcd73bb96ccd7e62b142f19daa38f33> , <https://astrea.linkeddata.es/shapes#c9ef7a727fc6cd1f8e36e5163091f774> , <https://astrea.linkeddata.es/shapes#111f5aa8fd43a501290b8f679f061255> , <https://astrea.linkeddata.es/shapes#90e8886236d324993882014afe393ee5> , <https://astrea.linkeddata.es/shapes#9e073cc1f33c5824364700dc15bcd39b> , <https://astrea.linkeddata.es/shapes#5738211eae80d40e33103190666fa853> , <https://astrea.linkeddata.es/shapes#a75f128d5532e225688ef49b7a10725d> , <https://astrea.linkeddata.es/shapes#e8192d63ae4cc6d09c8a1de7b1662ff3> , <https://astrea.linkeddata.es/shapes#dfa985b037f08978efde3dc2a2a260ed> , <https://astrea.linkeddata.es/shapes#3c9bc9471dd9c8c2ee072be968ec8776> , <https://astrea.linkeddata.es/shapes#cae895d2b67c50bccf7740ec5cb78e63> , <https://astrea.linkeddata.es/shapes#c5c866ff5d6ba568b3f234a55e9f051b> , <https://astrea.linkeddata.es/shapes#2de5e1c83badfe7128acd5fa567507fb> , <https://astrea.linkeddata.es/shapes#284a5f9bbd24e9c35cf37567dac7e404> , <https://astrea.linkeddata.es/shapes#fca999c99da79010561dda5e5b13d023> , <https://astrea.linkeddata.es/shapes#ea74b4b8fe5b5227e123eac24367b481> , <https://astrea.linkeddata.es/shapes#6a273d0de1702eedc7f362b128efcafb> , <https://astrea.linkeddata.es/shapes#a2be7f1a9b3d420c6cd98f685999aec6> , <https://astrea.linkeddata.es/shapes#44aeeaada14a6479735b490bb913723e> , <https://astrea.linkeddata.es/shapes#c694f4ba3ebe04e3e086fe3d1d80c5e7> , <https://astrea.linkeddata.es/shapes#9053e40e3283f23ec02c02d08859f712> , <https://astrea.linkeddata.es/shapes#80c765ae64c6bb07982ac40670899ddf> , <https://astrea.linkeddata.es/shapes#bdda0ca5dc898909e96a6ca74bba5df6> , <https://astrea.linkeddata.es/shapes#2619e873317f20c5e3fba46879286fa5> , <https://astrea.linkeddata.es/shapes#3dc43eb1ada4bb4feac2d16a7f7261df> , <https://astrea.linkeddata.es/shapes#8dbcc4f4bba836bac93d1f2e3bc25330> , <https://astrea.linkeddata.es/shapes#ebae07442d01b09e6910458cc18404aa> , <https://astrea.linkeddata.es/shapes#43c8c32d697e68f4e204f15e1204c93c> , <https://astrea.linkeddata.es/shapes#0592f4c173dcfcbdf8c29186c7619056> , <https://astrea.linkeddata.es/shapes#40a094c9baf15ad399e71dbe40433e54> , <https://astrea.linkeddata.es/shapes#60e70dff7acfbb7a19a10c211f224811> , <https://astrea.linkeddata.es/shapes#9ff45c233dc3d9772084558ce7c09b19> , <https://astrea.linkeddata.es/shapes#ee7f83310da9beaeab77eff1c4cdb0e5> , <https://astrea.linkeddata.es/shapes#b38aa31301f29490ec7d0f204c0a378f> , <https://astrea.linkeddata.es/shapes#3c1bb41f35b14abd39ecc0f642b7f1bb> , <https://astrea.linkeddata.es/shapes#8481cadedf63088d49bb9f125e721b4a> , <https://astrea.linkeddata.es/shapes#fed82ae31a3cedccc8f6c76f2579d9ca> , <https://astrea.linkeddata.es/shapes#e75afa353f00dc985e902328a60cffbd> , <https://astrea.linkeddata.es/shapes#b84a9b8123c1e7e72e9141c3b26cfc9f> , <https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e> , <https://astrea.linkeddata.es/shapes#f7fee0e64104a916251e3a6fbb52f879> , <https://astrea.linkeddata.es/shapes#43f064f83452373b38767cff3c605712> , <https://astrea.linkeddata.es/shapes#17d1c93354b9fbc0b375e1adec2191dd> , <https://astrea.linkeddata.es/shapes#f491b63e0c0c4df2d0cf99558ffe97e2> , <https://astrea.linkeddata.es/shapes#00ac3bae71b1b2d6a583442531d90588> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0620946147> .
+
+<https://astrea.linkeddata.es/shapes#e25292f55b0607fa02421e1e50f8fb19>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/keyid> .
+
+<https://astrea.linkeddata.es/shapes#cf4221cc46bbdb7aef8145a04a67cc5d>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/tarball> .
+
+<https://astrea.linkeddata.es/shapes#2f613664f1bce8b246e4168f60a99a4e>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#111f5aa8fd43a501290b8f679f061255>
+        a            sh:PropertyShape ;
+        sh:hasValue  <http://ontologies.siemens-energy.com/software/git> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/repoCVS> .
+
+<https://astrea.linkeddata.es/shapes#7e31832e417c40de0296529271f9132a>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/keyid> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#037ec4e30ade1a3c1981d8bec1252195>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/NPMOperationalnternal> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npmOperationalInternal> .
+
+<https://astrea.linkeddata.es/shapes#25083232e413a32d9be313350117a156>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/url> .
+
+<https://astrea.linkeddata.es/shapes#521c805b2951cfca395755ab231d5bcc>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/homepage> .
+
+<https://astrea.linkeddata.es/shapes#8dbcc4f4bba836bac93d1f2e3bc25330>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/host> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#e529c7053278001ef3b85c4844794556>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:anyURI ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/url> .
+
+<https://astrea.linkeddata.es/shapes#de80373b861f1cf5fe7d8b62404d6408>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/license> .
+
+<https://astrea.linkeddata.es/shapes#1a179c321a636f62df9d26027881bc80>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#369acdfc99847de394938ed2bcf85413>
+        a               sh:PropertyShape ;
+        rdfs:label      "You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.\n\n\nYou can check the full list of SPDX license IDs. Ideally you should pick one that is OSI approved." ;
+        sh:datatype     xsd:string ;
+        sh:description  "You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.\n\n\nYou can check the full list of SPDX license IDs. Ideally you should pick one that is OSI approved." ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://schema.org/license> ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#2619e873317f20c5e3fba46879286fa5>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Export> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/exports> .
+
+<https://astrea.linkeddata.es/shapes#63c32ffcc60b2920ea109515f1683137>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/NPMOperationalnternal> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npmOperationalInternal> .
+
+<https://astrea.linkeddata.es/shapes#c6762e4b9c6d64864bf08e20780f7da8>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Export> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/exports> .
+
+<https://astrea.linkeddata.es/shapes#b84a9b8123c1e7e72e9141c3b26cfc9f>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/module> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#6fd786d22aa0c5397d629c6e040e2922>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/sig> .
+
+<https://astrea.linkeddata.es/shapes#1e0555dd2d6e690c766f6dad701ec8d9>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Bug> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/bugs> .
+
+<https://astrea.linkeddata.es/shapes#480564553bb39a132422d4be970c7a30>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Script> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/scripts> .
+
+<https://astrea.linkeddata.es/shapes#7299cf70c59871b42a3ce930bb1e8248>
+        a               sh:NodeShape ;
+        rdfs:label      "Specific version of a software library" ;
+        sh:description  "name as label" ;
+        sh:name         "Specific version of a software library" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#ea74b4b8fe5b5227e123eac24367b481> , <https://astrea.linkeddata.es/shapes#1c9b1876b1d10666a34ff82afdc5053e> , <https://astrea.linkeddata.es/shapes#45b80312e54e48356b35f4ff3cd74726> , <https://astrea.linkeddata.es/shapes#ebae07442d01b09e6910458cc18404aa> , <https://astrea.linkeddata.es/shapes#514172f0ef325fe73f114767e4c53667> , <https://astrea.linkeddata.es/shapes#596775134cc10a922e5eb90fa5e3cb13> , <https://astrea.linkeddata.es/shapes#369acdfc99847de394938ed2bcf85413> , <https://astrea.linkeddata.es/shapes#c2fd0f25b92da48fb4e03dd5c2430335> , <https://astrea.linkeddata.es/shapes#b84a9b8123c1e7e72e9141c3b26cfc9f> , <https://astrea.linkeddata.es/shapes#3c9bc9471dd9c8c2ee072be968ec8776> , <https://astrea.linkeddata.es/shapes#63c32ffcc60b2920ea109515f1683137> , <https://astrea.linkeddata.es/shapes#5936d2695fbbc8b225b3fdd6adfdb8ae> , <https://astrea.linkeddata.es/shapes#f491b63e0c0c4df2d0cf99558ffe97e2> , <https://astrea.linkeddata.es/shapes#fed82ae31a3cedccc8f6c76f2579d9ca> , <https://astrea.linkeddata.es/shapes#0bd3b9a57f3996dfefd887b3d1bd4acb> , <https://astrea.linkeddata.es/shapes#e8192d63ae4cc6d09c8a1de7b1662ff3> , <https://astrea.linkeddata.es/shapes#5c3bc0de3c28ae2af9bab26b8d3d530c> , <https://astrea.linkeddata.es/shapes#9aa4cd19e097230ef4c0710dfd2dd7cd> , <https://astrea.linkeddata.es/shapes#037ec4e30ade1a3c1981d8bec1252195> , <https://astrea.linkeddata.es/shapes#1e0555dd2d6e690c766f6dad701ec8d9> , <https://astrea.linkeddata.es/shapes#c92a71c6748488c6e013f784278d31d1> , <https://astrea.linkeddata.es/shapes#e09b72925afca3a4dcd269048fed1d9a> , <https://astrea.linkeddata.es/shapes#480564553bb39a132422d4be970c7a30> , <https://astrea.linkeddata.es/shapes#9053e40e3283f23ec02c02d08859f712> , <https://astrea.linkeddata.es/shapes#e478a70207bc9300f649a92b739f54c6> , <https://astrea.linkeddata.es/shapes#a100a3cde39b2095281cdc20c5387d18> , <https://astrea.linkeddata.es/shapes#617e52eb4430a54107aaab4760b25eed> , <https://astrea.linkeddata.es/shapes#06e3d79131d65126ab2c1c8d9f43e2e6> , <https://astrea.linkeddata.es/shapes#4921f9b9e4b7d670b6748eed28492ff0> , <https://astrea.linkeddata.es/shapes#75bbb0520ec95261c0e65dfec83403fa> , <https://astrea.linkeddata.es/shapes#0872c666945cce5289a37e78dbc43c15> , <https://astrea.linkeddata.es/shapes#de80373b861f1cf5fe7d8b62404d6408> , <https://astrea.linkeddata.es/shapes#3aeb34b7f87f36184aba646b8864c7a2> , <https://astrea.linkeddata.es/shapes#cddd8b678c55b79833984d640143e01a> , <https://astrea.linkeddata.es/shapes#288e1d727cefa98f32334ea33c9a3e4f> , <https://astrea.linkeddata.es/shapes#532c9c6c21cb6cd091572ca4439429d9> , <https://astrea.linkeddata.es/shapes#3dc43eb1ada4bb4feac2d16a7f7261df> , <https://astrea.linkeddata.es/shapes#cae895d2b67c50bccf7740ec5cb78e63> , <https://astrea.linkeddata.es/shapes#c6762e4b9c6d64864bf08e20780f7da8> , <https://astrea.linkeddata.es/shapes#a2be7f1a9b3d420c6cd98f685999aec6> , <https://astrea.linkeddata.es/shapes#80c765ae64c6bb07982ac40670899ddf> , <https://astrea.linkeddata.es/shapes#4e9996271f6821da42c7bbf4dee41703> , <https://astrea.linkeddata.es/shapes#8481cadedf63088d49bb9f125e721b4a> , <https://astrea.linkeddata.es/shapes#903a8c115b1c843bb8bf32f48be4484d> , <https://astrea.linkeddata.es/shapes#2d0f4686528c908850a0fa71d17e41ca> , <https://astrea.linkeddata.es/shapes#1b16687416dedb6b1f8b52ff793002e3> , <https://astrea.linkeddata.es/shapes#bdda0ca5dc898909e96a6ca74bba5df6> , <https://astrea.linkeddata.es/shapes#b8b32f49df0ad8309d76d88f4a7ade71> , <https://astrea.linkeddata.es/shapes#ac2c418f89bca68ac497d29880bd1341> , <https://astrea.linkeddata.es/shapes#27eb623404958946fda5be06b5852cc0> , <https://astrea.linkeddata.es/shapes#2619e873317f20c5e3fba46879286fa5> , <https://astrea.linkeddata.es/shapes#43f064f83452373b38767cff3c605712> , <https://astrea.linkeddata.es/shapes#0f6eb80a326f6ece250a65d8fd1ab5f6> , <https://astrea.linkeddata.es/shapes#62af04468e06ecd1a9e2ba254138b3ed> , <https://astrea.linkeddata.es/shapes#0592f4c173dcfcbdf8c29186c7619056> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Software_library_version> .
+
+<https://astrea.linkeddata.es/shapes#92173fdf846040a45a4bdffa7bc00d92>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Bug> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/bugs> .
+
+<https://astrea.linkeddata.es/shapes#1a735aeb8a7a622764896a0cc043e8ef>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/SoftwareLibraryComponent> .
+
+<https://astrea.linkeddata.es/shapes#284a5f9bbd24e9c35cf37567dac7e404>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/VersionControlSoftware> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/repoCVS> .
+
+<https://astrea.linkeddata.es/shapes#bce356590e4b077637afb9cb285ae0d2>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/ProgrammingLanguage> .
+
+<https://astrea.linkeddata.es/shapes#d2e08536edd35355def24aff4e9ad0b1>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#111f5aa8fd43a501290b8f679f061255> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/GitRepository> .
+
+<https://astrea.linkeddata.es/shapes#06e3d79131d65126ab2c1c8d9f43e2e6>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Funding> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/funding> .
+
+<https://astrea.linkeddata.es/shapes#0872c666945cce5289a37e78dbc43c15>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Script> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/scripts> .
+
+<https://astrea.linkeddata.es/shapes#fae6a70bb23e6ac7614ccf93268635fc>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:dateTime ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/created> .
+
+<https://astrea.linkeddata.es/shapes#46d0983aab141ff6001afeab85c890f8>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/integrity> .
+
+<https://astrea.linkeddata.es/shapes#b8b32f49df0ad8309d76d88f4a7ade71>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/contributors> .
+
+<https://astrea.linkeddata.es/shapes#0f6eb80a326f6ece250a65d8fd1ab5f6>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:boolean ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/hasShrinkwrap> .
+
+<https://astrea.linkeddata.es/shapes#cddd8b678c55b79833984d640143e01a>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/maintainer> .
+
+<https://astrea.linkeddata.es/shapes#596775134cc10a922e5eb90fa5e3cb13>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/isVersionof> .
+
+<https://astrea.linkeddata.es/shapes#23e6194df356ec4138e27438b22dec1e>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#c2fd0f25b92da48fb4e03dd5c2430335>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/dependsOn> .
+
+<https://astrea.linkeddata.es/shapes#ebae07442d01b09e6910458cc18404aa>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/main> .
+
+<https://astrea.linkeddata.es/shapes#d0176ce9ac24c737fec044dfd8127c87>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#7e31832e417c40de0296529271f9132a> , <https://astrea.linkeddata.es/shapes#9b60f4544f70767f0593d621d7af3359> , <https://astrea.linkeddata.es/shapes#6fd786d22aa0c5397d629c6e040e2922> , <https://astrea.linkeddata.es/shapes#e25292f55b0607fa02421e1e50f8fb19> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Signature> .
+
+<https://astrea.linkeddata.es/shapes#fad12079897f637454248ca71b87fda2>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/shasum> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#45b80312e54e48356b35f4ff3cd74726>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/author> .
+
+<https://astrea.linkeddata.es/shapes#8aa612be99ce1f3c7d9ab466a6717d63>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#ec6bb0b73302a1c62792e20934554d9f> , <https://astrea.linkeddata.es/shapes#8dbcc4f4bba836bac93d1f2e3bc25330> , <https://astrea.linkeddata.es/shapes#c5c866ff5d6ba568b3f234a55e9f051b> , <https://astrea.linkeddata.es/shapes#b8ca176a3ffc286a2157cd9f5e31b638> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/NPMOperationalnternal> .
+
+<https://astrea.linkeddata.es/shapes#ec6bb0b73302a1c62792e20934554d9f>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/tmp> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#18b0d4eafe58c0873008c99f447bef55>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/protocol> .
+
+<https://astrea.linkeddata.es/shapes#c92a71c6748488c6e013f784278d31d1>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Engine> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/engines> .
+
+<https://astrea.linkeddata.es/shapes#fe5575ce267e049ce69eb4653584fc5b>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/readmeFilename> .
+
+<https://astrea.linkeddata.es/shapes#1478b283254a82fc1bc6d5377b676901>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/npm-signature> .
+
+<https://astrea.linkeddata.es/shapes#2b2a27eed5b61d3900d291e98df9d40c>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://schema.org/name> .
+
+<https://astrea.linkeddata.es/shapes#00ac3bae71b1b2d6a583442531d90588>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/VersionControlSoftware> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/repoCVS> .
+
+<https://astrea.linkeddata.es/shapes#fed82ae31a3cedccc8f6c76f2579d9ca>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/devDependsOn> .
+
+<https://astrea.linkeddata.es/shapes#da501479d7723241ac9ced0cb1ea1f67>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/protocol> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#9e073cc1f33c5824364700dc15bcd39b>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#32785f141d72a6776c911dd57d3a6ccc> , <https://astrea.linkeddata.es/shapes#0c9c7e5d2b8bc969402273a9d46220e4> , <https://astrea.linkeddata.es/shapes#2f613664f1bce8b246e4168f60a99a4e> , <https://astrea.linkeddata.es/shapes#8c9b24ee9e83c3de386d60b78a4e564f> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Export> .
+
+<https://astrea.linkeddata.es/shapes#e75afa353f00dc985e902328a60cffbd>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/includes> .
+
+<https://astrea.linkeddata.es/shapes#b38aa31301f29490ec7d0f204c0a378f>
+        a                       sh:PropertyShape ;
+        sh:nodeKind             sh:IRIOrLiteral ;
+        sh:path                 <http://ontologies.siemens-energy.com/software/latestVersion> ;
+        sh:qualifiedMaxCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedValueShape  [ sh:class  <http://ontologies.siemens-energy.com/software/Software_library_version> ] .
+
+<https://astrea.linkeddata.es/shapes#bdda0ca5dc898909e96a6ca74bba5df6>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Person> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/contributors> .
+
+<https://astrea.linkeddata.es/shapes#df1591db368f5eed6ea211dfc61b01cf>
+        a               sh:NodeShape ;
+        rdfs:label      "Software package" ;
+        sh:name         "Software package" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#8ec8a60b31b7991c205b00fa125427a2> , <https://astrea.linkeddata.es/shapes#a75f128d5532e225688ef49b7a10725d> , <https://astrea.linkeddata.es/shapes#ea8a85354484536f1c911df7acdb9017> , <https://astrea.linkeddata.es/shapes#e75afa353f00dc985e902328a60cffbd> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/Software_package> .
+
+<https://astrea.linkeddata.es/shapes#903a8c115b1c843bb8bf32f48be4484d>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/devDependsOn> .
+
+<https://astrea.linkeddata.es/shapes#68cd110dc45a8e6964cfc4b88bf26080>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/path> .
+
+<https://astrea.linkeddata.es/shapes#ceb2b73c051e30ecc744db840f614ec5>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/version> .
+
+<https://astrea.linkeddata.es/shapes#ac2c418f89bca68ac497d29880bd1341>
+        a               sh:PropertyShape ;
+        rdfs:label      "The main field is a module ID that is the primary entry point to your program. That is, if your package is named foo, and a user installs it, and then does require(\"foo\"), then your main module's exports object will be returned.\n\nThis should be a module relative to the root of your package folder.\n\nFor most modules, it makes the most sense to have a main script and often not much else.\n\nIf main is not set, it defaults to index.js in the package's root folder." ;
+        sh:datatype     xsd:string ;
+        sh:description  "The main field is a module ID that is the primary entry point to your program. That is, if your package is named foo, and a user installs it, and then does require(\"foo\"), then your main module's exports object will be returned.\n\nThis should be a module relative to the root of your package folder.\n\nFor most modules, it makes the most sense to have a main script and often not much else.\n\nIf main is not set, it defaults to index.js in the package's root folder." ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <http://ontologies.siemens-energy.com/software/main> ;
+        sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#337fe2f993469fa4a681d42ea423a04b>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#00ac3bae71b1b2d6a583442531d90588> , <https://astrea.linkeddata.es/shapes#3cefe502acf7b307b52353ea85e05d1e> , <https://astrea.linkeddata.es/shapes#e529c7053278001ef3b85c4844794556> , <https://astrea.linkeddata.es/shapes#284a5f9bbd24e9c35cf37567dac7e404> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/CodeRepository> .
+
+<https://astrea.linkeddata.es/shapes#3c027f3bee700478b3014170b8ae84c7>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/unpackedSize> ;
+        sh:pattern   "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#2d0f4686528c908850a0fa71d17e41ca>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/isVersionof> .
+
+<https://astrea.linkeddata.es/shapes#8ec8a60b31b7991c205b00fa125427a2>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Software_library_version> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/includes> .
+
+<https://astrea.linkeddata.es/shapes#617e52eb4430a54107aaab4760b25eed>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:string ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://ontologies.siemens-energy.com/software/typings> ;
+        sh:pattern   ".*" .
+
+<https://astrea.linkeddata.es/shapes#cd37f98788940dbeea9ee308a2d585eb>
+        a            sh:PropertyShape ;
+        sh:hasValue  <http://ontologies.siemens-energy.com/software/javascript> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/language> .
+
+<https://astrea.linkeddata.es/shapes#a75f128d5532e225688ef49b7a10725d>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Package_manager> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://ontologies.siemens-energy.com/software/managedBy> .
+
+<https://astrea.linkeddata.es/shapes#5d3c7b08f28f55c657db91da7c4b0170>
+        a               sh:NodeShape ;
+        rdfs:label      "NodePKG manager for JS packages" ;
+        sh:name         "NodePKG manager for JS packages" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#cd37f98788940dbeea9ee308a2d585eb> , <https://astrea.linkeddata.es/shapes#2de5e1c83badfe7128acd5fa567507fb> ;
+        sh:targetClass  <http://ontologies.siemens-energy.com/software/NODEPKG> .
+
+<https://astrea.linkeddata.es/shapes#1efb914f10b43b1433c4ce8cc3bf23c1>
+        a            sh:PropertyShape ;
+        sh:class     <http://ontologies.siemens-energy.com/software/Signature> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <http://ontologies.siemens-energy.com/software/signatures> .
